@@ -1,0 +1,94 @@
+Front End Day - (Horários - Palestras - Nomes - Bio)
+
+Abertura - 09:00
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+09:15 - Jean Livino | Desenvolvedor Front-End iFood 
+Trilha: Auditório
+A realidade de trabalhar em projetos que usam IA
+
+
+09:30 - CJ Patoilo | Criador do Miligram.io e Airform.io
+Trilha: Auditório
+Keynote - Arquitetura
+
+10:00 - Networking
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Trilha 2 Comunidades:
+
+10:40 Alynne Ferreira | Software Engineer Shape
+Grafos e Vogue Dance: usando estrutura de dados para criar coreografias
+
+
+11:20 Adrian Maycon | Desenvolvedor Front End MERX
+Novos Caminhos e Networking: O Papel das Comunidades de Tech
+
+
+11:40 Ewerton Nepomuceno | UX/UI Designer VMetrix
+Design System e Tokens
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Intervalo do Almoço
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+13:30 Cauan Victor | Engenheiro de software Normalabs
+React Native em 2024: Por onde começar?
+
+
+13:50 Rose Félix | QA Profectum
+PyLadies Fortaleza: História e fundação
+
+
+14:10 Noemi Cunha | Desenvolvedora Front-End Uol
+Dominando as Soft Skills para uma Jornada na Tecnologia
+
+
+14:50 Sílva Muniz | Tech Lead e Scrum Master Governo do Estado do Ceará
+Como impulsionar sua carreira através das comunidades de tecnologia
+
+
+15:10 Romênia Sousa | Product Manager PicPay
+Discovery de Produtos: Os desafios na busca de entregar soluções simples de alto valor
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+15:50 - Coffee Break + Networking
+
+
+16:45 - Sorteios de Brindes e Participantes do Codando no Breu
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+17:00 Willian Frantz | Senior Software Engineer Riot Games
+Trilha: Auditório
+Código nos jogos: Minha experiência na Riot Games
+
+
+17:30 Adriana Saty | Criadora de Conteúdo WebSaty
+Trilha: Auditório
+Data Driven na vida pessoal
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+18:00 Encerramento das Palestras
+
+
+18:30 Codando no Breu |  Code in the dark
+ 
