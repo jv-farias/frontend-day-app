@@ -4,8 +4,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
-    outline-offset: -1px;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
 }
 
 body {
@@ -49,9 +49,12 @@ header .navbar #logo-organizacao img {
 
 /*BOTÃO INSTAGRAM*/
 header .navbar #btn-insta {
-    padding: .1rem 1.5rem;
+    padding: 0.5rem 1.5rem; /* Ajuste os valores de preenchimento conforme necessário */
     background-color: #FF8506;
     border-radius: 25px;
+    display: inline-block;
+    text-align: center;
+    white-space: nowrap;
 }
 
 header .navbar #btn-insta a {
@@ -100,4 +103,17 @@ header .home #titulo-home h1 span {
     font-size: 20px;
     color: #FFF;
     font-weight: 700;
+}
+
+/* MEDIA QUERY PARA OUTRAS TELAS */
+@media (max-width: 390px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.8rem;
+        padding: 0.3rem 1rem; 
+        font-size: 14px;
+    }
 }
