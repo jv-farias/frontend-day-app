@@ -1,48 +1,50 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap);
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     /* outline: 1px solid red;
-    outline-offset: -1px; */
+    outline-offset: -1px; */ 
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
-/*ESTRUTURA HEADER*/
+.navbar,
+header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 header {
     width: 100vw;
     background-color: #021233;
     border-radius: 0 0 30px 30px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
     padding: 3rem 2rem;
     gap: 2rem;
 }
 
-header .navbar {
-    width: 100%;
-    display: flex;
+.navbar {
     justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
 }
 
-/*LOGO FRONTEND-CE*/
-header .navbar #logo-organizacao {
+.navbar #logo-organizacao,
+header .home {
+    width: 100%;
     display: flex;
     align-items: center;
-    max-width: 10rem;
-    width: 100%;
 }
 
-header .navbar #logo-organizacao img {
+.navbar #logo-organizacao {
+    max-width: 10rem;
+}
+
+.navbar #logo-organizacao img {
     height: auto;
     width: 100%;
 }
@@ -70,36 +72,31 @@ header .navbar #btn-insta {
 }
 
 
-header .navbar #btn-insta a {
+.navbar #btn-insta a {
     text-decoration: none;
     color: #021233;
     font-size: 15px;
     font-weight: 700;
 }
 
-/*INFORMAÇÕES: LOGO FRONTEND-DAY E CHAMATIVO*/
 header .home {
-    width: 100%;
-    display: flex;
     justify-content: space-evenly;
     flex-direction: column;
-    align-items: center;
     flex-wrap: wrap;
     gap: 1.5rem;
 }
 
-/*LOGO FRONTEND-DAY*/
 header .home #logo-home {
     display: flex;
     max-width: 12rem;
     width: 100%;
 }
 
+.navbar,
 header .home #logo-home img {
     width: 100%;
 }
 
-/*CHAMATIVO DA HOME*/
 header .home #titulo-home {
     max-width: 80%;
     text-align: center;
@@ -108,12 +105,193 @@ header .home #titulo-home {
 
 header .home #titulo-home h1 {
     font-size: 20px;
-    color: #51CAFD;
+    color: #51cafd;
     font-weight: 500;
 }
 
+.titulo-trilha,
 header .home #titulo-home h1 span {
     font-size: 20px;
-    color: #FFF;
+    color: #fff;
     font-weight: 700;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main #cronograma-frontend {
+    padding-top: 1.5rem;
+    margin-top: 4rem;
+    background-color: #021233;
+    border-radius: 30px;
+    width: 600px;
+}
+
+.titulo-trilha {
+    color: #51cafd;
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cards-palestrante-content {
+    padding: 1rem 1.5rem;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    border-bottom: 1.5px solid #51cafd;
+}
+
+.palestrante-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.palestrante-picture img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.card-informacoes {
+    justify-content: cem;
+    gap: .75rem;
+}
+
+.card-informacoes,
+.informacoes-palestrante {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.informacoes-palestrante .nome {
+    color: #51cafd;
+    font-weight: 700;
+}
+
+.informacoes-palestrante .cargo {
+    font-size: 14px;
+    color: #fff;
+}
+
+.informacoes-palestra .assunto {
+    font-size: 14px;
+    color: #51cafd;
+    font-weight: 700;
+}
+
+.palestrante-meta,
+.palestrante-meta .redes-sociais {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.palestrante-meta {
+    flex-wrap: wrap;
+    gap: .75rem;
+    align-items: flex-end;
+}
+
+.palestrante-meta .redes-sociais {
+    align-items: center;
+    gap: .15rem;
+}
+
+.palestrante-meta .redes-sociais a {
+    font-size: 20px;
+    color: #fff;
+}
+
+.palestrante-meta .horario p {
+    font-weight: 700;
+    color: #fff;
+}
+
+.cards-topicos-content {
+    padding: 1rem 1.5rem;
+    border-bottom: 1.5px solid #51cafd;
+    width: 400px;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 450px;
+    text-align: center;
+}
+
+.cards-topicos-content .horario-topico {
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.cards-topicos-content .nome-topico {
+    color: #FF8506;
+    background-color: #021233;
+    border-radius: 50px;
+    font-weight: 700;
+    flex: 1;
+    width: 100%;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+input {
+    padding: .7rem;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width:390px) {
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.8rem;
+        padding: .3rem 1rem;
+        font-size: 14px;
+    }
+
+    .cards-palestrante-content,
+    .navbar {
+        flex-direction: column;
+    }
+
+    .assunto,
+    .cargo,
+    .horario,
+    .informacoes-palestrante .nome {
+        text-align: center;
+    }
+
+    .palestrante-meta {
+        align-items: center;
+    }
+
+    .palestrante-meta .redes-sociais {
+        flex-direction: row;
+        gap: 1rem;
+    }
 }

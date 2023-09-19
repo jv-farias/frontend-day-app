@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css"> <!-- LINK PARA LINKAR O CSS AO HTML -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" type="imagex/svg" href="../assets/logos/logo-frontend-day.svg">
+    <!-- LINK PARA ADICIONAR A BIBLIOTECA DE ICONES NO HTML -->
     <title>Cronograma Frontend Day</title>
 </head>
 
@@ -25,10 +30,21 @@
             <div id="titulo-home">
                 <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
             </div>
+            <div class="botoes">
+                <input type="button" id="botao1" value="<=">
+                <input type="button" id="botao2" value="=>">
+            </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section id="cronograma-frontend" class="hidden">
+            <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
+            <div class="cards-container" id="cards-cronograma">
+            </div>
+        </section>
+    </main>
     <footer></footer>
+    <script type="module" src="../js/main.js"></script>
 </body>
 
 </html>
