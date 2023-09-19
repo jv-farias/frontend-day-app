@@ -38,13 +38,13 @@ header .navbar {
 header .navbar #logo-organizacao {
     display: flex;
     align-items: center;
-    max-width: 8rem;
+    max-width: 10rem;
     width: 100%;
 }
 
 header .navbar #logo-organizacao img {
     height: auto;
-    width: 70%;
+    width: 100%;
 }
 
 /*BOTÃO INSTAGRAM*/
@@ -83,7 +83,7 @@ header .home #logo-home img {
     width: 100%;
 }
 
-/*CHAMATIVO*/
+/*CHAMATIVO DA HOME*/
 header .home #titulo-home {
     max-width: 80%;
     text-align: center;
