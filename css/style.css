@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     /* outline: 1px solid red;
-    outline-offset: -1px; */ 
+    outline-offset: -1px; */
 }
 
 body {
@@ -51,7 +51,8 @@ header .home {
 
 /*BOTÃO INSTAGRAM*/
 header .navbar #btn-insta {
-    padding: 0.5rem 1.5rem; /* Ajuste os valores de preenchimento conforme necessário */
+    padding: 0.5rem 1.5rem;
+    /* Ajuste os valores de preenchimento conforme necessário */
     background-color: #FF8506;
     border-radius: 25px;
     display: inline-block;
@@ -66,8 +67,10 @@ header .navbar #btn-insta {
         justify-content: center;
         align-items: center;
         gap: 15px;
-        padding: 0.3rem 1rem; /* Valores de preenchimento menores para telas menores */
-        font-size: 14px; /* Tamanho de fonte menor para telas menores, ajuste conforme necessário */
+        padding: 0.3rem 1rem;
+        /* Valores de preenchimento menores para telas menores */
+        font-size: 14px;
+        /* Tamanho de fonte menor para telas menores, ajuste conforme necessário */
     }
 }
 
@@ -212,7 +215,7 @@ main #cronograma-frontend {
 }
 
 .palestrante-meta .redes-sociais a {
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
 }
 
@@ -293,5 +296,121 @@ input {
     .palestrante-meta .redes-sociais {
         flex-direction: row;
         gap: 1rem;
+    }
+}
+
+
+
+/* footer */
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 3rem 2rem;
+}
+
+.wrapper {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.wrapper i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+}
+
+.wrapper i:active {
+    transform: translateY(-50%) scale(0.85);
+}
+
+.wrapper i:first-child {
+    left: -22px;
+}
+
+.wrapper i:last-child {
+    right: -22px;
+}
+
+.wrapper .carousel {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: calc((100% / 3) - 12px);
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    border-radius: 8px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel.no-transition {
+    scroll-behavior: auto;
+}
+
+.carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+}
+
+.carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+}
+
+.carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel .card {
+    scroll-snap-align: start;
+    height: 342px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.carousel .card .img {
+
+    height: 200px;
+    width: 200px;
+
+}
+
+.card .img img {
+    width: 180px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 900px) {
+    .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .wrapper .carousel {
+        grid-auto-columns: 100%;
     }
 }

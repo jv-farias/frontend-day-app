@@ -1,4 +1,6 @@
 import { apresentaCard } from '../dist/cards.js'
+import { initCarousel } from '../js/carrossel.js'
+
 
 const cardsData = [
     {
@@ -269,5 +271,6 @@ function trocadorDeTrilha() {
     Anterior.addEventListener("click", trilhaAnterior);
 }
 
-trocadorDeTrilha()
+trocadorDeTrilha();
 
+initCarousel();
