@@ -510,3 +510,46 @@ const htmlGerado1 = cardsProcessados1.map(card => {
 }).join('');
 
 document.querySelector("#cards-comunidade").innerHTML = htmlGerado1;
+
+
+const botaoTrocarTrilha = document.getElementById('trocar-trilha');
+const trilhaFrontend = document.getElementById('cronograma-frontend');
+const trilhaComunidade = document.getElementById('cronograma-comunidade');
+
+botaoTrocarTrilha.addEventListener('click', () => {
+    if (trilhaFrontend.style.display === 'none') {
+        trilhaFrontend.style.display = 'block';
+        trilhaComunidade.style.display = 'none';
+    } else {
+        trilhaFrontend.style.display = 'none';
+        trilhaComunidade.style.display = 'block';
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll("#trocar-trilha");
+
+    botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            // Remove a classe "ativo" de todos os botões
+            botoes.forEach((b) => b.classList.remove("ativo"));
+            // Adiciona a classe "ativo" apenas ao botão clicado
+            botao.classList.add("ativo");
+
+            // Agora você pode controlar o conteúdo a ser exibido com base no botão clicado
+            const trilhaSelecionada = botao.textContent.trim().toUpperCase().replace("-", "");
+
+            // Exemplo: você pode mostrar a seção correspondente e ocultar as outras
+            document.getElementById("cronograma-frontend").style.display =
+                trilhaSelecionada === "FRONTEND" ? "block" : "none";
+            document.getElementById("cronograma-comunidade").style.display =
+                trilhaSelecionada === "COMUNIDADE" ? "block" : "none";
+            // Adicione mais lógica conforme necessário
+
+            // Adicione transições CSS para suavizar a mudança
+            const cardsContainer = document.querySelector(".cards-container");
+            cardsContainer.style.transition = "transform 0.3s ease-in-out";
+        });
+    });
+});
