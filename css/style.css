@@ -217,12 +217,21 @@ main #cronograma-frontend {
 .palestrante-meta .redes-sociais a {
     font-size: 25px;
     color: #fff;
+    
+}
+.palestrante-meta .horario {
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
 }
 
 .palestrante-meta .horario p {
     font-weight: 700;
     color: #fff;
+
 }
+
 
 .cards-topicos-content {
     padding: 1rem 1.5rem;
