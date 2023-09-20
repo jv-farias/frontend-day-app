@@ -120,9 +120,12 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-main #cronograma-frontend {
+main #cronograma-frontend,
+#cronograma-comunidade {
     padding-top: 1.5rem;
     margin-top: 4rem;
     background-color: #021233;
@@ -281,10 +284,6 @@ footer h3 {
     }
 }
 
-.hidden {
-    display: none;
-}
-
 .logos {
     margin: 2rem 0;
     overflow: hidden;
@@ -326,9 +325,9 @@ footer h3 {
 }
 
 .logos-slide img {
-    width: 7rem;
+    width: 10rem;
     height: 100%;
-    margin: 0 1rem;
+    margin: 0 2rem;
 }
 
 @media (max-width:390px) {
