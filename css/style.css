@@ -67,9 +67,7 @@ header .navbar #btn-insta {
         align-items: center;
         gap: 15px;
         padding: 0.3rem 1rem;
-        /* Valores de preenchimento menores para telas menores */
         font-size: 14px;
-        /* Tamanho de fonte menor para telas menores, ajuste conforme necessário */
     }
 }
 
@@ -216,7 +214,7 @@ main #cronograma-frontend {
 }
 
 .palestrante-meta .redes-sociais a {
-    font-size: 20px;
+    font-size: 25px;
     color: #fff;
 }
 
@@ -263,8 +261,74 @@ input {
     padding: .7rem;
 }
 
+footer  {
+    width: 100%;
+    margin: 1rem ;
+}
+
+footer h3 {
+    text-align: center;
+    color: #021233;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
 .hidden {
     display: none;
+}
+
+.logos {
+    margin: 2rem 0;
+    overflow: hidden;
+    background: #f1f1f1;
+    white-space: nowrap;
+    position: relative;
+    padding: .5rem 0;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 7rem;
+    height: 100%;
+    margin: 0 1rem;
 }
 
 @media (max-width:390px) {

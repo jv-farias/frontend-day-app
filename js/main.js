@@ -253,21 +253,20 @@ const htmlGerado = cardsProcessados.map(card => {
 // Insira o HTML gerado no elemento cards-cronograma
 document.querySelector("#cards-cronograma").innerHTML = htmlGerado;
 
-function proximaTrilha() {
-    document.getElementById("cronograma-frontend").classList.remove("hidden");
-}
+// function proximaTrilha() {
+//     document.getElementById("cronograma-frontend").classList.remove("hidden");
+// }
 
-function trilhaAnterior() {
-    document.getElementById("cronograma-frontend").classList.add("hidden");
-}
+// function trilhaAnterior() {
+//     document.getElementById("cronograma-frontend").classList.add("hidden");
+// }
 
-function trocadorDeTrilha() {
-    const Proxima = document.getElementById("botao1");
-    const Anterior = document.getElementById("botao2");
+// function trocadorDeTrilha() {
+//     const Proxima = document.getElementById("botao1");
+//     const Anterior = document.getElementById("botao2");
 
-    Proxima.addEventListener("click", proximaTrilha);
-    Anterior.addEventListener("click", trilhaAnterior);
-}
+//     Proxima.addEventListener("click", proximaTrilha);
+//     Anterior.addEventListener("click", trilhaAnterior);
+// }
 
-trocadorDeTrilha()
-
+// trocadorDeTrilha();
