@@ -459,6 +459,186 @@ const cardsData1 = [
     },
 ];
 
+const cardsData2 = [
+    {
+        topico: "ABERTURA",
+        horario: "9:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "JEAN LIVINO",
+        nomeArquivoImagem: "jean-livino.webp",
+        cargo: "Desenvolvedor Front-End iFood",
+        assunto: "A realidade de trabalhar em projetos que usam IA",
+        linkedin: "jeanlivino",
+        instagram: "jeanlivino",
+        horario: "09:15",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "CJ PATOILO",
+        nomeArquivoImagem: "cj-patoilo.webp",
+        cargo: "Criador do Miligram.io e Airform.io",
+        assunto: "Keynote - Arquitetura",
+        instagram: "cjpatoilo",
+        linkedin: "cjpatoilo",
+        horario: "09:30",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "NETWORKING",
+        horario: "10:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "RACHEL CARVALHO",
+        nomeArquivoImagem: "rachel-carvalho.webp",
+        cargo: "Product Designer Agenda Edu",
+        assunto: "UX e Handoff, a passagem do designer para o dev",
+        instagram: "kellrcarvlho",
+        linkedin: "kellrcarvalho",
+        horario: "10:40",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "WESLEY JONATHA",
+        nomeArquivoImagem: "wesle-jonatha.webp",
+        cargo: "Desenvolvedor Stefanini",
+        assunto: "Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade",
+        instagram: "wesleyj.dev",
+        linkedin: "wesley-jonatha-9329ba18a",
+        horario: "11:00",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "PMENOS LAB",
+        nomeArquivoImagem: "time-pmenos-lab.webp",
+        cargo: "Líderes Times de Inovação,Hub de Saúde, Ecommerce e App",
+        assunto: "Ecossistema VTEX e Alavancando Resultados com um App Gerencial",
+        instagram: "pmenoslab",
+        linkedin: "",
+        horario: "11:20",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "INTERVALO ALMOÇO",
+        horario: "12:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "VINÍCIUS CAMPITELLI",
+        nomeArquivoImagem: "vinicius-campitelli.webp",
+        cargo: " Developer Relations FusionAuth",
+        assunto: "O que você precisa saber sobre autenticação com JWT",
+        instagram: "vinicius.campitelli",
+        linkedin: "viniciuscampitelli",
+        horario: "13:30",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "VICTOR ALENCAR",
+        nomeArquivoImagem: "victor-alencar.webp",
+        cargo: "CTO Sunne Energias",
+        assunto: "Do Console à Sala de Reunião: profissionalismo na entrevista e na empresa",
+        instagram: "vtormuniz",
+        linkedin: "victor-alencar712762140",
+        horario: "13:50",
+        tipo: "card-palestrante"
+    },
+
+    {
+        nome: "MATHEUS LOUREIRO",
+        nomeArquivoImagem: "matheus-loureiro.webp",
+        cargo: "Co-Founder e Idealizador de soluções bh2 Tecnologia e Finanças",
+        assunto: "O que temos de oportunidade?",
+        instagram: "",
+        linkedin: "callmeloureiro",
+        horario: "14:10",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "RENATA E KEL",
+        nomeArquivoImagem: "renata-e-kel.webp",
+        cargo: "Sócias Evo Contábil",
+        assunto: "Contabilidade básica para o empreendedor, PJ e CLT",
+        instagram: "evocontabil",
+        linkedin: "",
+        horario: "14:30",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "MILENA TAVEIRA",
+        nomeArquivoImagem: "milena-taveira.webp",
+        cargo: " UX Designer LSBD",
+        assunto: "Transição de carreira: migrando para UX",
+        instagram: "milenatav",
+        linkedin: "taveiram",
+        horario: "14:50",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "AMÁLIA MOURA",
+        nomeArquivoImagem: "amalia-moura.webp",
+        cargo: "Especialista em carreira Rocketseat",
+        assunto: "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
+        instagram: "amaliabeatrizmoura",
+        linkedin: "amáliabeatrizmoura",
+        horario: "15:10",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "LETÍCIA SILVA",
+        nomeArquivoImagem: "leticia-silva.webp",
+        cargo: "Software Engineering Manager iFood",
+        assunto: "Em Breve",
+        instagram: "",
+        linkedin: "leticiasilvar",
+        horario: "14:50",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "COFFEE BREAK + NETWORKING",
+        horario: "15:50",
+        tipo: "card-topico"
+    },
+    {
+        topico: "SORTEIOS DE BRINDES E PARTICIPANTES DO CODANDO NO BREU",
+        horario: "16:45",
+        tipo: "card-topico"
+    },
+    {
+        nome: "WILLIAN FRANTZ",
+        nomeArquivoImagem: "willian-frantz.webp",
+        cargo: "Senior Software Engineer Riot Games",
+        assunto: "Código nos jogos: Minha experiência na Riot Games",
+        instagram: "",
+        linkedin: "willianfrantz",
+        horario: "17:00",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "ADRIANA SATY",
+        nomeArquivoImagem: "adriana-saty.webp",
+        cargo: "Criadora de Conteúdo WebSaty",
+        assunto: "Data Driven na vida pessoal",
+        instagram: "adriana.saty",
+        linkedin: "adriana-saty",
+        horario: "17:30",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "ENCERRAMENTOS DAS PALESTRAS",
+        horario: "18:00",
+        tipo: "card-topico"
+    },
+    {
+        topico: "CODANDO NO BREU | CODE IN THE DARK",
+        horario: "18:30",
+        tipo: "card-topico"
+    },
+];
+
+
 const cardsProcessados1 = apresentaCard(cardsData1);
 
 const htmlGerado1 = cardsProcessados1.map(card => {
@@ -510,3 +690,108 @@ const htmlGerado1 = cardsProcessados1.map(card => {
 }).join('');
 
 document.querySelector("#cards-comunidade").innerHTML = htmlGerado1;
+
+const cardsProcessados2 = apresentaCard(cardsData2);
+
+const htmlGerado2 = cardsProcessados2.map(card => {
+    if (card.tipo === 'card-palestrante') {
+        // Gere o HTML para um card de palestrante
+        return `
+        <div class="cards-palestrante-content">
+        
+        <div class="palestrante-picture">
+        <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
+        </div>
+        
+        <div class="card-informacoes">
+        <div class= "informacoes-palestrante">
+        <h3 id="nome" class="nome">${card.nome}</h3>
+                <p id="cargo" class="cargo">${card.cargo}</p>
+                </div>
+                <div class= "informacoes-palestra">
+                <p id="assunto" class="assunto">${card.assunto}</p>
+                </div>
+                </div>
+                
+                <div class="palestrante-meta">
+                <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/${card.linkedin}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/${card.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+                <div class="horario">
+                    <p id="horario">${card.horario}</p>
+                </div>
+            </div>
+            </div>`;
+    } else if (card.tipo === 'card-topico') {
+        return `
+        <div class="cards-topicos-content">
+        <div>
+                <p id="horario-topico" class="horario-topico" >${card.horario}</p>
+                </div>
+                <div class="nome-topico">
+                <p id="nome-topico">${card.topico}</p>
+                </div>
+                </div>`;
+    } else {
+        return `<div>
+            <p>ERROR</p>
+            </div>`;
+    }
+}).join('');
+
+document.querySelector("#cards-convida").innerHTML = htmlGerado2;
+
+
+const botaoTrocarTrilha = document.getElementById('trocar-trilha');
+const trilhaFrontend = document.getElementById('cronograma-frontend');
+const trilhaComunidade = document.getElementById('cronograma-comunidade');
+const trilhaConvida = document.getElementById('cronograma-convida');
+
+botaoTrocarTrilha.addEventListener('click', () => {
+    if (trilhaFrontend.style.display === 'none') {
+        trilhaFrontend.style.display = 'block';
+        trilhaComunidade.style.display = 'none';
+        trilhaConvida.style.display = 'none';
+    } 
+    else if  (trilhaConvida.style.display === 'none') {
+        trilhaConvida.style.display = 'block';
+        trilhaFrontend.style.display = 'none';
+        trilhaComunidade.style.display = 'none';
+    }
+    else {
+        trilhaFrontend.style.display = 'none';
+        trilhaConvida.style.display = 'none';
+        trilhaComunidade.style.display = 'block';
+    }
+    
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll("#trocar-trilha");
+
+    botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            // Remove a classe "ativo" de todos os botões
+            botoes.forEach((b) => b.classList.remove("ativo"));
+            // Adiciona a classe "ativo" apenas ao botão clicado
+            botao.classList.add("ativo");
+
+            // Agora você pode controlar o conteúdo a ser exibido com base no botão clicado
+            const trilhaSelecionada = botao.textContent.trim().toUpperCase().replace("-", "");
+
+            // Exemplo: você pode mostrar a seção correspondente e ocultar as outras
+            document.getElementById("cronograma-frontend").style.display =
+                trilhaSelecionada === "FRONTEND" ? "block" : "none";
+            document.getElementById("cronograma-comunidade").style.display =
+                trilhaSelecionada === "COMUNIDADE" ? "block" : "none";
+            // Adicione mais lógica conforme necessário
+
+            // Adicione transições CSS para suavizar a mudança
+            const cardsContainer = document.querySelector(".cards-container");
+            cardsContainer.style.transition = "transform 0.3s ease-in-out";
+        });
+    });
+});

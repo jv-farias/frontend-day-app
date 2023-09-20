@@ -124,10 +124,33 @@ main {
     gap: 2rem;
 }
 
+.botoes-trocas {
+    padding: 1rem 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+
+#trocar-trilha {
+    font-family: "Poppins", sans-serif;
+    background-color: #021233;
+    color: #51cafd;
+    border-radius: 50px;
+    padding: .5rem 1rem;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    font-weight: 700;
+}
+
 main #cronograma-frontend,
-#cronograma-comunidade {
+#cronograma-comunidade, #cronograma-convida {
     padding-top: 1.5rem;
-    margin-top: 4rem;
+
     background-color: #021233;
     border-radius: 30px;
     width: 100%;
@@ -139,6 +162,7 @@ main #cronograma-frontend,
 }
 
 .cards-container {
+    transition: .8s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -146,6 +170,7 @@ main #cronograma-frontend,
 }
 
 .cards-palestrante-content {
+   
     padding: 1rem 1.5rem;
     justify-content: center;
     display: flex;
@@ -411,4 +436,43 @@ footer h3 {
         width: 40%;
     }
 
+}
+
+
+
+
+.cards-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .cards-palestrante-content {
+    flex: 0 0 100%; /* Define a largura de cada card */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+  
+  .cards-palestrante-content.active {
+    flex: 0 0 100%; /* Mantém o card atual visível */
+  }
+
+
+
+
+
+
+
+
+
+  .cards-container {
+    display: flex;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.cards-palestrante-content {
+    flex: 0 0 100%;
+}
+
+.cards-palestrante-content.active {
+    flex: 0 0 100%;
 }

@@ -30,24 +30,36 @@
             <div id="titulo-home">
                 <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
             </div>
-            <!-- <div class="botoes">
-                <input type="button" id="botao1" value="<=">
-                <input type="button" id="botao2" value="=>">
-            </div> -->
         </div>
     </header>
     <main>
-        <section id="cronograma-frontend">
+        <div class="botoes-trocas">
+            <button id="trocar-trilha" class="ativo">FRONT-END</button>
+            <button id="trocar-trilha">COMUNIDADE</button>
+            <button id="trocar-trilha">CONVIDA</button>
+
+        </div>
+
+        <section id="cronograma-frontend" style="display: none;">
             <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
             <div class="cards-container" id="cards-cronograma">
+                <!-- Conteúdo da trilha Front-end aqui -->
             </div>
         </section>
-        
-        <section id="cronograma-comunidade">
+
+        <section id="cronograma-comunidade" style="display: none;">
             <h2 class="titulo-trilha">TRILHA COMUNIDADE</h2>
             <div class="cards-container" id="cards-comunidade">
+                <!-- Conteúdo da trilha Comunidade aqui -->
             </div>
         </section>
+        <section id="cronograma-convida" style="display: none" >
+            <h2 class="titulo-trilha">TRILHA CONVIDA</h2>
+            <div class="cards-container" id="cards-convida">
+                <!-- Conteúdo da trilha Comunidade aqui -->
+            </div>
+        </section>
+
     </main>
     <footer>
         <h3 class="titulo-colaboradores">PATROCINADORES E PARCEIROS</h3>
@@ -57,9 +69,11 @@
         </div>
     </footer>
     <script type="module" src="../js/main.js"></script>
+    <script src="../"></script>
     <script> var copy = document.querySelector(".logos-slide").cloneNode(true);
         document.querySelector(".logos").appendChild(copy);
     </script>
+
 </body>
 
 </html>""
