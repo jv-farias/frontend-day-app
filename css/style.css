@@ -52,7 +52,6 @@ header .home {
 /*BOTÃO INSTAGRAM*/
 header .navbar #btn-insta {
     padding: 0.5rem 1.5rem;
-    /* Ajuste os valores de preenchimento conforme necessário */
     background-color: #FF8506;
     border-radius: 25px;
     display: inline-block;
@@ -130,7 +129,7 @@ main #cronograma-frontend {
     margin-top: 4rem;
     background-color: #021233;
     border-radius: 30px;
-    width: 600px;
+    width: 100%;
 }
 
 .titulo-trilha {
@@ -151,8 +150,9 @@ main #cronograma-frontend {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 400px;
+    width: 100%;
     border-bottom: 1.5px solid #51cafd;
+
 }
 
 .palestrante-picture {
@@ -169,7 +169,7 @@ main #cronograma-frontend {
 }
 
 .card-informacoes {
-    justify-content: cem;
+    justify-content: center;
     gap: .75rem;
 }
 
@@ -178,6 +178,7 @@ main #cronograma-frontend {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .informacoes-palestrante .nome {
@@ -200,7 +201,6 @@ main #cronograma-frontend {
 .palestrante-meta .redes-sociais {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .palestrante-meta {
@@ -210,7 +210,8 @@ main #cronograma-frontend {
 }
 
 .palestrante-meta .redes-sociais {
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
     gap: .15rem;
 }
 
@@ -227,12 +228,11 @@ main #cronograma-frontend {
 .cards-topicos-content {
     padding: 1rem 1.5rem;
     border-bottom: 1.5px solid #51cafd;
-    width: 400px;
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
-    max-width: 450px;
     text-align: center;
 }
 
@@ -289,6 +289,10 @@ input {
         text-align: center;
     }
 
+    .informacoes-palestrante {
+        width: 100%;
+    }
+
     .palestrante-meta {
         align-items: center;
     }
@@ -306,13 +310,13 @@ input {
         justify-content: center;
         gap: 70px;
     }
-    
+
     header .home #titulo-home h1 {
         font-size: 30px;
         color: #51cafd;
         font-weight: 500;
     }
-    
+
     header .home #titulo-home h1 span {
         font-size: 40px;
         color: #fff;
@@ -325,4 +329,14 @@ input {
         justify-content: center;
         gap: 470px;
     }
+
+
+}
+
+@media (min-width:930px) {
+    .card-informacoes,
+    .informacoes-palestrante {
+        width: 40%;
+    }
+
 }
