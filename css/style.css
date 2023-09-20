@@ -52,7 +52,6 @@ header .home {
 /*BOTÃO INSTAGRAM*/
 header .navbar #btn-insta {
     padding: 0.5rem 1.5rem;
-    /* Ajuste os valores de preenchimento conforme necessário */
     background-color: #FF8506;
     border-radius: 25px;
     display: inline-block;
@@ -68,9 +67,7 @@ header .navbar #btn-insta {
         align-items: center;
         gap: 15px;
         padding: 0.3rem 1rem;
-        /* Valores de preenchimento menores para telas menores */
         font-size: 14px;
-        /* Tamanho de fonte menor para telas menores, ajuste conforme necessário */
     }
 }
 
@@ -123,14 +120,17 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 2rem;
 }
 
-main #cronograma-frontend {
+main #cronograma-frontend,
+#cronograma-comunidade {
     padding-top: 1.5rem;
     margin-top: 4rem;
     background-color: #021233;
     border-radius: 30px;
-    width: 600px;
+    width: 100%;
 }
 
 .titulo-trilha {
@@ -151,8 +151,9 @@ main #cronograma-frontend {
     display: flex;
     align-items: center;
     gap: 20px;
-    width: 400px;
+    width: 100%;
     border-bottom: 1.5px solid #51cafd;
+
 }
 
 .palestrante-picture {
@@ -169,7 +170,7 @@ main #cronograma-frontend {
 }
 
 .card-informacoes {
-    justify-content: cem;
+    justify-content: center;
     gap: .75rem;
 }
 
@@ -178,6 +179,7 @@ main #cronograma-frontend {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .informacoes-palestrante .nome {
@@ -200,7 +202,6 @@ main #cronograma-frontend {
 .palestrante-meta .redes-sociais {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .palestrante-meta {
@@ -210,7 +211,8 @@ main #cronograma-frontend {
 }
 
 .palestrante-meta .redes-sociais {
-    align-items: center;
+    display: flex;
+    align-items: flex-end;
     gap: .15rem;
 }
 
@@ -236,12 +238,11 @@ main #cronograma-frontend {
 .cards-topicos-content {
     padding: 1rem 1.5rem;
     border-bottom: 1.5px solid #51cafd;
-    width: 400px;
+    width: 100%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: flex-start;
     align-items: center;
-    max-width: 450px;
     text-align: center;
 }
 
@@ -272,8 +273,70 @@ input {
     padding: .7rem;
 }
 
-.hidden {
-    display: none;
+footer  {
+    width: 100%;
+    margin: 1rem ;
+}
+
+footer h3 {
+    text-align: center;
+    color: #021233;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.logos {
+    margin: 2rem 0;
+    overflow: hidden;
+    background: #f1f1f1;
+    white-space: nowrap;
+    position: relative;
+    padding: .5rem 0;
+}
+
+.logos:before,
+.logos:after {
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.logos:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
+}
+
+.logos:hover .logos-slide {
+    animation-play-state: paused;
+}
+
+.logos-slide {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    animation: 20s slide infinite linear;
+}
+
+.logos-slide img {
+    width: 10rem;
+    height: 100%;
+    margin: 0 2rem;
 }
 
 @media (max-width:390px) {
@@ -298,6 +361,10 @@ input {
         text-align: center;
     }
 
+    .informacoes-palestrante {
+        width: 100%;
+    }
+
     .palestrante-meta {
         align-items: center;
     }
@@ -308,118 +375,40 @@ input {
     }
 }
 
+@media (min-width:1200px) {
 
-
-/* footer */
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding: 3rem 2rem;
-}
-
-.wrapper {
-    max-width: 1100px;
-    width: 100%;
-    position: relative;
-}
-
-.wrapper i {
-    top: 50%;
-    height: 50px;
-    width: 50px;
-    cursor: pointer;
-    font-size: 1.25rem;
-    position: absolute;
-    text-align: center;
-    line-height: 50px;
-    background: #fff;
-    border-radius: 50%;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
-    transform: translateY(-50%);
-    transition: transform 0.1s linear;
-}
-
-.wrapper i:active {
-    transform: translateY(-50%) scale(0.85);
-}
-
-.wrapper i:first-child {
-    left: -22px;
-}
-
-.wrapper i:last-child {
-    right: -22px;
-}
-
-.wrapper .carousel {
-    display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3) - 12px);
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 16px;
-    border-radius: 8px;
-    scroll-behavior: smooth;
-    scrollbar-width: none;
-}
-
-.carousel::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel.no-transition {
-    scroll-behavior: auto;
-}
-
-.carousel.dragging {
-    scroll-snap-type: none;
-    scroll-behavior: auto;
-}
-
-.carousel.dragging .card {
-    cursor: grab;
-    user-select: none;
-}
-
-.carousel :where(.card, .img) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.carousel .card {
-    scroll-snap-align: start;
-    height: 342px;
-    list-style: none;
-    background: #fff;
-    cursor: pointer;
-    padding-bottom: 15px;
-    flex-direction: column;
-    border-radius: 8px;
-}
-
-.carousel .card .img {
-
-    height: 200px;
-    width: 200px;
-
-}
-
-.card .img img {
-    width: 180px;
-    object-fit: cover;
-}
-
-@media screen and (max-width: 900px) {
-    .wrapper .carousel {
-        grid-auto-columns: calc((100% / 2) - 9px);
+    header .home {
+        flex-direction: row-reverse;
+        justify-content: center;
+        gap: 70px;
     }
+
+    header .home #titulo-home h1 {
+        font-size: 30px;
+        color: #51cafd;
+        font-weight: 500;
+    }
+
+    header .home #titulo-home h1 span {
+        font-size: 40px;
+        color: #fff;
+        font-weight: 700;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .navbar {
+        justify-content: center;
+        gap: 470px;
+    }
+
+
 }
 
-@media screen and (max-width: 600px) {
-    .wrapper .carousel {
-        grid-auto-columns: 100%;
+@media (min-width:930px) {
+    .card-informacoes,
+    .informacoes-palestrante {
+        width: 40%;
     }
+
 }
