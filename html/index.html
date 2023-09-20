@@ -30,34 +30,44 @@
             <div id="titulo-home">
                 <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
             </div>
-            <!-- <div class="botoes">
-                <input type="button" id="botao1" value="<=">
-                <input type="button" id="botao2" value="=>">
-            </div> -->
         </div>
     </header>
     <main>
+        <div class="botoes-trocas">
+            <button id="trocar-trilha" class="ativo">FRONT-END</button>
+            <button id="trocar-trilha">COMUNIDADE</button>
+            <button id="trocar-trilha">CONVIDA</button>
+
+        </div>
+
         <section id="cronograma-frontend">
             <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
             <div class="cards-container" id="cards-cronograma">
+                <!-- Conteúdo da trilha Front-end aqui -->
             </div>
         </section>
+
+        <section id="cronograma-comunidade" style="display: none;">
+            <h2 class="titulo-trilha">TRILHA COMUNIDADE</h2>
+            <div class="cards-container" id="cards-comunidade">
+                <!-- Conteúdo da trilha Comunidade aqui -->
+            </div>
+        </section>
+
     </main>
     <footer>
-        <h3 class="titulo-colaboradores">COLABORADORES</h3>
+        <h3 class="titulo-colaboradores">PATROCINADORES E PARCEIROS</h3>
         <div class="logos">
-            
-            <div class="logos-slide">
-                <img src="../assets/logos/casa-do-codigo.webp" alt="">
-                <img src="../assets/logos/stickers-devs.webp" alt="">
-                <img src="../assets/logos/rocketseat.webp" alt="">
+            <div class="logos-slide" id="logos-slide">
             </div>
         </div>
     </footer>
     <script type="module" src="../js/main.js"></script>
+    <script src="../"></script>
     <script> var copy = document.querySelector(".logos-slide").cloneNode(true);
-    document.querySelector(".logos").appendChild(copy);
+        document.querySelector(".logos").appendChild(copy);
     </script>
+
 </body>
 
-</html>
+</html>""

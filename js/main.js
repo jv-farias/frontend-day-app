@@ -1,4 +1,5 @@
 import { apresentaCard } from '../dist/cards.js'
+import { apresentaLogo } from '../dist/colaboradores.js';
 
 const cardsData = [
     {
@@ -198,8 +199,6 @@ const cardsData = [
     },
 ];
 
-
-
 const cardsProcessados = apresentaCard(cardsData);
 
 const htmlGerado = cardsProcessados.map(card => {
@@ -250,23 +249,307 @@ const htmlGerado = cardsProcessados.map(card => {
     }
 }).join('');
 
-// Insira o HTML gerado no elemento cards-cronograma
 document.querySelector("#cards-cronograma").innerHTML = htmlGerado;
 
-// function proximaTrilha() {
-//     document.getElementById("cronograma-frontend").classList.remove("hidden");
-// }
 
-// function trilhaAnterior() {
-//     document.getElementById("cronograma-frontend").classList.add("hidden");
-// }
+const logosData = [ 
+    {
+        nome: "Rocketseat",
+        nomeArquivoImagem: "rocketseat.webp",
+    },
 
-// function trocadorDeTrilha() {
-//     const Proxima = document.getElementById("botao1");
-//     const Anterior = document.getElementById("botao2");
+    {
+        nome: "H2U Santos Dumont",
+        nomeArquivoImagem: "h2u-santos-dumont.webp",
+    },
 
-//     Proxima.addEventListener("click", proximaTrilha);
-//     Anterior.addEventListener("click", trilhaAnterior);
-// }
+    {
+        nome: "Instituto Poliglota de Línguas e Culturas",
+        nomeArquivoImagem: "instituto-poliglota.webp",
+    },
+    
+    {
+        nome: "Casa do Código",
+        nomeArquivoImagem: "casa-do-codigo.webp",
+    },
 
-// trocadorDeTrilha();
+    {
+        nome: "Video Rama",
+        nomeArquivoImagem: "video-rama.webp",
+    },
+
+    {
+        nome: "Sticker Devs",
+        nomeArquivoImagem: "stickers-devs.webp",
+    },
+
+    {
+        nome: "Mundo sem Fio",
+        nomeArquivoImagem: "mundo-sem-fio.webp",
+    },
+]
+
+const logosProcessadas = apresentaLogo(logosData); 
+
+const carrosselHtmlGerado = logosProcessadas.map(colaborador => {
+        return `
+        <img src="../assets/logos/${colaborador.nomeArquivoImagem}" alt="${colaborador.nome}">`;
+}).join('');
+
+document.querySelector("#logos-slide").innerHTML = carrosselHtmlGerado;
+
+
+
+const cardsData1 = [
+    {
+        topico: "ABERTURA",
+        horario: "9:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "JEAN LIVINO",
+        nomeArquivoImagem: "jean-livino.webp",
+        cargo: "Desenvolvedor Front-End iFood",
+        assunto: "A realidade de trabalhar em projetos que usam IA",
+        linkedin: "jeanlivino",
+        instagram: "jeanlivino",
+        horario: "09:15",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "CJ PATOILO",
+        nomeArquivoImagem: "cj-patoilo.webp",
+        cargo: "Criador do Miligram.io e Airform.io",
+        assunto: "Keynote - Arquitetura",
+        instagram: "cjpatoilo",
+        linkedin: "cjpatoilo",
+        horario: "09:30",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "NETWORKING",
+        horario: "10:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "ALYNNE FERREIRA",
+        nomeArquivoImagem: "alynne-ferreira.webp",
+        cargo: "Software Engineer Shape",
+        assunto: "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
+        instagram: "brunorbarroso",
+        linkedin: "brunorbarroso",
+        horario: "10:40",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "ADRIAN MAYCON",
+        nomeArquivoImagem: "adrian-maycon.webp",
+        cargo: "Desenvolvedor Front End MERX",
+        assunto: "Novos Caminhos e Networking: O Papel das Comunidades de Tech",
+        instagram: "victornery.dev",
+        linkedin: "victornerytx",
+        horario: "11:20",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "EWERTON NEPOMUCENO",
+        nomeArquivoImagem: "ewerton-nepomuceno.webp",
+        cargo: "UX/UI Designer VMetrix",
+        assunto: "Design System e Tokens",
+        instagram: "abraao.alves_",
+        linkedin: "abraaoalves",
+        horario: "11:40",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "INTERVALO ALMOÇO",
+        horario: "12:00",
+        tipo: "card-topico"
+    },
+    {
+        nome: "CAUAN VICTOR",
+        nomeArquivoImagem: "cauan-victor.webp",
+        cargo: "Engenheiro de Software Normalabs",
+        assunto: "React Native em 2024: Por onde começar?",
+        instagram: "",
+        linkedin: "eloise-ferreira",
+        horario: "13:30",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "ROSE FÉLIX",
+        nomeArquivoImagem: "rose-felix.webp",
+        cargo: "QA Profectum",
+        assunto: "PyLadies Fortaleza: História e fundação",
+        instagram: "brumsilva",
+        linkedin: "brumsilva",
+        horario: "13:50",
+        tipo: "card-palestrante"
+    },
+
+    {
+        nome: "NOEMI CUNHA",
+        nomeArquivoImagem: "noemi-cunha.webp",
+        cargo: "Desenvolvedora Front-End Uol",
+        assunto: "Dominando as Soft Skills para uma Jornada na Tecnologia",
+        instagram: "heydelicias",
+        linkedin: "heyde-moura-3387a67b",
+        horario: "14:10",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "SÍLVIA MUNIZ",
+        nomeArquivoImagem: "silvia-muniz.webp",
+        cargo: "Tech Lead e Scrum Master Governo do Estado do Ceará",
+        assunto: "Como impulsionar sua carreira através das comunidades de tecnologia",
+        instagram: "felipecesr",
+        linkedin: "felipecesr",
+        horario: "14:50",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "ROMÊNIA SOUSA",
+        nomeArquivoImagem: "romenia-sousa.webp",
+        cargo: "Product Manager PicPay",
+        assunto: "Discovery de Produtos: Os desafios na busca de entregar soluções simples de alto valor",
+        instagram: "oismaelash",
+        linkedin: "oismaelash",
+        horario: "15:10",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "COFFEE BREAK + NETWORKING",
+        horario: "15:50",
+        tipo: "card-topico"
+    },
+    {
+        topico: "SORTEIOS DE BRINDES E PARTICIPANTES DO CODANDO NO BREU",
+        horario: "16:45",
+        tipo: "card-topico"
+    },
+    {
+        nome: "WILLIAN FRANTZ",
+        nomeArquivoImagem: "willian-frantz.webp",
+        cargo: "Senior Software Engineer Riot Games",
+        assunto: "Código nos jogos: Minha experiência na Riot Games",
+        instagram: "",
+        linkedin: "willianfrantz",
+        horario: "17:00",
+        tipo: "card-palestrante"
+    },
+    {
+        nome: "ADRIANA SATY",
+        nomeArquivoImagem: "adriana-saty.webp",
+        cargo: "Criadora de Conteúdo WebSaty",
+        assunto: "Data Driven na vida pessoal",
+        instagram: "adriana.saty",
+        linkedin: "adriana-saty",
+        horario: "17:30",
+        tipo: "card-palestrante"
+    },
+    {
+        topico: "ENCERRAMENTOS DAS PALESTRAS",
+        horario: "18:00",
+        tipo: "card-topico"
+    },
+    {
+        topico: "CODANDO NO BREU | CODE IN THE DARK",
+        horario: "18:30",
+        tipo: "card-topico"
+    },
+];
+
+const cardsProcessados1 = apresentaCard(cardsData1);
+
+const htmlGerado1 = cardsProcessados1.map(card => {
+    if (card.tipo === 'card-palestrante') {
+        // Gere o HTML para um card de palestrante
+        return `
+        <div class="cards-palestrante-content">
+        
+        <div class="palestrante-picture">
+        <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
+        </div>
+        
+        <div class="card-informacoes">
+        <div class= "informacoes-palestrante">
+        <h3 id="nome" class="nome">${card.nome}</h3>
+                <p id="cargo" class="cargo">${card.cargo}</p>
+                </div>
+                <div class= "informacoes-palestra">
+                <p id="assunto" class="assunto">${card.assunto}</p>
+                </div>
+                </div>
+                
+                <div class="palestrante-meta">
+                <div class="redes-sociais">
+                <a href="https://www.linkedin.com/in/${card.linkedin}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/${card.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                
+                <div class="horario">
+                    <p id="horario">${card.horario}</p>
+                </div>
+            </div>
+            </div>`;
+    } else if (card.tipo === 'card-topico') {
+        return `
+        <div class="cards-topicos-content">
+        <div>
+                <p id="horario-topico" class="horario-topico" >${card.horario}</p>
+                </div>
+                <div class="nome-topico">
+                <p id="nome-topico">${card.topico}</p>
+                </div>
+                </div>`;
+    } else {
+        return `<div>
+            <p>ERROR</p>
+            </div>`;
+    }
+}).join('');
+
+document.querySelector("#cards-comunidade").innerHTML = htmlGerado1;
+
+
+const botaoTrocarTrilha = document.getElementById('trocar-trilha');
+const trilhaFrontend = document.getElementById('cronograma-frontend');
+const trilhaComunidade = document.getElementById('cronograma-comunidade');
+
+botaoTrocarTrilha.addEventListener('click', () => {
+    if (trilhaFrontend.style.display === 'none') {
+        trilhaFrontend.style.display = 'block';
+        trilhaComunidade.style.display = 'none';
+    } else {
+        trilhaFrontend.style.display = 'none';
+        trilhaComunidade.style.display = 'block';
+    }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botoes = document.querySelectorAll("#trocar-trilha");
+
+    botoes.forEach((botao) => {
+        botao.addEventListener("click", () => {
+            // Remove a classe "ativo" de todos os botões
+            botoes.forEach((b) => b.classList.remove("ativo"));
+            // Adiciona a classe "ativo" apenas ao botão clicado
+            botao.classList.add("ativo");
+
+            // Agora você pode controlar o conteúdo a ser exibido com base no botão clicado
+            const trilhaSelecionada = botao.textContent.trim().toUpperCase().replace("-", "");
+
+            // Exemplo: você pode mostrar a seção correspondente e ocultar as outras
+            document.getElementById("cronograma-frontend").style.display =
+                trilhaSelecionada === "FRONTEND" ? "block" : "none";
+            document.getElementById("cronograma-comunidade").style.display =
+                trilhaSelecionada === "COMUNIDADE" ? "block" : "none";
+            // Adicione mais lógica conforme necessário
+
+            // Adicione transições CSS para suavizar a mudança
+            const cardsContainer = document.querySelector(".cards-container");
+            cardsContainer.style.transition = "transform 0.3s ease-in-out";
+        });
+    });
+});
