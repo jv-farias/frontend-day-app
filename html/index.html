@@ -30,43 +30,34 @@
             <div id="titulo-home">
                 <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
             </div>
-            <div class="botoes">
+            <!-- <div class="botoes">
                 <input type="button" id="botao1" value="<=">
                 <input type="button" id="botao2" value="=>">
-            </div>
+            </div> -->
         </div>
     </header>
     <main>
-        <section id="cronograma-frontend" class="hidden">
+        <section id="cronograma-frontend">
             <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
             <div class="cards-container" id="cards-cronograma">
             </div>
         </section>
     </main>
     <footer>
-        <div class="wrapper">
-            <i id="left" class="fa-solid fa-angle-left"></i>
-            <ul class="carousel">
-              <li class="card">
-                <div class="img"><img src="../assets/logos/casa-do-codigo.webp" alt="img" draggable="false"></div>
-              </li>
-              <li class="card">
-                <div class="img"><img src="../assets/logos/h2u-santos-dumont.webp" alt="img" draggable="false"></div>
-              </li>
-              <li class="card">
-                <div class="img"><img src="../assets/logos/mundo-sem-fio.webp" alt="img" draggable="false"></div>
-              </li>
-              <li class="card">
-                <div class="img"><img src="../assets/logos/rocketseat.webp" alt="img" draggable="false"></div>
-              </li>
-              <li class="card">
-                <div class="img"><img src="../assets/logos/video-rama.webp" alt="img" draggable="false"></div>
-              </li>
-            </ul>
-            <i id="right" class="fa-solid fa-angle-right"></i>
-          </div>
+        <h3 class="titulo-colaboradores">COLABORADORES</h3>
+        <div class="logos">
+            
+            <div class="logos-slide">
+                <img src="../assets/logos/casa-do-codigo.webp" alt="">
+                <img src="../assets/logos/stickers-devs.webp" alt="">
+                <img src="../assets/logos/rocketseat.webp" alt="">
+            </div>
+        </div>
     </footer>
     <script type="module" src="../js/main.js"></script>
+    <script> var copy = document.querySelector(".logos-slide").cloneNode(true);
+    document.querySelector(".logos").appendChild(copy);
+    </script>
 </body>
 
 </html>
