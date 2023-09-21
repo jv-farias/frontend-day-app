@@ -12,6 +12,8 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+/* ESTRUTURA HEADER - NAVBAR */
+
 .navbar,
 header {
     display: flex;
@@ -33,6 +35,9 @@ header {
     justify-content: space-between;
 }
 
+
+/*LOGO ORGANIZAÇÃO FRONTEND CE*/
+
 .navbar #logo-organizacao,
 header .home {
     width: 100%;
@@ -50,6 +55,7 @@ header .home {
 }
 
 /*BOTÃO INSTAGRAM*/
+
 header .navbar #btn-insta {
     padding: 0.5rem 1.5rem;
     background-color: #FF8506;
@@ -58,19 +64,6 @@ header .navbar #btn-insta {
     text-align: center;
     white-space: nowrap;
 }
-
-@media (max-width: 370px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        padding: 0.3rem 1rem;
-        font-size: 14px;
-    }
-}
-
 
 .navbar #btn-insta a {
     text-decoration: none;
@@ -116,6 +109,8 @@ header .home #titulo-home h1 span {
     font-weight: 700;
 }
 
+/* ESTRUTURA GERAL DA MAIN */
+
 main {
     display: flex;
     justify-content: center;
@@ -123,6 +118,8 @@ main {
     flex-direction: column;
     gap: 2rem;
 }
+
+/* ESTRUTURA DOS BOTÕES PARA TROCAR ENTRE AS TRILHAS */
 
 .botoes-trocas {
     padding: 1rem 1.5rem;
@@ -135,7 +132,7 @@ main {
     gap: 1rem;
 }
 
-#trocar-trilha {
+#trocar-frontend, #trocar-comunidade, #trocar-convida {
     font-family: "Poppins", sans-serif;
     background-color: #021233;
     color: #51cafd;
@@ -145,15 +142,29 @@ main {
     outline: none;
     border: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
-main #cronograma-frontend,
-#cronograma-comunidade {
-    padding-top: 1.5rem;
+#trocar-frontend:hover, #trocar-comunidade:hover, #trocar-convida:hover {
+    color: #021233;
+    background-color: #51cafd;
+    transition: .6s;
+}
 
+/* ESTRUTURA DOS CARDS DOS PALESTRANTES E DOS TÓPICOS */
+
+main #cronograma-frontend,
+#cronograma-comunidade,
+#cronograma-convida {
+    padding-top: 1.5rem;
     background-color: #021233;
     border-radius: 30px;
     width: 100%;
+}
+
+main #cronograma-comunidade,
+#cronograma-convida {
+    display: none;
 }
 
 .titulo-trilha {
@@ -170,7 +181,6 @@ main #cronograma-frontend,
 }
 
 .cards-palestrante-content {
-   
     padding: 1rem 1.5rem;
     justify-content: center;
     display: flex;
@@ -178,7 +188,6 @@ main #cronograma-frontend,
     gap: 20px;
     width: 100%;
     border-bottom: 1.5px solid #51cafd;
-
 }
 
 .palestrante-picture {
@@ -246,9 +255,17 @@ main #cronograma-frontend,
     color: #fff;
 }
 
+.palestrante-meta .horario {
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+}
+
 .palestrante-meta .horario p {
     font-weight: 700;
     color: #fff;
+
 }
 
 .cards-topicos-content {
@@ -277,82 +294,21 @@ main #cronograma-frontend,
     width: 100%;
 }
 
-.botoes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-}
+/* ESTRUTURA DO FOOTER COM CARROSSEL DE LOGOS */
 
 
-input {
-    padding: .7rem;
-}
+/* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
 
-footer  {
-    width: 100%;
-    margin: 1rem ;
-}
-
-footer h3 {
-    text-align: center;
-    color: #021233;
-}
-
-@keyframes slide {
-    from {
-        transform: translateX(0);
+@media (max-width: 370px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        padding: 0.3rem 1rem;
+        font-size: 14px;
     }
-
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-.logos {
-    margin: 2rem 0;
-    overflow: hidden;
-    background: #f1f1f1;
-    white-space: nowrap;
-    position: relative;
-    padding: .5rem 0;
-}
-
-.logos:before,
-.logos:after {
-    position: absolute;
-    top: 0;
-    width: 100px;
-    height: 100%;
-    content: "";
-    z-index: 2;
-}
-
-.logos:before {
-    left: 0;
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-}
-
-.logos:after {
-    right: 0;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), rgb(255, 255, 255));
-}
-
-.logos:hover .logos-slide {
-    animation-play-state: paused;
-}
-
-.logos-slide {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    animation: 20s slide infinite linear;
-}
-
-.logos-slide img {
-    width: 10rem;
-    height: 100%;
-    margin: 0 2rem;
 }
 
 @media (max-width:390px) {
@@ -391,6 +347,14 @@ footer h3 {
     }
 }
 
+@media (min-width:930px) {
+
+    .card-informacoes,
+    .informacoes-palestrante {
+        width: 40%;
+    }
+}
+
 @media (min-width:1200px) {
 
     header .home {
@@ -417,53 +381,4 @@ footer h3 {
         justify-content: center;
         gap: 470px;
     }
-
-
-}
-
-@media (min-width:930px) {
-    .card-informacoes,
-    .informacoes-palestrante {
-        width: 40%;
-    }
-
-}
-
-
-
-
-.cards-container {
-    display: flex;
-    overflow: hidden;
-  }
-  
-  .cards-palestrante-content {
-    flex: 0 0 100%; /* Define a largura de cada card */
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
-  }
-  
-  .cards-palestrante-content.active {
-    flex: 0 0 100%; /* Mantém o card atual visível */
-  }
-
-
-
-
-
-
-
-
-
-  .cards-container {
-    display: flex;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
-}
-
-.cards-palestrante-content {
-    flex: 0 0 100%;
-}
-
-.cards-palestrante-content.active {
-    flex: 0 0 100%;
 }
