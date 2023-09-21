@@ -353,14 +353,18 @@ footer .logo-slider .patrocinadores img {
 }
 
 
+button.slick-prev.slick-arrow, 
 button.slick-next.slick-arrow {
+
     width: 100px;
     height: 100px;
     z-index: 20;
 }
+button.slick-prev::before,
 button.slick-next::before{
-    font-size: 15px;
-    color:#021233;
+    font-size: 20px;
+    color: #021233;
+    opacity: 1;
  }
 
 
