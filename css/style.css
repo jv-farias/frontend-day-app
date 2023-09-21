@@ -133,6 +133,7 @@ main {
     flex-wrap: wrap;
     margin-top: 1rem;
     gap: 1rem;
+    
 }
 
 #trocar-trilha {
@@ -145,10 +146,12 @@ main {
     outline: none;
     border: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
 main #cronograma-frontend,
-#cronograma-comunidade, #cronograma-convida {
+#cronograma-comunidade,
+#cronograma-convida {
     padding-top: 1.5rem;
 
     background-color: #021233;
@@ -170,7 +173,7 @@ main #cronograma-frontend,
 }
 
 .cards-palestrante-content {
-   
+
     padding: 1rem 1.5rem;
     justify-content: center;
     display: flex;
@@ -244,8 +247,9 @@ main #cronograma-frontend,
 .palestrante-meta .redes-sociais a {
     font-size: 25px;
     color: #fff;
-    
+
 }
+
 .palestrante-meta .horario {
     font-weight: 700;
     color: #fff;
@@ -291,6 +295,7 @@ main #cronograma-frontend,
     justify-content: center;
     align-items: center;
     gap: 15px;
+    
 }
 
 
@@ -298,9 +303,9 @@ input {
     padding: .7rem;
 }
 
-footer  {
+footer {
     width: 100%;
-    margin: 1rem ;
+    margin: 1rem;
 }
 
 footer h3 {
@@ -431,6 +436,7 @@ footer h3 {
 }
 
 @media (min-width:930px) {
+
     .card-informacoes,
     .informacoes-palestrante {
         width: 40%;
@@ -444,16 +450,19 @@ footer h3 {
 .cards-container {
     display: flex;
     overflow: hidden;
-  }
-  
-  .cards-palestrante-content {
-    flex: 0 0 100%; /* Define a largura de cada card */
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
-  }
-  
-  .cards-palestrante-content.active {
-    flex: 0 0 100%; /* Mantém o card atual visível */
-  }
+}
+
+.cards-palestrante-content {
+    flex: 0 0 100%;
+    /* Define a largura de cada card */
+    transition: transform 0.3s ease-in-out;
+    /* Adiciona uma transição suave */
+}
+
+.cards-palestrante-content.active {
+    flex: 0 0 100%;
+    /* Mantém o card atual visível */
+}
 
 
 
@@ -463,10 +472,11 @@ footer h3 {
 
 
 
-  .cards-container {
+.cards-container {
     display: flex;
     overflow: hidden;
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    transition: transform 0.3s ease-in-out;
+    /* Adiciona uma transição suave */
 }
 
 .cards-palestrante-content {

@@ -755,7 +755,7 @@ botaoTrocarTrilha.addEventListener('click', () => {
         trilhaComunidade.style.display = 'none';
         trilhaConvida.style.display = 'none';
     } 
-    else if  (trilhaConvida.style.display === 'none') {
+    else if (trilhaConvida.style.display === 'none') {
         trilhaConvida.style.display = 'block';
         trilhaFrontend.style.display = 'none';
         trilhaComunidade.style.display = 'none';
@@ -765,6 +765,8 @@ botaoTrocarTrilha.addEventListener('click', () => {
         trilhaConvida.style.display = 'none';
         trilhaComunidade.style.display = 'block';
     }
+    
+    
     
 });
 
