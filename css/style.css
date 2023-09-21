@@ -136,7 +136,7 @@ main {
     
 }
 
-#trocar-trilha {
+#trocar-frontend, #trocar-comunidade, #trocar-convida {
     font-family: "Poppins", sans-serif;
     background-color: #021233;
     color: #51cafd;
@@ -149,7 +149,7 @@ main {
     cursor: pointer;
 }
 
-#trocar-trilha:active {
+#trocar-frontend:active, #trocar-comunidade:active, #trocar-convida:active {
     color: #021233;
     background-color: #51cafd;
 }
@@ -372,69 +372,6 @@ footer h3 {
     width: 10rem;
     height: 100%;
     margin: 0 2rem;
-}
-
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-}
-
-.feedback-form {
-    background-color: #021233;
-    color: #51cafd;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-}
-
-.close-button {
-    position: absolute;
-    top: 9px;
-    right: 10px;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(0, 0, 0, 0);
-    color: #FF8506;
-}
-
-
-h2 {
-    margin-top: 0;
-    font-size: 18px;
-    display: flex;
-}
-
-label {
-    display: block;
-    margin-top: 10px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-}
-
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    margin-top: 10px;
-    border-radius: 3px;
-    cursor: pointer;
 }
 
 @media (max-width:390px) {

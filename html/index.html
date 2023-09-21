@@ -34,9 +34,9 @@
     </header>
     <main>
         <div class="botoes-trocas">
-            <button id="trocar-trilha" class="ativo">FRONT-END</button>
-            <button id="trocar-trilha">COMUNIDADE</button>
-            <button id="trocar-trilha">CONVIDA</button>
+            <button id="trocar-frontend" class="ativo">FRONT-END</button>
+            <button id="trocar-comunidade">COMUNIDADE</button>
+            <button id="trocar-convida">CONVIDA</button>
 
         </div>
 
@@ -53,7 +53,7 @@
                 <!-- Conteúdo da trilha Comunidade aqui -->
             </div>
         </section>
-        <section id="cronograma-convida" style="display: none;" >
+        <section id="cronograma-convida" style="display: none;">
             <h2 class="titulo-trilha">TRILHA CONVIDA</h2>
             <div class="cards-container" id="cards-convida">
                 <!-- Conteúdo da trilha Comunidade aqui -->
@@ -85,36 +85,6 @@
     <script type="module" src="../js/main.js"></script>
     <script> var copy = document.querySelector(".logos-slide").cloneNode(true);
         document.querySelector(".logos").appendChild(copy);
-
-        // Função para mostrar o formulário
-        function mostrarFormulario() {
-            const overlay = document.getElementById('overlay');
-            const feedbackForm = document.getElementById('feedback-form');
-            overlay.style.display = 'flex';
-            feedbackForm.style.display = 'block';
-        }
-
-        // Função para fechar o formulário
-        function fecharFormulario() {
-            const overlay = document.getElementById('overlay');
-            const feedbackForm = document.getElementById('feedback-form');
-            overlay.style.display = 'none';
-            feedbackForm.style.display = 'none';
-        }
-
-        // Defina o horário em que o formulário de feedback deve aparecer (em milissegundos desde a meia-noite)
-        const horaDeMostrar = 18 * 60 * 60 * 1000; // 18:00 (6 PM)
-
-        // Função para verificar e mostrar o formulário no horário especificado
-        function verificarMostrarFormulario() {
-            const agora = new Date().getTime();
-            if (agora >= horaDeMostrar) {
-                mostrarFormulario();
-            }
-        }
-
-        // Chame a função para verificar e mostrar o formulário
-        verificarMostrarFormulario();
     </script>
 
 </body>

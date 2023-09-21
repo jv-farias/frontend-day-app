@@ -744,30 +744,30 @@ const htmlGerado2 = cardsProcessados2.map(card => {
 document.querySelector("#cards-convida").innerHTML = htmlGerado2;
 
 
-const botaoTrocarTrilha = document.getElementById('trocar-trilha');
-const trilhaFrontend = document.getElementById('cronograma-frontend');
-const trilhaComunidade = document.getElementById('cronograma-comunidade');
-const trilhaConvida = document.getElementById('cronograma-convida');
+const btnFrontEnd = document.getElementById("trocar-frontend");
+const btnComunidade = document.getElementById("trocar-comunidade");
+const btnConvida = document.getElementById("trocar-convida");
 
-botaoTrocarTrilha.addEventListener('click', () => {
-    if (trilhaFrontend.style.display === 'none') {
-        trilhaFrontend.style.display = 'block';
-        trilhaComunidade.style.display = 'none';
-        trilhaConvida.style.display = 'none';
-    } 
-    else if (trilhaConvida.style.display === 'none') {
-        trilhaConvida.style.display = 'block';
-        trilhaFrontend.style.display = 'none';
-        trilhaComunidade.style.display = 'none';
-    }
-    else {
-        trilhaFrontend.style.display = 'none';
-        trilhaConvida.style.display = 'none';
-        trilhaComunidade.style.display = 'block';
-    }
-    
-    
-    
+const cronogramaFrontEnd = document.getElementById("cronograma-frontend");
+const cronogramaComunidade = document.getElementById("cronograma-comunidade");
+const cronogramaConvida = document.getElementById("cronograma-convida");
+
+btnFrontEnd.addEventListener("click", function () {
+    cronogramaFrontEnd.style.display = "block";
+    cronogramaComunidade.style.display = "none";
+    cronogramaConvida.style.display = "none";
+});
+
+btnComunidade.addEventListener("click", function () {
+    cronogramaFrontEnd.style.display = "none";
+    cronogramaComunidade.style.display = "block";
+    cronogramaConvida.style.display = "none";
+});
+
+btnConvida.addEventListener("click", function () {
+    cronogramaFrontEnd.style.display = "none";
+    cronogramaComunidade.style.display = "none";
+    cronogramaConvida.style.display = "block";
 });
 
 
