@@ -30,34 +30,87 @@
             <div id="titulo-home">
                 <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
             </div>
-            <!-- <div class="botoes">
-                <input type="button" id="botao1" value="<=">
-                <input type="button" id="botao2" value="=>">
-            </div> -->
         </div>
     </header>
     <main>
+        <div class="botoes-trocas">
+            <button id="trocar-trilha" class="ativo">FRONT-END</button>
+            <button id="trocar-trilha">COMUNIDADE</button>
+            <button id="trocar-trilha">CONVIDA</button>
+
+        </div>
+
         <section id="cronograma-frontend">
             <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
             <div class="cards-container" id="cards-cronograma">
+                <!-- Conteúdo da trilha Front-end aqui -->
             </div>
         </section>
+
+        <section id="cronograma-comunidade" style="display: none;">
+            <h2 class="titulo-trilha">TRILHA COMUNIDADE</h2>
+            <div class="cards-container" id="cards-comunidade">
+                <!-- Conteúdo da trilha Comunidade aqui -->
+            </div>
+        </section>
+
     </main>
     <footer>
-        <h3 class="titulo-colaboradores">COLABORADORES</h3>
+        <h3 class="titulo-colaboradores">PATROCINADORES E PARCEIROS</h3>
         <div class="logos">
-            
-            <div class="logos-slide">
-                <img src="../assets/logos/casa-do-codigo.webp" alt="">
-                <img src="../assets/logos/stickers-devs.webp" alt="">
-                <img src="../assets/logos/rocketseat.webp" alt="">
+            <div class="logos-slide" id="logos-slide">
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay">
+            <div class="feedback-form" id="feedback-form">
+                <h2>Deixe seu feedback</h2>
+                <form action="#" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+                <button class="close-button" id="close-button" onclick="fecharFormulario()"><i class="fa-brands fa-x"></i></button>
             </div>
         </div>
     </footer>
     <script type="module" src="../js/main.js"></script>
     <script> var copy = document.querySelector(".logos-slide").cloneNode(true);
-    document.querySelector(".logos").appendChild(copy);
+        document.querySelector(".logos").appendChild(copy);
+
+        // Função para mostrar o formulário
+        function mostrarFormulario() {
+            const overlay = document.getElementById('overlay');
+            const feedbackForm = document.getElementById('feedback-form');
+            overlay.style.display = 'flex';
+            feedbackForm.style.display = 'block';
+        }
+
+        // Função para fechar o formulário
+        function fecharFormulario() {
+            const overlay = document.getElementById('overlay');
+            const feedbackForm = document.getElementById('feedback-form');
+            overlay.style.display = 'none';
+            feedbackForm.style.display = 'none';
+        }
+
+        // Defina o horário em que o formulário de feedback deve aparecer (em milissegundos desde a meia-noite)
+        const horaDeMostrar = 18 * 60 * 60 * 1000; // 18:00 (6 PM)
+
+        // Função para verificar e mostrar o formulário no horário especificado
+        function verificarMostrarFormulario() {
+            const agora = new Date().getTime();
+            if (agora >= horaDeMostrar) {
+                mostrarFormulario();
+            }
+        }
+
+        // Chame a função para verificar e mostrar o formulário
+        verificarMostrarFormulario();
     </script>
+
 </body>
 
-</html>
+</html>""
