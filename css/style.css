@@ -22,7 +22,7 @@ header {
 }
 
 header {
-    width: 100vw;
+    width: 100%;
     background-color: #021233;
     border-radius: 0 0 30px 30px;
     flex-direction: column;
@@ -176,6 +176,7 @@ main #cronograma-frontend,
     width: 100%;
 }
 
+
 main #cronograma-comunidade,
 #cronograma-convida {
     display: none;
@@ -192,6 +193,10 @@ main #cronograma-comunidade,
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.cards-container :last-child {
+    border-bottom: none;
 }
 
 .cards-palestrante-content {
@@ -293,6 +298,10 @@ main #cronograma-comunidade,
     text-align: center;
 }
 
+
+
+
+
 .cards-topicos-content .horario-topico {
     color: #fff;
     font-weight: 700;
@@ -317,7 +326,7 @@ main #cronograma-comunidade,
 }
 
 footer h3 {
-    margin-top: 2rem;
+    margin: 2rem 1rem 1rem 1rem;
     text-align: center;
     font-size: 20px;
     color: #021233;
@@ -325,6 +334,10 @@ footer h3 {
 
 footer .logo-slider img {
     width: 100px;
+}
+
+footer .logo-slider .patrocinadores img {
+    width: 150px;
 }
 
 .item:hover {
@@ -346,10 +359,24 @@ footer .logo-slider img {
 }
 
 .logo-slider .item a {
+    margin: 0 auto;
+    width: 80%;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
     align-items: center;
 }
+
+
+button.slick-next.slick-arrow {
+    width: 100px;
+    height: 100px;
+    z-index: 20;
+}
+button.slick-next::before{
+    font-size: 15px;
+    color:#021233;
+ }
+
 
 /* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
 
