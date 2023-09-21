@@ -7,15 +7,16 @@
     <meta name="description" content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" type="imagex/svg" href="../assets/logos/logo-frontend-day.svg">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    
-    
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+
+
     <title>Cronograma Frontend Day</title>
 </head>
 
@@ -63,12 +64,23 @@
     <footer class="container-slides">
         <h3>PATROCINADORES E COLABORADORES</h3>
         <div class="logo-slider">
-            <div class="item"><a href="#"><img src="../assets/logos/casa-do-codigo.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/sunrise.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/stickers-devs.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/rocketseat.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/video-rama.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/instituto-poliglota.webp" alt=""></a></div>
+            <div class="item patrocinadores"><a href="https://www.rocketseat.com.br/" target="_blank"><img
+                        src="../assets/logos/rocketseat.webp" alt="Rocketseat"></a></div>
+            <div class="item patrocinadores"><a href="https://h2uescritoriovirtual.com.br/" target="_blank"><img
+                        src="../assets/logos/h2u-santos-dumont.webp" alt="H2U Santos Dumont"></a></div>
+            <div class="item patrocinadores"><a href="https://www.instagram.com/sunrise.beachclub/" target="_blank"><img
+                        src="../assets/logos/sunrise.webp" alt="Sunrise"></a></div>
+            <div class="item"><a href="https://www.institutopoliglota.com/" target="_blank"><img
+                        src="../assets/logos/instituto-poliglota.webp" alt="Instituto Poliglota"></a></div>
+            <div class="item"><a href="https://www.casadocodigo.com.br/" target="_blank"><img
+                        src="../assets/logos/casa-do-codigo.webp" alt="Casa do Código"></a></div>
+            <div class="item"><a href="https://www.videorama.com.br/" target="_blank"><img
+                        src="../assets/logos/video-rama.webp" alt="VideoRama"></a></div>
+            <div class="item"><a href="https://www.stickersdevs.com.br/" target="_blank"><img
+                        src="../assets/logos/stickers-devs.webp" alt="Stickers Devs"></a></div>
+            <div class="item"><a href="https://www.instagram.com/mundosemfio.com.br/" target="_blank"><img
+                        src="../assets/logos/mundo-sem-fio.webp" alt="Mundo Sem Fio"></a></div>
+
         </div>
     </footer>
 
@@ -76,18 +88,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
     <script>
-    $(document).ready(function(){
-        $('.logo-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: true, 
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-        });
+      $(document).ready(function() {
+    $('.logo-slider').slick({
+        slidesToShow: 3, // Padrão para telas maiores
+        slidesToScroll: 1,
+        dots: true,
+        autoplay: true,
+        autoplaySpeed: 2000,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 550, // Quando a tela for menor que 768px
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 480, // Quando a tela for menor que 480px
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
-</script>
+});
+    </script>
 
 </body>
 
