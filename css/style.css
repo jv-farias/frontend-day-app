@@ -63,6 +63,14 @@ header .navbar #btn-insta {
     display: inline-block;
     text-align: center;
     white-space: nowrap;
+
+}
+
+header .navbar #btn-insta:hover {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: inset 2px 2px 1px 2px
+    
 }
 
 .navbar #btn-insta a {
@@ -132,7 +140,9 @@ main {
     gap: 1rem;
 }
 
-#trocar-frontend, #trocar-comunidade, #trocar-convida {
+#trocar-frontend,
+#trocar-comunidade,
+#trocar-convida {
     font-family: "Poppins", sans-serif;
     background-color: #021233;
     color: #51cafd;
@@ -145,10 +155,14 @@ main {
     cursor: pointer;
 }
 
-#trocar-frontend:hover, #trocar-comunidade:hover, #trocar-convida:hover {
+#trocar-frontend:hover,
+#trocar-comunidade:hover,
+#trocar-convida:hover {
     color: #021233;
     background-color: #51cafd;
-    transition: .6s;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px
 }
 
 /* ESTRUTURA DOS CARDS DOS PALESTRANTES E DOS TÓPICOS */
