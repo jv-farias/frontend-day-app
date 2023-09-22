@@ -166,14 +166,9 @@ main {
 #trocar-convida:hover {
     color: #021233;
     background-color: #51cafd;
-<<<<<<< HEAD
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px
-=======
-    transition: all 0.3s ease;
-    box-shadow: inset 2px 2px 2px 0px;
->>>>>>> d15f9ec1ed36717ef040656209a991e1365aa91b
 }
 
 /* ESTRUTURA DOS CARDS DOS PALESTRANTES E DOS TÓPICOS */
