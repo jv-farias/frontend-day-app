@@ -175,6 +175,14 @@ main #cronograma-comunidade,
     display: none;
 }
 
+
+main #cronograma-frontend:last-child,
+#cronograma-comunidade:last-child,
+#cronograma-convida:last-child
+ {
+border-bottom: none;
+}
+
 .titulo-trilha {
     color: #51cafd;
     text-align: center;
