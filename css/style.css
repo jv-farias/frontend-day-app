@@ -73,11 +73,17 @@ header .navbar #btn-insta:hover {
     
 }
 
-.navbar #btn-insta a {
+.navbar a {
     text-decoration: none;
     color: #021233;
     font-size: 15px;
     font-weight: 700;
+}
+
+.navbar #btn-insta:hover{
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px;
+    cursor: pointer;
 }
 
 header .home {
@@ -160,9 +166,14 @@ main {
 #trocar-convida:hover {
     color: #021233;
     background-color: #51cafd;
+<<<<<<< HEAD
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px
+=======
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px;
+>>>>>>> d15f9ec1ed36717ef040656209a991e1365aa91b
 }
 
 /* ESTRUTURA DOS CARDS DOS PALESTRANTES E DOS TÓPICOS */
@@ -298,10 +309,6 @@ main #cronograma-comunidade,
     text-align: center;
 }
 
-
-
-
-
 .cards-topicos-content .horario-topico {
     color: #fff;
     font-weight: 700;
@@ -367,14 +374,18 @@ footer .logo-slider .patrocinadores img {
 }
 
 
+button.slick-prev.slick-arrow, 
 button.slick-next.slick-arrow {
+
     width: 100px;
     height: 100px;
     z-index: 20;
 }
+button.slick-prev::before,
 button.slick-next::before{
-    font-size: 15px;
-    color:#021233;
+    font-size: 20px;
+    color: #021233;
+    opacity: 1;
  }
 
 
