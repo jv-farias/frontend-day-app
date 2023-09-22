@@ -316,10 +316,15 @@ border-bottom: none;
 
 /* ESTRUTURA DO FOOTER COM CARROSSEL DE LOGOS */
 
+
 .container-slides {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     max-width: 800px;
-    margin: 0 auto;
-    width: 100vw;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
 footer h3 {
@@ -329,13 +334,6 @@ footer h3 {
     color: #021233;
 }
 
-footer .logo-slider img {
-    width: 100px;
-}
-
-footer .logo-slider .patrocinadores img {
-    width: 150px;
-}
 
 .item:hover {
     display: block;
@@ -343,10 +341,49 @@ footer .logo-slider .patrocinadores img {
     transform: scale(1.05) translateY(-5px);
 }
 
-.logo-slider .slick-slide {
+.patrocinadores,
+.parceiros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.logos-patrocinadores, .logos-parceiros {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .7rem;
+}
+
+.logos-parceiros {
+    flex-wrap: wrap;
+    gap: .7rem;
+}
+
+.logos-patrocinadores img {
+    width: 120px;
+}
+
+
+.logos-parceiros img {
+    width: 75px;
+}
+
+/* .logo-slider .slick-slide {
     margin: 1.5rem;
     width: 200px;
 }
+
+.slick-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
 
 .slick-list .slick-track {
     display: flex;
@@ -362,13 +399,13 @@ footer .logo-slider .patrocinadores img {
     justify-content: center;    
     align-items: center;
 }
+ */
 
 
-button.slick-prev.slick-arrow, 
+
+/* button.slick-prev.slick-arrow, 
 button.slick-next.slick-arrow {
-
-    width: 100px;
-    height: 100px;
+   
     z-index: 20;
 }
 button.slick-prev::before,
@@ -376,7 +413,7 @@ button.slick-next::before{
     font-size: 20px;
     color: #021233;
     opacity: 1;
- }
+ } */
 
 
 /* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
