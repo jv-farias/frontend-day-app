@@ -63,13 +63,13 @@ header .navbar #btn-insta {
     display: inline-block;
     text-align: center;
     white-space: nowrap;
-
+    
 }
 
 header .navbar #btn-insta:hover {
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: inset 2px 2px 1px 2px
+    box-shadow: 0 12px 16px 0 rgba(17, 169, 207, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
     
 }
 
@@ -80,7 +80,7 @@ header .navbar #btn-insta:hover {
     font-weight: 700;
 }
 
-.navbar #btn-insta:hover{
+.navbar #btn-insta:hover {
     transition: all 0.3s ease;
     box-shadow: inset 2px 2px 2px 0px;
     cursor: pointer;
@@ -364,24 +364,25 @@ footer .logo-slider .patrocinadores img {
     margin: 0 auto;
     width: 80%;
     display: flex;
-    justify-content: center;    
+    justify-content: center;
     align-items: center;
 }
 
 
-button.slick-prev.slick-arrow, 
+button.slick-prev.slick-arrow,
 button.slick-next.slick-arrow {
 
     width: 100px;
     height: 100px;
     z-index: 20;
 }
+
 button.slick-prev::before,
-button.slick-next::before{
+button.slick-next::before {
     font-size: 20px;
     color: #021233;
     opacity: 1;
- }
+}
 
 
 /* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
