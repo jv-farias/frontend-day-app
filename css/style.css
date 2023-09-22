@@ -296,6 +296,46 @@ main #cronograma-comunidade,
 
 /* ESTRUTURA DO FOOTER COM CARROSSEL DE LOGOS */
 
+.container-slides {
+    max-width: 800px;
+    margin: 0 auto;
+    width: 100vw;
+}
+
+footer h3 {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 20px;
+    color: #021233;
+}
+
+footer .logo-slider img {
+    width: 100px;
+}
+
+.item:hover {
+    display: block;
+    transition: all ease 0.3s;
+    transform: scale(1.05) translateY(-5px);
+}
+
+.logo-slider .slick-slide {
+    margin: 1.5rem;
+    width: 200px;
+}
+
+.slick-list .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.logo-slider .item a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
 
