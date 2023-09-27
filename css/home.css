@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;700&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
-    outline-offset: -1px;
 }
 
 /* ESTRUTURA DO BODY (CORPO DO HTML) */
@@ -20,6 +19,9 @@ body {
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 /* ESTRUTURA HEADER  */
@@ -28,102 +30,31 @@ header {
     padding: 4rem 2rem 2rem 2rem;
 }
 
-.header-container {
-    font-family: 'Archivo Black', sans-serif;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.top-header {
-    width: 100%;
+.logos-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.return-btn {
+.logo-evento {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(217, 217, 217, 0.5);
-    padding: 1.3rem;
-    border-radius: 200px;
-}
-
-.return-btn a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: white;
-}
-
-.title-live {
-    color: white;
-    font-size: 1.1rem;
-}
-
-.botoes-trilhas {
-    gap: 1rem;
+    max-width: 8rem;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
 }
 
-.btn-principal {
-    border-radius: 50px;
-    width: 60%;
-    background-color: rgba(217, 217, 217, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    outline: none;
-    border: none;
-}
-
-#btnAoVivo {
-    color: white;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    padding: .5rem;
-    font-family: 'Raleway', sans-serif;
-    flex: 1;
-    background-color: rgba(217, 217, 217, 0.5);
-    outline: none;
-    border: none;
-}
-
-.btn-secundario {
+.logo-evento img {
     width: 100%;
+}
+
+.logo-organizacao {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
+    max-width: 6rem;
 }
 
-#btnFrontEnd,
-#btnComunidade,
-#btnConvida {
-    color: white;
-    border-radius: 50px;
-    font-size: 1rem;
-    padding: .5rem;
-    font-family: 'Archivo Black', sans-serif;
-    background-color: rgba(217, 217, 217, 0.5);
-    outline: none;
-    border: none;
+.logo-organizacao img {
+    height: auto;
+    width: 100%;
 }
-
-
 
 /* ESTRUTURA BODY  */
 main {
