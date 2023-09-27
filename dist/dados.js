@@ -539,3 +539,56 @@ export const cardsData2 = [
         tipo: "card-topico"
     },
 ];
+export const cardsDataAoVivo = [
+    {
+        topico: "ABERTURA",
+        horario: "9:00",
+        nomeArquivoImagem: "../assets/gifs/almoco.gif",
+        dataStart: "17:30",
+        dataEnd: "18:00",
+        tipo: 'card-topico-AoVivo'
+    },
+    {
+        nome: "JEAN LIVINO",
+        nomeArquivoImagem: "../assets/palestrantes/jean-livino.webp",
+        cargo: "Desenvolvedor Front-End iFood",
+        assunto: "A realidade de trabalhar em projetos que usam IA",
+        horario: "09:15",
+        dataStart: "17:30",
+        dataEnd: "18:00",
+        trilha: "Auditório",
+        tipo: "card-palestrante-AoVivo"
+    },
+    {
+        nome: "CJ PATOILO",
+        nomeArquivoImagem: "../assets/palestrantes/cj-patoilo.webp",
+        cargo: "Criador do Miligram.io e Airform.io",
+        assunto: "Keynote - Arquitetura",
+        horario: "09:30",
+        dataStart: "17:30",
+        dataEnd: "18:00",
+        trilha: "Auditório",
+        tipo: "card-palestrante-AoVivo"
+    },
+    {
+        topico: "NETWORKING",
+        horario: "10:00",
+        nomeArquivoImagem: "../assets/gifs/almoco.gif",
+        dataStart: "17:30",
+        dataEnd: "18:00",
+        tipo: 'card-topico-AoVivo'
+    },
+    {
+        nome: "RACHEL CARVALHO",
+        nomeArquivoImagem: "../assets/palestrantes/rachel-carvalho.webp",
+        cargo: "Product Designer Agenda Edu",
+        assunto: "UX e Handoff, a passagem do designer para o dev",
+        horario: "10:40",
+        dataStart: "17:30",
+        dataEnd: "18:00",
+        trilha: "Front-End",
+        tipo: "card-palestrante-AoVivo"
+    },
+]
+
+

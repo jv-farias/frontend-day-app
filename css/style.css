@@ -411,3 +411,58 @@ footer {
         height: 3rem;
     }
 }
+
+@media (max-width: 333px) {
+    .cards-palestrante-content {
+        flex-direction: column;
+    }
+
+    .user {
+        order: 1;
+    }
+
+    .info-post {
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .palestrante {
+        flex-direction: column;
+        text-align: left;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .palestrante img {
+        width: 120px;
+        margin-left: 40px;
+    }
+
+    .info-palestrante {
+        margin-left: 15px;
+    }    
+
+    .assunto-palestra {
+        width: 85%;
+    }
+    
+    .post-topico {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+    
+    .topico {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+
+    .conteudo-topico {
+        font-size: 1.3rem;
+    }
+}
