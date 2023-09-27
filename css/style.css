@@ -1,19 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 1px solid red;
-    outline-offset: -1px;
 }
-
-/* ESTRUTURA DO BODY (CORPO DO HTML) */
 
 body {
     background-position: center;
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-image: url(../assets/effects/bg-desktop\ 1.png);
     background-color: #000517;
     background-size: cover;
@@ -22,14 +17,11 @@ body {
     height: 100vh;
 }
 
-/* ESTRUTURA HEADER  */
-
 header {
     padding: 4rem 2rem 2rem 2rem;
 }
 
 .header-container {
-    font-family: 'Archivo Black', sans-serif;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -51,7 +43,7 @@ header {
     align-items: center;
     width: 2rem;
     height: 2rem;
-    background-color: rgba(217, 217, 217, 0.5);
+    background-color: rgba(217, 217, 217, 0.7);
     padding: 1.3rem;
     border-radius: 200px;
 }
@@ -67,68 +59,241 @@ header {
 
 .title-live {
     color: white;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 .botoes-trilhas {
-    gap: 1rem;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-}
-
-.btn-principal {
-    border-radius: 50px;
-    width: 60%;
-    background-color: rgba(217, 217, 217, 0.5);
     display: flex;
     justify-content: center;
     align-items: center;
-    outline: none;
-    border: none;
-}
-
-#btnAoVivo {
-    color: white;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    padding: .5rem;
-    font-family: 'Raleway', sans-serif;
-    flex: 1;
-    background-color: rgba(217, 217, 217, 0.5);
-    outline: none;
-    border: none;
-}
-
-.btn-secundario {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-grow: 1;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 #btnFrontEnd,
 #btnComunidade,
 #btnConvida {
+    font-family: "Poppins", sans-serif;
+    background-color: rgba(57, 196, 255, 0.8);
     color: white;
     border-radius: 50px;
-    font-size: 1rem;
-    padding: .5rem;
-    font-family: 'Archivo Black', sans-serif;
-    background-color: rgba(217, 217, 217, 0.5);
+    padding: .5rem 1rem;
+    font-size: 20px;
     outline: none;
     border: none;
+    font-weight: 700;
+    cursor: pointer;
 }
 
-
-
-/* ESTRUTURA BODY  */
 main {
-    padding: 0 5rem 0 2rem;
+    padding: 0 2rem;
+}
+
+.cards-container {
+    gap: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style: none;
+}
+
+.cards-palestrante-content {
+    max-width: 700px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(57, 196, 255, 0.8);
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.info-post {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.user {
     color: white;
+    gap: .5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#usuario {
+    font-size: .9rem;
+}
+
+#horarioLive {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.ao-vivo {
+    gap: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-circle {
+    background-color: red;
+    border-radius: 50%;
+    width: .8rem;
+    height: .8rem;
+    animation: pulse 2s infinite;
+}
+
+.live-text {
+    color: #89D5F4;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.palestrante {
+    width: 100%;
+    gap: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-palestrante {
+    display: flex;
+    width: 35%;
+}
+
+.img-palestrante img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.info-palestrante {
+    color: white;
+    gap: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.nomePalestrante {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.cargoPalestrante {
+    font-size: .8rem;
+}
+
+.trilhaPalestrante {
+    font-weight: 700;
+    font-size: .9rem;
+}
+
+.assunto-palestra {
+    width: 100%;
+    font-weight: 700;
+    font-size: 1.15rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: #000517;
+}
+
+.cards-topicos-content {
+    max-width: 700px;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 133, 6, 1);
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.post-topico {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.live-text-topico {
+    color: white;
+    font-size: .9rem;
+    font-weight: 700;
+}
+
+.topico {
+    width: 100%;
+    gap: .8rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-topico {
+    display: flex;
+    width: 35%;
+}
+
+.img-topico img {
+    border-radius: 1rem;
+    width: 100%;
+}
+
+.info-topico {
+    color: #000517;
+    gap: 1rem;
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: 700;
+}
+
+.conteudo-topico {
+    font-size: 1.5rem;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(138, 1, 1, 0.7);
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 1.5px rgba(197, 6, 6, 0.856);
+    }
+
+    100% {
+        transform: scale(0.98);
+        box-shadow: 0 0 0 0 rgba(156, 0, 0, 0.712);
+    }
 }
 
 .text-container {
@@ -160,8 +325,6 @@ main {
     color: white;
     font-weight: 700;
 }
-
-/* ESTRUTURA DO FOOTER  */
 
 footer {
     display: flex;
@@ -227,8 +390,6 @@ footer {
     padding: .5rem;
     background-color: white;
 }
-
-/* MEDIA QUERY PARA OUTROS DISPOSITIVOS */
 
 @media (min-width:1000px) {
 

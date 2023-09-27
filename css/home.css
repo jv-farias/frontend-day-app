@@ -76,6 +76,9 @@ main {
 }
 
 .cronograma {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
     cursor: pointer;
     background-color: rgba(57, 196, 255, 1);
     padding: 1rem;
@@ -86,11 +89,7 @@ main {
     transform: scale(0.98);
 }
 
-.cronograma a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-}
+
 
 /* ESTRUTURA DO FOOTER  */
 
