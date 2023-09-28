@@ -7,27 +7,27 @@
 import { htmlGeradoAoVivo } from '../dist/cardsHtml.js';
 
 document.addEventListener("DOMContentLoaded", function () {
-    function atualizarCardsAoVivo() {
-      const now = moment();
-      const currentTime = now.format("HH:mm");
-  
-      const cardsAoVivo = document.querySelectorAll(".cards-palestrante-content, .cards-topicos-content");
-      cardsAoVivo.forEach((card) => {
-        const start = card.getAttribute("data-start");
-        const end = card.getAttribute("data-end");
-  
-        if (currentTime >= start && currentTime < end) {
-          card.style.display = "flex"; // Exibe o card
-        } else {
-          card.style.display = "none"; // Oculta o card
-        }
-      });
-    }
-  
-    atualizarCardsAoVivo(); // Chama a função para atualizar os cards ao carregar a página
-  
-    // Define um intervalo para verificar e atualizar os cards a cada minuto
-    setInterval(atualizarCardsAoVivo, 1000); // Atualiza a cada minuto (60 segundos)
-  });
+  function atualizarCardsAoVivo() {
+    const now = moment();
+    const currentTime = now.format("HH:mm");
 
-  
+    const cardsAoVivo = document.querySelectorAll(".cards-palestrante-content, .cards-topicos-content");
+    cardsAoVivo.forEach((card) => {
+      const start = card.getAttribute("data-start");
+      const end = card.getAttribute("data-end");
+
+      if (currentTime >= start && currentTime < end) {
+        card.style.display = "flex"; // Exibe o card
+      } else {
+        card.style.display = "none"; // Oculta o card
+      }
+    });
+  }
+
+  atualizarCardsAoVivo(); // Chama a função para atualizar os cards ao carregar a página
+
+  // Define um inte rvalo para verificar e atualizar os cards a cada minuto
+  setInterval(atualizarCardsAoVivo, 1000); 
+});
+
+
