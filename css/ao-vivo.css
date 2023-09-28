@@ -7,14 +7,9 @@
 }
 
 body {
-  background-position: center;
   font-family: "Poppins", sans-serif;
-  background-image: url(../assets/effects/bg-desktop\ 1.png);
   background-color: #000517;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100vw;
-  height: 100%;
+  width: 100%;
 }
 
 header {
@@ -164,7 +159,6 @@ main {
   color: #89d5f4;
   font-size: 0.9rem;
   font-weight: 700;
-  animation: pulse 2s infinite;
 }
 
 .palestrante {
@@ -286,7 +280,7 @@ main {
 
 @keyframes pulse {
   0% {
-    transform: scale(0.98);
+    transform: scale(0.97);
     box-shadow: 0 0 0 0 rgba(138, 1, 1, 0.7);
   }
 
@@ -296,7 +290,7 @@ main {
   }
 
   100% {
-    transform: scale(0.98);
+    transform: scale(0.97);
     box-shadow: 0 0 0 0 rgba(156, 0, 0, 0.712);
   }
 }
@@ -397,6 +391,7 @@ footer {
 }
 
 @media (min-width: 1000px) {
+
   header,
   main {
     width: 60vw;
@@ -469,3 +464,4 @@ footer {
     font-size: 1.3rem;
   }
 }
+
