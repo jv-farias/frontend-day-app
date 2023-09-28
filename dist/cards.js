@@ -33,19 +33,19 @@ export function apresentaCard(cards) {
                 linkedin: notificacao.linkedin,
                 instagram: notificacao.instagram,
                 horario: notificacao.horario,
-                tipo: 'card-palestrante' // Adicione o tipo aqui, se necessário.
+                tipo: 'card-palestrante'
             };
         }
         if (notificacao.tipo === 'card-topico') {
             return {
                 topico: notificacao.topico,
                 horario: notificacao.horario,
-                tipo: 'card-topico' // Adicione o tipo aqui, se necessário.
+                tipo: 'card-topico'
             };
         }
-        // Adicione um tratamento para tipos desconhecidos, se necessário.
+        // Tratamento para tipos desconhecidos.
         return {
-            tipo: 'tipo-desconhecido', // Adicione o tipo aqui, se necessário.
+            tipo: 'tipo-desconhecido',
         };
     });
 }

@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
     margin: 0;
@@ -9,8 +11,12 @@
 /* ESTRUTURA DO BODY (CORPO DO HTML) */
 
 body {
-    font-family: 'DM Sans', sans-serif;
+    background-position: center;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../assets/effects/bg-desktop\ 1.png);
     background-color: #000517;
+    background-size: cover;
+    background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -19,17 +25,6 @@ body {
 }
 
 /* ESTRUTURA HEADER  */
-
-
-body {
-    font-family: 'DM Sans', sans-serif;
-    background-color: #000517;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
 
 header {
     padding: 4rem 2rem 2rem 2rem;
@@ -76,11 +71,14 @@ main {
 }
 
 #titulo {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
 }
 
 .cronograma {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
     cursor: pointer;
     background-color: rgba(57, 196, 255, 1);
     padding: 1rem;
@@ -91,11 +89,7 @@ main {
     transform: scale(0.98);
 }
 
-.cronograma a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-}
+
 
 /* ESTRUTURA DO FOOTER  */
 
@@ -123,6 +117,7 @@ footer {
 }
 
 .text-divulgacao p {
+    font-family: 'Archivo Black', sans-serif;
     opacity: .5;
     background-size: 500%;
     background-position: 85%;
@@ -130,8 +125,7 @@ footer {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 2rem;
-    font-weight: 700;
+    font-size: 1.5rem;
     color: rgba(117, 198, 240, 1);
 }
 
@@ -155,8 +149,8 @@ footer {
 }
 
 .img-dev img {
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     object-fit: cover;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
