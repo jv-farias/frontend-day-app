@@ -162,7 +162,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
     if (card.tipo === 'card-palestrante-AoVivo') {
         // Gere o HTML para um card de palestrante
         return `
-        <li class="cards-palestrante-content">
+        <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-palestrante-content">
                     <div class="info-post">
                         <div class="user">
                             <div class="user-img">
@@ -202,7 +202,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
 `;
     } else if (card.tipo === 'card-topico-AoVivo') {
         return `
-        <li class="cards-topicos-content">
+        <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-topicos-content">
                     <div class="post-topico">
                         <div class="user">
                             <div class="user-img">

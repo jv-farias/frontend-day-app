@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap");
 
 * {
     margin: 0;
@@ -77,7 +77,7 @@ header {
     background-color: rgba(57, 196, 255, 0.8);
     color: white;
     border-radius: 50px;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     font-size: 20px;
     outline: none;
     border: none;
@@ -86,7 +86,7 @@ header {
 }
 
 main {
-    padding: 0 2rem;
+    padding: 0 2rem 2rem 2rem;
 }
 
 .cards-container {
@@ -123,7 +123,7 @@ main {
 
 .user {
     color: white;
-    gap: .5rem;
+    gap: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -136,7 +136,7 @@ main {
 }
 
 #usuario {
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 #horarioLive {
@@ -145,7 +145,7 @@ main {
 }
 
 .ao-vivo {
-    gap: .5rem;
+    gap: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -154,14 +154,14 @@ main {
 .live-circle {
     background-color: red;
     border-radius: 50%;
-    width: .8rem;
-    height: .8rem;
+    width: 0.8rem;
+    height: 0.8rem;
     animation: pulse 2s infinite;
 }
 
 .live-text {
-    color: #89D5F4;
-    font-size: .9rem;
+    color: #89d5f4;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
@@ -175,13 +175,15 @@ main {
 
 .img-palestrante {
     display: flex;
-    width: 35%;
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
 .img-palestrante img {
     border-radius: 1rem;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    object-fit: cover;
 }
 
 .info-palestrante {
@@ -200,12 +202,12 @@ main {
 }
 
 .cargoPalestrante {
-    font-size: .8rem;
+    font-size: 0.8rem;
 }
 
 .trilhaPalestrante {
     font-weight: 700;
-    font-size: .9rem;
+    font-size: 0.9rem;
 }
 
 .assunto-palestra {
@@ -242,13 +244,13 @@ main {
 
 .live-text-topico {
     color: white;
-    font-size: .9rem;
+    font-size: 0.9rem;
     font-weight: 700;
 }
 
 .topico {
     width: 100%;
-    gap: .8rem;
+    gap: 0.8rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -256,13 +258,15 @@ main {
 
 .img-topico {
     display: flex;
-    width: 35%;
+    width: 7.5rem;
+    height: 7.5rem;
 }
 
 .img-topico img {
     border-radius: 1rem;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    object-fit: cover;
 }
 
 .info-topico {
@@ -277,7 +281,7 @@ main {
 }
 
 .conteudo-topico {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 @keyframes pulse {
@@ -306,7 +310,7 @@ main {
 }
 
 #titulo {
-    font-family: 'Archivo Black', sans-serif;
+    font-family: "Archivo Black", sans-serif;
     font-size: 2rem;
 }
 
@@ -341,7 +345,7 @@ footer {
 .footer-container {
     border-radius: 3rem 3rem 0 0;
     padding: 1.5rem;
-    background: rgba(57, 196, 255, .85);
+    background: rgba(57, 196, 255, 0.85);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -351,8 +355,8 @@ footer {
 }
 
 .text-divulgacao p {
-    font-family: 'Archivo Black', sans-serif;
-    opacity: .5;
+    font-family: "Archivo Black", sans-serif;
+    opacity: 0.5;
     background-size: 500%;
     background-position: 85%;
     background-image: url(../assets/effects/outline-bg.gif);
@@ -364,7 +368,7 @@ footer {
 }
 
 .img-container {
-    padding: .3rem;
+    padding: 0.3rem;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5);
     display: flex;
@@ -378,7 +382,7 @@ footer {
     object-fit: cover;
     background-color: white;
     border-radius: 50%;
-    padding: .4rem;
+    padding: 0.4rem;
     display: flex;
 }
 
@@ -388,11 +392,11 @@ footer {
     object-fit: cover;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
-    padding: .5rem;
+    padding: 0.5rem;
     background-color: white;
 }
 
-@media (min-width:1000px) {
+@media (min-width: 1000px) {
 
     header,
     main {
@@ -437,24 +441,19 @@ footer {
 
     .info-palestrante {
         margin-left: 15px;
-    }    
+    }
+
+    .palestrante img {
+        width: 120px;
+        margin-left: 40px;
+    }
+
+    .info-palestrante {
+        margin-left: 15px;
+    }
 
     .assunto-palestra {
         width: 85%;
-    }
-    
-    .post-topico {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-    }
-    
-    .topico {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
     }
 
     .img-topico {
@@ -464,6 +463,20 @@ footer {
     .img-palestrante {
         width: 150px;
         margin: 0 auto;
+    }
+
+    .post-topico {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .topico {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
     }
 
     .conteudo-topico {
