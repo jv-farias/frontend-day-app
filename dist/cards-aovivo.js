@@ -57,3 +57,20 @@ export function apresentaCardAoVivo(cardsaovivo) {
         };
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    setTimeout(function () {
+        var loader = document.getElementById("loader");
+        loader.style.display = "none";
+        var contentContainer = document.querySelector(".content-container");
+        contentContainer.style.display = "block";
+    }, 3000); 
+});
+
+
+
+
+
+
+
