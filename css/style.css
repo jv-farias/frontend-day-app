@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
     margin: 0;
@@ -6,299 +8,58 @@
     box-sizing: border-box;
 }
 
+/* ESTRUTURA DO BODY (CORPO DO HTML) */
+
 body {
     background-position: center;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Raleway', sans-serif;
     background-image: url(../assets/effects/bg-desktop\ 1.png);
     background-color: #000517;
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
+/* ESTRUTURA HEADER  */
 
 header {
     padding: 4rem 2rem 2rem 2rem;
 }
 
-.header-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.top-header {
-    width: 100%;
+.logos-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
-.return-btn {
+.logo-evento {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2rem;
-    height: 2rem;
-    background-color: rgba(217, 217, 217, 0.7);
-    padding: 1.3rem;
-    border-radius: 200px;
-}
-
-.return-btn a {
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    color: white;
-}
-
-.title-live {
-    color: white;
-    font-size: 1rem;
-}
-
-.botoes-trilhas {
+    max-width: 8rem;
     width: 100%;
+}
+
+.logo-evento img {
+    width: 100%;
+}
+
+.logo-organizacao {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1rem;
+    max-width: 6rem;
 }
 
-#btnFrontEnd,
-#btnComunidade,
-#btnConvida {
-    font-family: "Poppins", sans-serif;
-    background-color: rgba(57, 196, 255, 0.8);
-    color: white;
-    border-radius: 50px;
-    padding: 0.5rem 1rem;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
+.logo-organizacao img {
+    height: auto;
+    width: 100%;
 }
 
+/* ESTRUTURA BODY  */
 main {
-    padding: 0 2rem 2rem 2rem;
-}
-
-.cards-container {
-    gap: 2rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    list-style: none;
-}
-
-.cards-palestrante-content {
-    max-width: 700px;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 1rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(57, 196, 255, 0.8);
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.info-post {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.user {
+    padding: 0 5rem 0 2rem;
     color: white;
-    gap: 0.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.user-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#usuario {
-    font-size: 0.9rem;
-}
-
-#horarioLive {
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.ao-vivo {
-    gap: 0.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.live-circle {
-    background-color: red;
-    border-radius: 50%;
-    width: 0.8rem;
-    height: 0.8rem;
-    animation: pulse 2s infinite;
-}
-
-.live-text {
-    color: #89d5f4;
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.palestrante {
-    width: 100%;
-    gap: .8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.img-palestrante {
-    display: flex;
-    width: 7.5rem;
-    height: 7.5rem;
-}
-
-.img-palestrante img {
-    border-radius: 1rem;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    object-fit: cover;
-}
-
-.info-palestrante {
-    color: white;
-    gap: 1rem;
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.nomePalestrante {
-    font-size: 1.1rem;
-    font-weight: 700;
-}
-
-.cargoPalestrante {
-    font-size: 0.8rem;
-}
-
-.trilhaPalestrante {
-    font-weight: 700;
-    font-size: 0.9rem;
-}
-
-.assunto-palestra {
-    width: 100%;
-    font-weight: 700;
-    font-size: 1.15rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    color: #000517;
-}
-
-.cards-topicos-content {
-    max-width: 700px;
-    width: 100%;
-    flex-wrap: wrap;
-    padding: 1rem;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(255, 133, 6, 1);
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.post-topico {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.live-text-topico {
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 700;
-}
-
-.topico {
-    width: 100%;
-    gap: 0.8rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.img-topico {
-    display: flex;
-    width: 7.5rem;
-    height: 7.5rem;
-}
-
-.img-topico img {
-    border-radius: 1rem;
-    width: 100%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-    object-fit: cover;
-}
-
-.info-topico {
-    color: #000517;
-    gap: 1rem;
-    flex: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-direction: column;
-    font-weight: 700;
-}
-
-.conteudo-topico {
-    font-size: 1.2rem;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(0.98);
-        box-shadow: 0 0 0 0 rgba(138, 1, 1, 0.7);
-    }
-
-    70% {
-        transform: scale(1);
-        box-shadow: 0 0 0 1.5px rgba(197, 6, 6, 0.856);
-    }
-
-    100% {
-        transform: scale(0.98);
-        box-shadow: 0 0 0 0 rgba(156, 0, 0, 0.712);
-    }
 }
 
 .text-container {
@@ -310,11 +71,14 @@ main {
 }
 
 #titulo {
-    font-family: "Archivo Black", sans-serif;
+    font-family: 'Archivo Black', sans-serif;
     font-size: 2rem;
 }
 
 .cronograma {
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
     cursor: pointer;
     background-color: rgba(57, 196, 255, 1);
     padding: 1rem;
@@ -325,16 +89,15 @@ main {
     transform: scale(0.98);
 }
 
-.cronograma a {
-    text-decoration: none;
-    color: white;
-    font-weight: 700;
-}
+
+
+/* ESTRUTURA DO FOOTER  */
 
 footer {
     display: flex;
-    margin-top: 8rem;
+    margin-top: 23rem;
     width: 100%;
+    height: 100%;
     border-radius: 3rem 3rem 0 0;
     background-size: 500%;
     background-position: 85%;
@@ -345,7 +108,7 @@ footer {
 .footer-container {
     border-radius: 3rem 3rem 0 0;
     padding: 1.5rem;
-    background: rgba(57, 196, 255, 0.85);
+    background: rgba(57, 196, 255, .85);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -355,8 +118,8 @@ footer {
 }
 
 .text-divulgacao p {
-    font-family: "Archivo Black", sans-serif;
-    opacity: 0.5;
+    font-family: 'Archivo Black', sans-serif;
+    opacity: .5;
     background-size: 500%;
     background-position: 85%;
     background-image: url(../assets/effects/outline-bg.gif);
@@ -368,7 +131,7 @@ footer {
 }
 
 .img-container {
-    padding: 0.3rem;
+    padding: .3rem;
     border-radius: 50%;
     background-color: rgba(217, 217, 217, 0.5);
     display: flex;
@@ -382,7 +145,7 @@ footer {
     object-fit: cover;
     background-color: white;
     border-radius: 50%;
-    padding: 0.4rem;
+    padding: .4rem;
     display: flex;
 }
 
@@ -392,11 +155,13 @@ footer {
     object-fit: cover;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     border-radius: 50%;
-    padding: 0.5rem;
+    padding: .5rem;
     background-color: white;
 }
 
-@media (min-width: 1000px) {
+/* MEDIA QUERY PARA OUTROS DISPOSITIVOS */
+
+@media (min-width:1000px) {
 
     header,
     main {
@@ -414,72 +179,5 @@ footer {
     .img-dev img {
         width: 3rem;
         height: 3rem;
-    }
-}
-
-@media (max-width: 333px) {
-    .cards-palestrante-content {
-        flex-direction: column;
-    }
-
-    .user {
-        order: 1;
-    }
-
-    .info-post {
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .palestrante {
-        flex-direction: column;
-        text-align: left;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
-
-    .info-palestrante {
-        margin-left: 15px;
-    }
-
-    .palestrante img {
-        width: 120px;
-        margin-left: 40px;
-    }
-
-    .info-palestrante {
-        margin-left: 15px;
-    }
-
-    .assunto-palestra {
-        width: 85%;
-    }
-
-    .img-topico {
-        width: 150px;
-    }
-
-    .img-palestrante {
-        width: 150px;
-        margin: 0 auto;
-    }
-
-    .post-topico {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .topico {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    .conteudo-topico {
-        font-size: 1.3rem;
     }
 }

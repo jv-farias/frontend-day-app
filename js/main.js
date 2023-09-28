@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const end = card.getAttribute("data-end");
   
         if (currentTime >= start && currentTime < end) {
-          card.style.display = "block"; // Exibe o card
+          card.style.display = "flex"; // Exibe o card
         } else {
           card.style.display = "none"; // Oculta o card
         }
