@@ -1,58 +1,57 @@
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Raleway:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
+/* ESTRUTURA DO BODY (CORPO DO HTML) */
 
 body {
-  background-position: center;
-  font-family: "Poppins", sans-serif;
-  background-color: #000517;
-  width: 100vw;
+    background-position: center;
+    font-family: 'Raleway', sans-serif;
+    background-image: url(../assets/effects/bg-desktop\ 1.png);
+    background-color: #000517;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
+
+/* ESTRUTURA HEADER  */
 
 header {
-  padding: 4rem 2rem 2rem 2rem;
+    padding: 4rem 2rem 2rem 2rem;
 }
 
-.header-container {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
+.logos-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
-.top-header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.logo-evento {
+    display: flex;
+    max-width: 8rem;
+    width: 100%;
 }
 
-.return-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 2rem;
-  height: 2rem;
-  background-color: rgba(217, 217, 217, 0.7);
-  padding: 1.3rem;
-  border-radius: 200px;
+.logo-evento img {
+    width: 100%;
 }
 
-.return-btn a {
-  text-decoration: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: white;
+.logo-organizacao {
+    display: flex;
+    max-width: 6rem;
 }
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 /*BOTÃO INSTAGRAM*/
 
@@ -107,9 +106,16 @@ header .navbar #btn-insta:hover {
   font-weight: 700;
   cursor: pointer;
 >>>>>>> 1f264618ddd66d2d39ba899df84f7638f787dc60
+=======
+.logo-organizacao img {
+    height: auto;
+    width: 100%;
+>>>>>>> d42e00312f0afc264a7697c6a2cedacaa8e12211
 }
 
+/* ESTRUTURA BODY  */
 main {
+<<<<<<< HEAD
 <<<<<<< HEAD
     display: flex;
     justify-content: center;
@@ -397,103 +403,109 @@ border-bottom: none;
     transform: scale(0.98);
     box-shadow: 0 0 0 0 rgba(156, 0, 0, 0.712);
   }
+=======
+    padding: 0 5rem 0 2rem;
+    color: white;
+>>>>>>> d42e00312f0afc264a7697c6a2cedacaa8e12211
 }
 
 .text-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 #titulo {
-  font-family: "Archivo Black", sans-serif;
-  font-size: 2rem;
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 2rem;
 }
 
 .cronograma {
-  cursor: pointer;
-  background-color: rgba(57, 196, 255, 1);
-  padding: 1rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: rgba(57, 196, 255, 1);
+    padding: 1rem;
 }
 
 .cronograma:active {
-  background-color: rgb(24, 154, 209);
-  transform: scale(0.98);
+    background-color: rgb(24, 154, 209);
+    transform: scale(0.98);
 }
 
-.cronograma a {
-  text-decoration: none;
-  color: white;
-  font-weight: 700;
-}
+
+
+/* ESTRUTURA DO FOOTER  */
 
 footer {
-  display: flex;
-  margin-top: 8rem;
-  width: 100%;
-  border-radius: 3rem 3rem 0 0;
-  background-size: 500%;
-  background-position: 85%;
-  background-image: url(../assets/effects/outline-bg.gif);
-  backdrop-filter: blur(8px);
+    display: flex;
+    margin-top: 8rem;
+    width: 100%;
+    border-radius: 3rem 3rem 0 0;
+    background-size: 500%;
+    background-position: 85%;
+    background-image: url(../assets/effects/outline-bg.gif);
+    backdrop-filter: blur(8px);
 }
 
 .footer-container {
-  border-radius: 3rem 3rem 0 0;
-  padding: 1.5rem;
-  background: rgba(57, 196, 255, 0.85);
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  gap: 1rem;
+    border-radius: 3rem 3rem 0 0;
+    padding: 1.5rem;
+    background: rgba(57, 196, 255, .85);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .text-divulgacao p {
-  font-family: "Archivo Black", sans-serif;
-  opacity: 0.5;
-  background-size: 500%;
-  background-position: 85%;
-  background-image: url(../assets/effects/outline-bg.gif);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
-  color: rgba(117, 198, 240, 1);
+    font-family: 'Archivo Black', sans-serif;
+    opacity: .5;
+    background-size: 500%;
+    background-position: 85%;
+    background-image: url(../assets/effects/outline-bg.gif);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    color: rgba(117, 198, 240, 1);
 }
 
 .img-container {
-  padding: 0.3rem;
-  border-radius: 50%;
-  background-color: rgba(217, 217, 217, 0.5);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  gap: 1.5rem;
+    padding: .3rem;
+    border-radius: 50%;
+    background-color: rgba(217, 217, 217, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .img-dev {
-  object-fit: cover;
-  background-color: white;
-  border-radius: 50%;
-  padding: 0.4rem;
-  display: flex;
+    object-fit: cover;
+    background-color: white;
+    border-radius: 50%;
+    padding: .4rem;
+    display: flex;
 }
 
 .img-dev img {
-  width: 3.5rem;
-  height: 3.5rem;
-  object-fit: cover;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 50%;
-  padding: 0.5rem;
-  background-color: white;
+    width: 3.5rem;
+    height: 3.5rem;
+    object-fit: cover;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 50%;
+    padding: .5rem;
+    background-color: white;
 }
 
+<<<<<<< HEAD
 @media (min-width: 1000px) {
   header,
   main {
@@ -558,57 +570,27 @@ button.slick-next::before {
   }
 >>>>>>> 1f264618ddd66d2d39ba899df84f7638f787dc60
 }
+=======
+/* MEDIA QUERY PARA OUTROS DISPOSITIVOS */
 
-@media (max-width: 333px) {
-  .cards-palestrante-content {
-    flex-direction: column;
-  }
+@media (min-width:1000px) {
 
-  .user {
-    order: 1;
-  }
+    header,
+    main {
+        width: 60vw;
+        margin: 0 auto;
+    }
+>>>>>>> d42e00312f0afc264a7697c6a2cedacaa8e12211
 
-  .info-post {
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
+    .footer-container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
 
-  .palestrante {
-    flex-direction: column;
-    text-align: left;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-
-  .palestrante img {
-    width: 120px;
-    margin-left: 40px;
-  }
-
-  .info-palestrante {
-    margin-left: 15px;
-  }
-
-  .assunto-palestra {
-    width: 85%;
-  }
-
-  .post-topico {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-  }
-
-  .topico {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .conteudo-topico {
-    font-size: 1.3rem;
-  }
+    .img-dev img {
+        width: 3rem;
+        height: 3rem;
+    }
 }

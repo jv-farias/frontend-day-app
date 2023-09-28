@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const end = card.getAttribute("data-end");
   
         if (currentTime >= start && currentTime < end) {
-          card.style.display = "block"; // Exibe o card
+          card.style.display = "flex"; // Exibe o card
         } else {
           card.style.display = "none"; // Oculta o card
         }
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     atualizarCardsAoVivo(); // Chama a função para atualizar os cards ao carregar a página
   
     // Define um intervalo para verificar e atualizar os cards a cada minuto
-    setInterval(atualizarCardsAoVivo, 60000); // Atualiza a cada minuto (60 segundos)
+    setInterval(atualizarCardsAoVivo, 1000); // Atualiza a cada minuto (60 segundos)
   });
 
   
