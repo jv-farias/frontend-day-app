@@ -1,6 +1,6 @@
 import { apresentaCard } from "./cards.js";
 import { apresentaCardAoVivo } from "./cards-aovivo.js";
-import { cardsData, cardsDataAoVivo } from './dados.js'; // FUNÇAO IMPORTADA - CARDS FRONTEND
+import { cardsData, cardsDataAoVivo } from "./dados.js"; // FUNÇAO IMPORTADA - CARDS FRONTEND
 import { cardsData1 } from "./dados.js";
 import { cardsData2 } from "./dados.js";
 
@@ -10,11 +10,11 @@ import { cardsData2 } from "./dados.js";
 //         // Gere o HTML para um card de palestrante
 //         return `
 //         <div class="cards-palestrante-content">
-        
+
 //         <div class="palestrante-picture">
 //         <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
 //         </div>
-        
+
 //         <div class="card-informacoes">
 //         <div class= "informacoes-palestrante">
 //         <h3 id="nome" class="nome">${card.nome}</h3>
@@ -24,13 +24,13 @@ import { cardsData2 } from "./dados.js";
 //                 <p id="assunto" class="assunto">${card.assunto}</p>
 //                 </div>
 //                 </div>
-                
+
 //                 <div class="palestrante-meta">
 //                 <div class="redes-sociais">
 //                 <a href="https://www.linkedin.com/in/${card.linkedin}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 //                 <a href="https://www.instagram.com/${card.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 //                 </div>
-                
+
 //                 <div class="horario">
 //                     <p id="horario">${card.horario}</p>
 //                 </div>
@@ -54,18 +54,17 @@ import { cardsData2 } from "./dados.js";
 // }).join('');
 // document.querySelector("#cards-cronograma").innerHTML = htmlGerado;
 
-
 // const cardsProcessados1 = apresentaCard(cardsData1);
 // export const htmlGerado1 = cardsProcessados1.map(card => {
 //     if (card.tipo === 'card-palestrante') {
 //         // Gere o HTML para um card de palestrante
 //         return `
 //         <div class="cards-palestrante-content">
-        
+
 //         <div class="palestrante-picture">
 //         <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
 //         </div>
-        
+
 //         <div class="card-informacoes">
 //         <div class= "informacoes-palestrante">
 //         <h3 id="nome" class="nome">${card.nome}</h3>
@@ -75,13 +74,13 @@ import { cardsData2 } from "./dados.js";
 //                 <p id="assunto" class="assunto">${card.assunto}</p>
 //                 </div>
 //                 </div>
-                
+
 //                 <div class="palestrante-meta">
 //                 <div class="redes-sociais">
 //                 <a href="https://www.linkedin.com/in/${card.linkedin}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 //                 <a href="https://www.instagram.com/${card.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 //                 </div>
-                
+
 //                 <div class="horario">
 //                     <p id="horario">${card.horario}</p>
 //                 </div>
@@ -105,18 +104,17 @@ import { cardsData2 } from "./dados.js";
 // }).join('');
 // document.querySelector("#cards-comunidade").innerHTML = htmlGerado1;
 
-
 // const cardsProcessados2 = apresentaCard(cardsData2);
 // export const htmlGerado2 = cardsProcessados2.map(card => {
 //     if (card.tipo === 'card-palestrante') {
 //         // Gere o HTML para um card de palestrante
 //         return `
 //         <div class="cards-palestrante-content">
-        
+
 //         <div class="palestrante-picture">
 //         <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
 //         </div>
-        
+
 //         <div class="card-informacoes">
 //         <div class= "informacoes-palestrante">
 //         <h3 id="nome" class="nome">${card.nome}</h3>
@@ -126,13 +124,13 @@ import { cardsData2 } from "./dados.js";
 //                 <p id="assunto" class="assunto">${card.assunto}</p>
 //                 </div>
 //                 </div>
-                
+
 //                 <div class="palestrante-meta">
 //                 <div class="redes-sociais">
 //                 <a href="https://www.linkedin.com/in/${card.linkedin}/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
 //                 <a href="https://www.instagram.com/${card.instagram}" target="_blank"><i class="fa-brands fa-instagram"></i></a>
 //                 </div>
-                
+
 //                 <div class="horario">
 //                     <p id="horario">${card.horario}</p>
 //                 </div>
@@ -156,12 +154,11 @@ import { cardsData2 } from "./dados.js";
 // }).join('');
 // document.querySelector("#cards-convida").innerHTML = htmlGerado2;
 
-
 const cardsProcessadosAoVivo = apresentaCardAoVivo(cardsDataAoVivo);
-export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
-    if (card.tipo === 'card-palestrante-AoVivo') {
-        // Gere o HTML para um card de palestrante
-        return `
+export const htmlGeradoAoVivo = cardsProcessadosAoVivo
+  .map((card) => {
+    if (card.tipo === "card-palestrante-AoVivo") {
+      return `
         <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-palestrante-content">
                     <div class="info-post">
                         <div class="user">
@@ -200,8 +197,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
                     </div>
                 </li>
 `;
-    } else if (card.tipo === 'card-topico-AoVivo') {
-        return `
+    } else if (card.tipo === "card-topico-AoVivo") {
+      return `
         <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-topicos-content">
                     <div class="post-topico">
                         <div class="user">
@@ -233,9 +230,10 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
                     </div>
                 </li>`;
     } else {
-        return `<div>
+      return `<div>
             <p>ERROR</p>
             </div>`;
     }
-}).join('');
+  })
+  .join("");
 document.querySelector("#cards-cronograma").innerHTML = htmlGeradoAoVivo;

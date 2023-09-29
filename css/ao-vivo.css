@@ -1,103 +1,94 @@
 @import url(https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap);
 
-@keyframes pulse {
-  0% {
-    transform: scale(.97);
-    box-shadow: 0 0 0 0 rgba(138, 1, 1, .7)
-  }
-
-  70% {
-    transform: scale(1);
-    box-shadow: 0 0 0 1.5px rgba(197, 6, 6, .856)
-  }
-
-  to {
-    transform: scale(.97);
-    box-shadow: 0 0 0 0 rgba(156, 0, 0, .712)
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
+  /* outline: 1px solid red;
+  outline-offset: -1px; */
 }
 
 body {
   background-position: center;
   font-family: "Poppins", sans-serif;
-  background-image: url(../assets/effects/bg-desktop\ 1.png);
-  background-color: #000517
+  /* background-image: url(../assets/effects/bg-desktop\ 1.png); */
+  background-color: #000517;
+  height: 100vh;
+  width: 100vw;
 }
 
 header,
 main {
-  width: 100%
+  width: 100%;
 }
 
 header {
-  padding: 4rem 2rem 2rem
+  padding: 4rem 2rem 2rem;
 }
 
 .header-container,
 .top-header {
   width: 100%;
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .header-container {
   justify-content: center;
   flex-direction: column;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 .top-header {
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .return-btn {
   width: 2rem;
   height: 2rem;
-  background-color: rgba(217, 217, 217, .7);
+  background-color: rgba(217, 217, 217, 0.7);
   padding: 1.3rem;
-  border-radius: 200px
+  border-radius: 200px;
 }
 
 .cronograma a,
 .return-btn a {
   text-decoration: none;
-  color: #fff
+  color: #fff;
 }
 
 .return-btn,
 .return-btn a {
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
 }
 
 .return-btn a {
-  font-size: 1.5rem
+  font-size: 1.5rem;
 }
 
 .title-live {
   color: #fff;
-  font-size: 1rem
+  font-size: 1rem;
 }
-
+/* ESTRUTURA MAIN */
 main {
-  padding: 0 2rem 2rem
+  padding: 0 2rem 2rem;
 }
 
 .cards-container,
 .cards-palestrante-content {
-  flex-direction: column
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cards-container {
   gap: 2rem;
-  list-style: none
+  list-style: none;
 }
 
 .cards-palestrante-content {
@@ -105,14 +96,14 @@ main {
   flex-wrap: wrap;
   padding: 1rem;
   border-radius: 20px;
-  background-color: rgba(57, 196, 255, .8);
-  gap: 1rem
+  background-color: rgba(57, 196, 255, 0.8);
+  gap: 1rem;
 }
 
 .info-post {
   width: 100%;
   justify-content: space-between;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .ao-vivo,
@@ -120,66 +111,66 @@ main {
 .user,
 .user-img {
   display: flex;
-  align-items: center
+  align-items: center;
 }
 
 .user {
   color: #fff;
-  gap: .5rem;
-  justify-content: space-between
+  gap: 0.5rem;
+  justify-content: space-between;
 }
 
 .ao-vivo,
 .user-img {
-  justify-content: center
+  justify-content: center;
 }
 
 #usuario {
-  font-size: .9rem
+  font-size: 0.9rem;
 }
 
 #horarioLive {
   font-size: 1.1rem;
-  font-weight: 700
+  font-weight: 700;
 }
 
 .ao-vivo {
-  gap: .5rem
+  gap: 0.5rem;
 }
 
 .live-circle {
   background-color: red;
   border-radius: 50%;
-  width: .8rem;
-  height: .8rem;
-  animation: pulse 2s infinite
+  width: 0.8rem;
+  height: 0.8rem;
+  animation: pulse 2s infinite;
 }
 
 .live-text {
   color: #89d5f4;
-  font-size: .9rem;
-  font-weight: 700
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .palestrante {
   width: 100%;
-  gap: .8rem;
+  gap: 0.8rem;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
 
 .img-palestrante {
   display: flex;
   width: 7.5rem;
-  height: 7.5rem
+  height: 7.5rem;
 }
 
 .img-palestrante img,
 .img-topico img {
   border-radius: 1rem;
   width: 100%;
-  object-fit: cover
+  object-fit: cover;
 }
 
 .info-palestrante {
@@ -189,21 +180,21 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  flex-direction: column
+  flex-direction: column;
 }
 
 .nomePalestrante {
   font-size: 1.1rem;
-  font-weight: 700
+  font-weight: 700;
 }
 
 .cargoPalestrante {
-  font-size: .8rem
+  font-size: 0.8rem;
 }
 
 .trilhaPalestrante {
   font-weight: 700;
-  font-size: .9rem
+  font-size: 0.9rem;
 }
 
 .assunto-palestra {
@@ -213,7 +204,7 @@ main {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  color: #000517
+  color: #000517;
 }
 
 .cards-topicos-content,
@@ -221,7 +212,7 @@ main {
   width: 100%;
   display: flex;
   align-items: center;
-  flex-wrap: wrap
+  flex-wrap: wrap;
 }
 
 .cards-topicos-content {
@@ -231,31 +222,31 @@ main {
   justify-content: center;
   background-color: #ff8506;
   flex-direction: column;
-  gap: 1rem
+  gap: 1rem;
 }
 
 .post-topico {
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .live-text-topico {
   color: #fff;
-  font-size: .9rem;
-  font-weight: 700
+  font-size: 0.9rem;
+  font-weight: 700;
 }
 
 .topico {
   width: 100%;
-  gap: .8rem;
+  gap: 0.8rem;
   display: flex;
   justify-content: space-between;
-  align-items: center
+  align-items: center;
 }
 
 .img-topico {
   display: flex;
   width: 7.5rem;
-  height: 7.5rem
+  height: 7.5rem;
 }
 
 .info-topico {
@@ -266,11 +257,11 @@ main {
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
-  font-weight: 700
+  font-weight: 700;
 }
 
 .conteudo-topico {
-  font-size: 1.2rem
+  font-size: 1.2rem;
 }
 
 .text-container {
@@ -278,135 +269,151 @@ main {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  gap: 1.5rem
+  gap: 1.5rem;
 }
 
 .cronograma {
   cursor: pointer;
   background-color: #39c4ff;
-  padding: 1rem
+  padding: 1rem;
 }
 
 .cronograma:active {
   background-color: #189ad1;
-  transform: scale(.98)
+  transform: scale(0.98);
 }
 
 .cronograma a {
-  font-weight: 700
+  font-weight: 700;
 }
 
+/* ESTRUTURA FOOTER NAVIGATION MENU */
+
 footer {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 100;
   position: fixed;
   bottom: 0;
-  background-color: white;
+  background-color: rgba(253, 246, 246, 0.8);
   width: 100%;
   padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.5);
 }
 
 .botoes-trilhas {
+  gap: 0.5rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.ao-vivo,
-.front-end
-.comunidades,
-.convida {
+.content-trilhas {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 0.2rem;
 }
 
-#btnFrontEnd img {
-  width: 50%;
-margin: 0 auto;
+.iconBtn {
+  color: rgb(131, 131, 131);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.titulo-trilha {
+  font-size: 0.7rem;
+  color: rgb(131, 131, 131);
+}
 
-@media (min-width:1000px) {
+/* MEDIA QUERYS PARA TELAS ESPECÍFICAS */
 
+@media (min-width: 1000px) {
   header,
   main {
     width: 60vw;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   .footer-container {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 2rem
+    gap: 2rem;
   }
 
   .img-dev img {
     width: 3rem;
-    height: 3rem
+    height: 3rem;
   }
 }
 
-@media (max-width:333px) {
+@media (max-width: 333px) {
   .cards-palestrante-content {
-    flex-direction: column
+    flex-direction: column;
   }
 
   .user {
-    order: 1
+    order: 1;
   }
 
   .info-post {
     justify-content: center;
     align-items: center;
-    gap: 5px
+    gap: 5px;
   }
 
   .palestrante {
     flex-direction: column;
     text-align: left;
     justify-content: flex-start;
-    align-items: flex-start
+    align-items: flex-start;
   }
 
   .palestrante img {
     width: 120px;
-    margin-left: 40px
+    margin-left: 40px;
   }
 
   .info-palestrante {
-    margin-left: 15px
+    margin-left: 15px;
   }
 
   .assunto-palestra {
-    width: 85%
+    width: 85%;
   }
 
   .post-topico,
   .topico {
     justify-content: center;
-    align-items: center
+    align-items: center;
   }
 
   .post-topico {
     display: flex;
-    gap: 5px
+    gap: 5px;
   }
 
   .topico {
     flex-direction: column;
-    width: 100%
+    width: 100%;
   }
 
   .conteudo-topico {
-    font-size: 1.3rem
+    font-size: 1.3rem;
   }
 }
 
- /*Botão de Carregamento*/
+/* LOADING */
 
- .loader {
+.loader {
   position: fixed;
   width: 48px;
   height: 48px;
@@ -418,7 +425,7 @@ margin: 0 auto;
   animation: rotation 1s linear infinite;
 }
 .loader::after {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -426,7 +433,7 @@ margin: 0 auto;
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border-bottom: 4px solid #FF3D00;
+  border-bottom: 4px solid #ff3d00;
   border-left: 4px solid transparent;
 }
 @keyframes rotation {
@@ -438,7 +445,7 @@ margin: 0 auto;
   }
 }
 
-.loading{
+.loading {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -447,10 +454,155 @@ margin: 0 auto;
   background-color: rgb(244, 238, 238);
 }
 
-.content-container {
+@keyframes pulse {
+  0% {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(138, 1, 1, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 1.5px rgba(197, 6, 6, 0.856);
+  }
+
+  to {
+    transform: scale(0.97);
+    box-shadow: 0 0 0 0 rgba(156, 0, 0, 0.712);
+  }
+}
+
+.content-container,
+.content-main,
+.content-footer {
   display: none;
 }
 
-.content-main {
-  display: none;
+
+
+
+
+
+.cards-container {
+  margin-bottom: 2.5rem;
+}
+
+.cards-cronograma-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 700px;
+  gap: 1rem;
+}
+
+.horario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#horario-palestra {
+  font-size: 1.2rem;
+  color: white;
+  font-weight: 700;
+}
+
+.palestrante {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.2rem;
+  align-items: center;
+  border-radius: 20px;
+  background-color: rgba(57, 196, 255, 0.8);
+}
+
+.text-informacoes {
+  width: 100%;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.nome,
+.info-palestra {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+#nome {
+  font-size: 1.2rem;
+  color: white;
+}
+
+#cargo {
+  font-size: 0.7rem;
+  color: rgb(202, 202, 202);
+}
+
+#assunto {
+  font-size: 0.9rem;
+  color: #000517;
+  font-weight: 700;
+}
+
+.media-informacoes {
+  gap: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img-profile {
+  width: 5rem;
+  height: 5rem;
+}
+
+.img-profile img {
+  border-radius: 15px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.redes-profile {
+  padding: 0.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+
+.redes-profile a {
+  color: transparent;
+}
+
+.fa-brands {
+  display: flex;
+  justify-content: center;
+  font-size: 1.3rem;
+  width: 100%;
+  color: white;
+}
+
+.cards-topicos-content {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+#horario-topico {
+  font-weight: 700;
+  color: white;
+}
+
+#nome-topico {
+  color: white;
 }

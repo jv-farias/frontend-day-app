@@ -37,7 +37,7 @@ export const cardsData = [
     assunto: "Carreira & Tecnologia & Bacalhau",
     instagram: "brunorbarroso",
     linkedin: "brunorbarroso",
-    horario: "10:40",
+    horario: "10:20",
     tipo: "card-palestrante",
   },
   {
@@ -407,7 +407,7 @@ export const cardsData2 = [
   },
   {
     nome: "WESLEY JONATHA",
-    nomeArquivoImagem: "wesle-jonatha.webp",
+    nomeArquivoImagem: "wesley-jonatha.webp",
     cargo: "Desenvolvedor Stefanini",
     assunto:
       "Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade",
@@ -545,6 +545,8 @@ export const cardsData2 = [
     tipo: "card-topico",
   },
 ];
+
+// CARDS AO VIVO - CRONOGRAMA GERAL
 
 export const cardsDataAoVivo = [
   {
