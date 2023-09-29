@@ -64,8 +64,10 @@ document.addEventListener("DOMContentLoaded", function () {
         var loader = document.getElementById("loader");
         loader.style.display = "none";
         var contentContainer = document.querySelector(".content-container");
-        contentContainer.style.display = "block";
-    }, 3000); 
+        contentContainer.style.display = "flex";
+        var contentMain = document.querySelector(".content-main");
+        contentMain.style.display = "flex";
+    }, 2000); 
 });
 
 

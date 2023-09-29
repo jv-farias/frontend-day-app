@@ -86,36 +86,6 @@ header {
   font-size: 1rem
 }
 
-.botoes-trilhas,
-.cards-container,
-.cards-palestrante-content {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center
-}
-
-.botoes-trilhas {
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-#btnAoVivo,
-#btnComunidade,
-#btnConvida,
-#btnFrontEnd {
-  font-family: "Poppins", sans-serif;
-  background-color: rgba(57, 196, 255, .8);
-  color: #fff;
-  border-radius: 50px;
-  padding: .5rem 1rem;
-  font-size: 20px;
-  outline: 0;
-  border: 0;
-  font-weight: 700;
-  cursor: pointer
-}
-
 main {
   padding: 0 2rem 2rem
 }
@@ -311,11 +281,6 @@ main {
   gap: 1.5rem
 }
 
-#titulo {
-  font-family: "Archivo Black", sans-serif;
-  font-size: 2rem
-}
-
 .cronograma {
   cursor: pointer;
   background-color: #39c4ff;
@@ -331,74 +296,36 @@ main {
   font-weight: 700
 }
 
-.text-divulgacao p,
 footer {
-  background-size: 500%;
-  background-position: 85%;
-  background-image: url(../assets/effects/outline-bg.gif)
+  z-index: 100;
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  padding: 0.5rem;
 }
 
-footer {
+.botoes-trilhas {
   display: flex;
-  margin-top: 8rem;
-  backdrop-filter: blur(8px)
-}
-
-.footer-container,
-.img-container {
-  display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  flex-direction: column
 }
 
-.footer-container,
-footer {
-  border-radius: 3rem 3rem 0 0;
-  width: 100%
+.ao-vivo,
+.front-end
+.comunidades,
+.convida {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.footer-container {
-  padding: 1.5rem;
-  background: rgba(57, 196, 255, .85);
-  gap: 1rem
+#btnFrontEnd img {
+  width: 50%;
+margin: 0 auto;
 }
 
-.text-divulgacao p {
-  font-family: "Archivo Black", sans-serif;
-  opacity: .5;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 1.5rem;
-  color: #75c6f0
-}
-
-.img-container {
-  padding: .3rem;
-  border-radius: 50%;
-  background-color: rgba(217, 217, 217, .5);
-  gap: 1.5rem
-}
-
-.img-dev,
-.img-dev img {
-  object-fit: cover;
-  border-radius: 50%;
-  background-color: #fff
-}
-
-.img-dev {
-  padding: .4rem;
-  display: flex
-}
-
-.img-dev img {
-  width: 3.5rem;
-  height: 3.5rem;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, .25);
-  padding: .5rem
-}
 
 @media (min-width:1000px) {
 
@@ -517,5 +444,13 @@ footer {
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(230, 222, 222);
+  background-color: rgb(244, 238, 238);
+}
+
+.content-container {
+  display: none;
+}
+
+.content-main {
+  display: none;
 }

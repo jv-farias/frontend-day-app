@@ -1,133 +1,129 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/ao-vivo.css" />
+    <title>Cronograma Front-End Day 2023</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="../css/ao-vivo.css" />
-  <title>Cronograma Front-End Day 2023</title>
-</head>
-
-<body>
- <!--Carregamento-->
- <div class="loading" id="loader" display="none">
-  <span class="loader"></span>
-</div>
-
-  <header>
-    <div class="header-container">
-      <div class="top-header">
-        <div class="return-btn">
-          <a href="../html/index.html"><i class="fa-solid fa-chevron-left"></i></a>
-        </div>
-        <div class="title-live">
-          <h1 class="titulo">Ao Vivo</h1>
-        </div>
-      </div>
-      <div class="botoes-trilhas">
-        <button id="btnAoVivo" style="display: none;">Ao Vivo</button>
-        <button id="btnFrontEnd">Front-End</button>
-        <button id="btnComunidade">Comunidade</button>
-        <button id="btnConvida">Convida</button>
-      </div>
+  <body>
+    <!--Carregamento-->
+    <div class="loading" id="loader" display="none">
+      <span class="loader"></span>
     </div>
-  </header>
-  <main>
-   
 
-    <section class="cronograma-live" id="horario">
-      <ul class="cards-container" id="cards-cronograma"></ul>
-    </section>
-  </main>
-  <script type="module" src="../js/main.js"></script>
-  <script>
+    <header class="content-container">
+      <div class="header-container">
+        <div class="top-header">
+          <div class="return-btn">
+            <a href="../html/index.html"
+              ><i class="fa-solid fa-chevron-left"></i
+            ></a>
+          </div>
+          <div class="title-live">
+            <h1 class="titulo">Ao Vivo</h1>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content-main">
+      <section class="cronograma-live" id="horario">
+        <ul class="cards-container" id="cards-cronograma"></ul>
+      </section>
+    </main>
+    <footer>
+      <div class="botoes-trilhas">
+        <div id="btnAoVivo" class="ao-vivo">
+          <img src="../assets/effects/aovivo.svg" alt="Ícone Ao Vivo" />
+          <p>Ao Vivo</p>
+        </div>
+        <div id="btnFrontEnd" class="front-end">
+          <img src="../assets/effects/frontend.svg" alt="Ícone Front-End" />
+          <p>Front-End</p>
+        </div>
 
+        <div id="btnComunidade" class="comunidades">
+          <img
+            src="../assets/effects/comunidades.svg"
+            alt="Ícone Comunidades"
+          />
+          <p>Comunidades</p>
+        </div>
+        <div id="btnConvida" class="convida">
+          <img src="../assets/effects/convida.svg" alt="Ícone Convida" />
+          <p>Convida</p>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="../js/main.js"></script>
+    <script>
+      let titulo = document.querySelector(".titulo");
+      let btnAoVivo = document.querySelector("#btnAoVivo");
+      let btnFrontEnd = document.querySelector("#btnFrontEnd");
+      let btnComunidade = document.querySelector("#btnComunidade");
+      let btnConvida = document.querySelector("#btnConvida");
 
-    let titulo = document.querySelector(".titulo")
-    let btnAoVivo = document.querySelector("#btnAoVivo")
-    let btnFrontEnd = document.querySelector("#btnFrontEnd")
-    let btnComunidade = document.querySelector("#btnComunidade")
-    let btnConvida = document.querySelector("#btnConvida")
-
-    function frontEnd() {
-      btnFrontEnd.style.display = "none"
-      titulo.innerHTML = "Front-End"
-      let cronogramaLive = document.querySelector("#horario").style.display = "none"
-      btnAoVivo.style.display = "flex"
-      btnComunidade.style.display = "flex"
-      btnConvida.style.display = "flex"
-    }
-
-    function comunidade() {
-      btnComunidade.style.display = "none"
-      titulo.innerHTML = "Comunidade"
-      let cronogramaLive = document.querySelector("#horario").style.display = "none"
-      btnAoVivo.style.display = "flex"
-      btnFrontEnd.style.display = "flex"
-      btnConvida.style.display = "flex"
-    }
-
-    function convida() {
-      btnConvida.style.display = "none"
-      titulo.innerHTML = "Convida"
-      let cronogramaLive = document.querySelector("#horario").style.display = "none"
-      btnAoVivo.style.display = "flex"
-      btnFrontEnd.style.display = "flex"
-      btnComunidade.style.display = "flex"
-    }
-
-    function live() {
-      btnAoVivo.style.display = "none"
-      titulo.innerHTML = "Ao Vivo"
-      let cronogramaLive = document.querySelector("#horario").style.display = "flex"
-      btnFrontEnd.style.display = "flex"
-      btnComunidade.style.display = "flex"
-      btnConvida.style.display = "flex"
-    }
-
-    document.getElementById("btnFrontEnd").addEventListener("click", frontEnd);
-    document.getElementById("btnComunidade").addEventListener("click", comunidade);
-    document.getElementById("btnAoVivo").addEventListener("click", live);
-    document.getElementById("btnConvida").addEventListener("click", convida);
-
-
-
-  </script>
-  <!-- <script>
-  // Função para alternar entre as trilhas ao vivo e Front-End
-  function toggleTrilha(trilha) {
-      var trilhaAoVivo = document.querySelector('.trilha-aovivo');
-      var trilhaFrontEnd = document.querySelector('.trilha-frontend');
-
-      if (trilha === 'aovivo') {
-          trilhaAoVivo.style.display = 'flex';
-          trilhaFrontEnd.style.display = 'none';
-      } else if (trilha === 'frontend') {
-          trilhaAoVivo.style.display = 'none';
-          trilhaFrontEnd.style.display = 'flex';
+      function frontEnd() {
+        btnFrontEnd.style.display = "none";
+        titulo.innerHTML = "Front-End";
+        let cronogramaLive = (document.querySelector("#horario").style.display =
+          "none");
+        btnAoVivo.style.display = "flex";
+        btnComunidade.style.display = "flex";
+        btnConvida.style.display = "flex";
       }
-  }
 
-  // Adicione um ouvinte de evento aos botões do nav-second
-  var aoVivoButton = document.querySelector('.nav-second button:nth-child(1)');
-  var frontEndButton = document.querySelector('.nav-second button:nth-child(2)');
+      function comunidade() {
+        btnComunidade.style.display = "none";
+        titulo.innerHTML = "Comunidade";
+        let cronogramaLive = (document.querySelector("#horario").style.display =
+          "none");
+        btnAoVivo.style.display = "flex";
+        btnFrontEnd.style.display = "flex";
+        btnConvida.style.display = "flex";
+      }
 
-  aoVivoButton.addEventListener('click', function () {
-      toggleTrilha('aovivo');
-  });
+      function convida() {
+        btnConvida.style.display = "none";
+        titulo.innerHTML = "Convida";
+        let cronogramaLive = (document.querySelector("#horario").style.display =
+          "none");
+        btnAoVivo.style.display = "flex";
+        btnFrontEnd.style.display = "flex";
+        btnComunidade.style.display = "flex";
+      }
 
-  frontEndButton.addEventListener('click', function () {
-      toggleTrilha('frontend');
-  });
+      function live() {
+        btnAoVivo.style.display = "none";
+        titulo.innerHTML = "Ao Vivo";
+        let cronogramaLive = (document.querySelector("#horario").style.display =
+          "flex");
+        btnFrontEnd.style.display = "flex";
+        btnComunidade.style.display = "flex";
+        btnConvida.style.display = "flex";
+      }
 
-  // Exiba a trilha Ao Vivo por padrão
-  toggleTrilha('aovivo'); 
-</script> -->
-</body>
-
+      document
+        .getElementById("btnFrontEnd")
+        .addEventListener("click", frontEnd);
+      document
+        .getElementById("btnComunidade")
+        .addEventListener("click", comunidade);
+      document.getElementById("btnAoVivo").addEventListener("click", live);
+      document.getElementById("btnConvida").addEventListener("click", convida);
+    </script>
+  </body>
 </html>

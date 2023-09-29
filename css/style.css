@@ -19,12 +19,15 @@ body {
 
 body {
     background-position: center;
-    background-image: url(../assets/effects/bg-desktop\ 1.png);
+    /* background-image: url(../assets/effects/bg-desktop\ 1.png); */
     background-color: #000517;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
 }
 
 header {
