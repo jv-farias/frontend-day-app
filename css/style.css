@@ -97,6 +97,7 @@ footer {
 }
 
 footer {
+  width: 100%;
   display: flex;
   margin-top: 6rem;
   backdrop-filter: blur(8px);
