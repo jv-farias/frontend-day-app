@@ -57,6 +57,7 @@ export function apresentaCardAoVivo(cardsaovivo) {
         };
     });
 }
+// Página de loading
 
 document.addEventListener("DOMContentLoaded", function () {
     
