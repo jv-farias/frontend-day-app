@@ -1,12 +1,12 @@
-export const btnFrontEnd = document.getElementById("btnFrontEnd");
-export const btnComunidade = document.getElementById("btnComunidade");
-export const btnConvida = document.getElementById("btnConvida");
-export const btnLive = document.getElementById("btnAoVivo");
+export let btnFrontEnd = document.getElementById("btnFrontEnd");
+export let btnComunidade = document.getElementById("btnComunidade");
+export let btnConvida = document.getElementById("btnConvida");
+export let btnLive = document.getElementById("btnAoVivo");
 
-const cronogramaFrontEnd = document.getElementById("frontend");
-const cronogramaComunidade = document.getElementById("comunidades");
-const cronogramaConvida = document.getElementById("convida");
-const cronogramaLive = document.getElementById("horario");
+let cronogramaFrontEnd = document.getElementById("frontend");
+let cronogramaComunidade = document.getElementById("comunidades");
+let cronogramaConvida = document.getElementById("convida");
+let cronogramaLive = document.getElementById("horario");
 
 btnFrontEnd.addEventListener("click", function () {
   cronogramaFrontEnd.style.display = "flex";
