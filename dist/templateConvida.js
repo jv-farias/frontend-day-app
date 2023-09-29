@@ -35,7 +35,7 @@ export const htmlConvida = cardsProcessadosConvida
 `;
     } else if (card.tipo === "card-topico") {
       return `
-      <li class="cards-topicos-content">
+      <li class="topicos-cronograma-content">
           <div>
                   <p id="horario-topico" class="horario-topico">${card.horario}</p>
                   </div>

@@ -306,6 +306,7 @@ footer {
 }
 
 .botoes-trilhas {
+
   gap: 0.5rem;
   display: flex;
   justify-content: space-evenly;
@@ -313,6 +314,7 @@ footer {
 }
 
 .content-trilhas {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -600,4 +602,24 @@ footer {
 
 #nome-topico {
   color: white;
+}
+
+
+
+.topicos-cronograma-content,
+.post-topico {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.topicos-cronograma-content {
+  max-width: 700px;
+  padding: 1rem;
+  border-radius: 20px;
+  justify-content: center;
+  background-color: #ff8506;
+  flex-direction: column;
+  gap: 1rem;
 }
