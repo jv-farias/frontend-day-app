@@ -1,12 +1,11 @@
+import "./loading.js";
+import { dadosAoVivo, apresentaCardAoVivo } from "./dadosAoVivo.js";
 
-import { apresentaCardAoVivo } from "./cards-aovivo.js";
-import { cardsDataAoVivo } from './dados.js'; // FUNÇAO IMPORTADA - CARDS FRONTEND
-
-const cardsProcessadosAoVivo = apresentaCardAoVivo(cardsDataAoVivo);
-export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
-    if (card.tipo === 'card-palestrante-AoVivo') {
-        // Gere o HTML para um card de palestrante
-        return `
+const cardsProcessadosAoVivo = apresentaCardAoVivo(dadosAoVivo);
+export const htmlGeradoAoVivo = cardsProcessadosAoVivo
+  .map((card) => {
+    if (card.tipo === "card-palestrante-AoVivo") {
+      return `
         <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-palestrante-content">
                     <div class="info-post">
                         <div class="user">
@@ -45,8 +44,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
                     </div>
                 </li>
 `;
-    } else if (card.tipo === 'card-topico-AoVivo') {
-        return `
+    } else if (card.tipo === "card-topico-AoVivo") {
+      return `
         <li data-start="${card.dataStart}" data-end="${card.dataEnd}" class="cards-topicos-content">
                     <div class="post-topico">
                         <div class="user">
@@ -78,9 +77,10 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo.map(card => {
                     </div>
                 </li>`;
     } else {
-        return `<div>
+      return `<div>
             <p>ERROR</p>
             </div>`;
     }
-}).join('');
+  })
+  .join("");
 document.querySelector("#cards-cronograma").innerHTML = htmlGeradoAoVivo;

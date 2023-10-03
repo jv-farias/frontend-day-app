@@ -1,33 +1,60 @@
-// import { htmlGerado } from '../dist/cardsHtml.js';
-// import { htmlGerado1 } from '../dist/cardsHtml.js';
-// import { htmlGerado2 } from '../dist/cardsHtml.js';
-// import { btnFrontEnd } from '../dist/botoesTrilhas.js';
-// import { btnComunidade } from '../dist/botoesTrilhas.js';
-// import { btnConvida } from '../dist/botoesTrilhas.js';
-import { htmlGeradoAoVivo } from '../dist/cardsHtml.js';
+import "../dist/navigation-mobile.js";
+import "../dist/templateAoVivo.js";
+import { atualizarCardsAoVivo } from "../dist/atualizarCards.js";
+import { cardsProcessadosConvida } from "../dist/templateConvida.js";
+import { cardsProcessadosComunidades } from "../dist/templateComunidades.js";
+import { cardsProcessadosFrontEnd } from "../dist/templateFrontEnd.js";
 
-document.addEventListener("DOMContentLoaded", function () {
-    function atualizarCardsAoVivo() {
-      const now = moment();
-      const currentTime = now.format("HH:mm");
-  
-      const cardsAoVivo = document.querySelectorAll(".cards-palestrante-content, .cards-topicos-content");
-      cardsAoVivo.forEach((card) => {
-        const start = card.getAttribute("data-start");
-        const end = card.getAttribute("data-end");
-  
-        if (currentTime >= start && currentTime < end) {
-          card.style.display = "flex"; // Exibe o card
-        } else {
-          card.style.display = "none"; // Oculta o card
-        }
-      });
+
+// Obtém a barra de pesquisa
+const searchBar = document.getElementById("search-box-input");
+
+// Ouça o evento 'input' na barra de pesquisa
+searchBar.addEventListener("input", function () {
+  const searchTerm = searchBar.value.toLowerCase();
+
+  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
+  const cardsPalestrantes = document.querySelectorAll(".cards-cronograma-content");
+
+  // Itera sobre todos os elementos de cards de palestrantes
+  cardsPalestrantes.forEach((element) => {
+    const nomeElement = element.querySelector(".nome");
+    const assuntoElement = element.querySelector(".assunto");
+
+    if (nomeElement && assuntoElement) {
+      const nome = nomeElement.textContent.toLowerCase();
+      const assunto = assuntoElement.textContent.toLowerCase();
+
+      // Verifica se o elemento corresponde à pesquisa
+      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
+        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
+        element.style.display = "flex";
+      } else {
+        // Caso contrário, oculta o elemento
+        element.style.display = "none";
+      }
     }
-  
-    atualizarCardsAoVivo(); // Chama a função para atualizar os cards ao carregar a página
-  
-    // Define um intervalo para verificar e atualizar os cards a cada minuto
-    setInterval(atualizarCardsAoVivo, 1000); // Atualiza a cada minuto (60 segundos)
   });
 
-  
+  // Obtém todos os elementos com classe "topicos-cronograma-content" (tópicos)
+  const topicos = document.querySelectorAll(".topicos-cronograma-content");
+
+  // Itera sobre todos os elementos de tópicos
+  topicos.forEach((element) => {
+    // Verifica se o elemento contém informações relevantes para a pesquisa
+    const nomeElement = element.querySelector(".nome-topico");
+
+    if (nomeElement) {
+      const nome = nomeElement.textContent.toLowerCase();
+
+      // Verifica se o elemento corresponde à pesquisa
+      if (nome.includes(searchTerm) || searchTerm === "") {
+        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
+        element.style.display = "flex";
+      } else {
+        // Caso contrário, oculta o elemento
+        element.style.display = "none";
+      }
+    }
+  });
+});

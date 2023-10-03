@@ -1,4 +1,3 @@
-"use strict";
 let card = [
     {
         nome: "ABRAÃO ALVES",
