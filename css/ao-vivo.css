@@ -735,6 +735,17 @@ footer {
 @media screen and (min-width: 400px) {
 
   .search-box:hover .search-box-input {
-    width: 30vw;
+    width: 50vw;
+  }
+}
+
+@media (max-width: 300px) {
+
+  .search-box:hover .search-box-input {
+    width: 50vw;
+  }
+
+  .titulo {
+    font-size: 1.7rem;
   }
 }
