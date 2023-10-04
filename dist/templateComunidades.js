@@ -8,7 +8,7 @@ export const htmlComunidades = cardsProcessadosComunidades
       // Gere o HTML para um card de palestrante
       return `
       <li  class="cards-cronograma-content">
-      <div class="palestrante">
+      <div class="palestrante-cronograma">
         <div class="text-informacoes">
           <div class="nome">
             <h3 id="nome" class="nome">${card.nome}</h3>

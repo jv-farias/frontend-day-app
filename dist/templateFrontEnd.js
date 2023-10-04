@@ -8,7 +8,7 @@ export const htmlFrontEnd = cardsProcessadosFrontEnd
       // Gere o HTML para um card de palestrante
       return `
       <li  class="cards-cronograma-content">
-      <div class="palestrante">
+      <div class="palestrante-cronograma">
         <div class="text-informacoes">
           <div class="nome">
             <h3 id="${card.nome}" class="nome hidden">${card.nome}</h3>
