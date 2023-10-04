@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="../css/cronogramas.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <title>Cronograma Front-End Day 2023</title>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="top-header">
+                <div class="return-btn">
+                    <a href="../html/index.html"><i class="fa-solid fa-chevron-left"></i></a>
+                </div>
+                <div class="title-live">
+                    <h1>Ao Vivo</h1>
+                </div>
+                
+            </div>
+            <div class="botoes-trilhas">
+                <button id="btnFrontEnd">Front-End</button>
+                <button id="btnComunidade">Comunidade</button>
+                <button id="btnConvida">Convida</button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="cronograma-frontend" id="frontend">
+            <ul class="cards-container" id="cards-cronograma-frontend">
+            </ul>
+        </section>
+    </main>
+    <script type="module" src="../dist/trilhasHtml.js"></script>
+</body>
+
+</html>

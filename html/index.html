@@ -1,94 +1,67 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Tela Inicial Front-End Day App" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <title>Cronograma Front-End Day 2023</title>
+  </head>
 
-<head>
-    <meta charset="UTF-8">
-
-    <meta name="description" content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" type="imagex/svg" href="../assets/logos/logo-frontend-day.svg">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
-    
-    
-    <title>Cronograma Frontend Day</title>
-</head>
-
-<body>
+  <body>
     <header>
-        <div class="navbar">
-            <div id="logo-organizacao">
-                <img src="../assets/logos/logo-frontend-ce.svg" alt="Logo Frontend-Ce">
-            </div>
-            <div id="btn-insta">
-                <a href="https://www.instagram.com/frontendce" target="_blank">@frontendce</a>
-            </div>
+      <div class="logos-container">
+        <div class="logo-evento">
+          <img
+            src="../assets/logos/logo-frontend-day.svg"
+            alt="Logo Front-End Day 2023 "
+          />
         </div>
-        <div class="home">
-            <div id="logo-home">
-                <img src="../assets/logos/logo-frontend-day.svg" alt="Logo Frontend Day">
-            </div>
-            <div id="titulo-home">
-                <h1>O maior encontro da comunidade <span>Front-end CE</span></h1>
-            </div>
+        <div class="logo-organizacao">
+          <img
+            src="../assets/logos/logo-frontend-ce.svg"
+            alt="Logo Front-End Ce"
+          />
         </div>
+      </div>
     </header>
-
     <main>
-        <div class="botoes-trocas">
-            <button id="trocar-frontend" class="ativo">FRONT-END</button>
-            <button id="trocar-comunidade">COMUNIDADE</button>
-            <button id="trocar-convida">CONVIDA</button>
+      <div class="text-container">
+        <div class="text-principal">
+          <h1 id="titulo">Bem vindo ao Front-End Day 2023.</h1>
         </div>
-        <section id="cronograma-frontend">
-            <h2 class="titulo-trilha">TRILHA FRONT-END</h2>
-            <div class="cards-container" id="cards-cronograma"></div>
-        </section>
-
-        <section id="cronograma-comunidade">
-            <h2 class="titulo-trilha">TRILHA COMUNIDADE</h2>
-            <div class="cards-container" id="cards-comunidade"></div>
-        </section>
-        <section id="cronograma-convida">
-            <h2 class="titulo-trilha">TRILHA CONVIDA</h2>
-            <div class="cards-container" id="cards-convida"></div>
-        </section>
+        <div class="text-comentario">
+          <p>
+            Um dia de evento com alto volume de conteúdo sobre Front-End, UX,
+            Back-End, carreira, empreendedorismo e muito mais.
+          </p>
+        </div>
+        <a class="cronograma" href="../html/ao-vivo.html"
+          >CONFIRA O CRONOGRAMA</a
+        >
+      </div>
     </main>
-
-    <footer class="container-slides">
-        <h3>PATROCINADORES E COLABORADORES</h3>
-        <div class="logo-slider">
-            <div class="item"><a href="#"><img src="../assets/logos/casa-do-codigo.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/sunrise.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/stickers-devs.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/rocketseat.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/video-rama.webp" alt=""></a></div>
-            <div class="item"><a href="#"><img src="../assets/logos/instituto-poliglota.webp" alt=""></a></div>
+    <footer>
+      <div class="footer-container">
+        <div class="text-divulgacao">
+          <p>developed by</p>
         </div>
+        <div class="img-container">
+          <div class="img-dev">
+            <img
+              src="../assets/logos/logo-open-rage.svg"
+              alt="Logo Open Rage"
+            />
+          </div>
+        </div>
+      </div>
     </footer>
-
-    <script type="module" src="../js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script>
-    $(document).ready(function(){
-        $('.logo-slider').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            dots: true,
-            arrows: true, 
-            autoplay: true,
-            autoplaySpeed: 2000,
-            infinite: true,
-        });
-    });
-</script>
-
-</body>
-
+  </body>
 </html>

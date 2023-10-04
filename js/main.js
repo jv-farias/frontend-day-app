@@ -1,6 +1,8 @@
-import { htmlGerado } from '../dist/cardsHtml.js';
-import { htmlGerado1 } from '../dist/cardsHtml.js';
-import { htmlGerado2 } from '../dist/cardsHtml.js';
-import { btnFrontEnd } from '../dist/botoesTrilhas.js';
-import { btnComunidade } from '../dist/botoesTrilhas.js';
-import { btnConvida } from '../dist/botoesTrilhas.js';
+
+import { btnConvida } from "../dist/botoesTrilhas.js";
+import { htmlGeradoAoVivo } from "../dist/templateAoVivo.js";
+import { destacarBotao } from "../dist/navigation-mobile.js";
+import { atualizarCardsAoVivo } from "../dist/atualizarCards.js";
+import { cardsProcessadosConvida } from "../dist/templateConvida.js";
+import { cardsProcessadosComunidades } from "../dist/templateComunidades.js";
+import { cardsProcessadosFrontEnd } from "../dist/templateFrontEnd.js";

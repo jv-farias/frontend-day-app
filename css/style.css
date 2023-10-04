@@ -1,424 +1,181 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;700&display=swap);
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* outline: 1px solid red;
-    outline-offset: -1px; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#titulo,
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.logos-container,
+body {
+  display: flex;
+  justify-content: space-between;
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+  background-position: center;
+  /* background-image: url(../assets/effects/bg-desktop\ 1.png); */
+  background-color: #000517;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
-/* ESTRUTURA HEADER - NAVBAR */
-
-.navbar,
 header {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  padding: 4rem 2rem 2rem;
 }
 
-header {
-    width: 100vw;
-    background-color: #021233;
-    border-radius: 0 0 30px 30px;
-    flex-direction: column;
-    justify-content: center;
-    padding: 3rem 2rem;
-    gap: 2rem;
+.logos-container {
+  align-items: flex-start;
 }
 
-.navbar {
-    justify-content: space-between;
+.logo-evento {
+  display: flex;
+  max-width: 8rem;
+  width: 100%;
 }
 
-
-/*LOGO ORGANIZAÇÃO FRONTEND CE*/
-
-.navbar #logo-organizacao,
-header .home {
-    width: 100%;
-    display: flex;
-    align-items: center;
+.logo-evento img {
+  width: 100%;
 }
 
-.navbar #logo-organizacao {
-    max-width: 10rem;
+.logo-organizacao {
+  display: flex;
+  max-width: 6rem;
 }
 
-.navbar #logo-organizacao img {
-    height: auto;
-    width: 100%;
+.logo-organizacao img {
+  height: auto;
+  width: 100%;
 }
-
-/*BOTÃO INSTAGRAM*/
-
-header .navbar #btn-insta {
-    padding: 0.5rem 1.5rem;
-    background-color: #FF8506;
-    border-radius: 25px;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-}
-
-.navbar #btn-insta a {
-    text-decoration: none;
-    color: #021233;
-    font-size: 15px;
-    font-weight: 700;
-}
-
-header .home {
-    justify-content: space-evenly;
-    flex-direction: column;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-}
-
-header .home #logo-home {
-    display: flex;
-    max-width: 12rem;
-    width: 100%;
-}
-
-.navbar,
-header .home #logo-home img {
-    width: 100%;
-}
-
-header .home #titulo-home {
-    max-width: 80%;
-    text-align: center;
-    line-height: 1.1;
-}
-
-header .home #titulo-home h1 {
-    font-size: 20px;
-    color: #51cafd;
-    font-weight: 500;
-}
-
-.titulo-trilha,
-header .home #titulo-home h1 span {
-    font-size: 20px;
-    color: #fff;
-    font-weight: 700;
-}
-
-/* ESTRUTURA GERAL DA MAIN */
 
 main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 2rem;
+  padding: 0 5rem 0 2rem;
+  color: #fff;
 }
 
-/* ESTRUTURA DOS BOTÕES PARA TROCAR ENTRE AS TRILHAS */
-
-.botoes-trocas {
-    padding: 1rem 1.5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-top: 1rem;
-    gap: 1rem;
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
-#trocar-frontend, #trocar-comunidade, #trocar-convida {
-    font-family: "Poppins", sans-serif;
-    background-color: #021233;
-    color: #51cafd;
-    border-radius: 50px;
-    padding: .5rem 1rem;
-    font-size: 20px;
-    outline: none;
-    border: none;
-    font-weight: 700;
-    cursor: pointer;
+#titulo {
+  font-size: 2rem;
 }
 
-#trocar-frontend:hover, #trocar-comunidade:hover, #trocar-convida:hover {
-    color: #021233;
-    background-color: #51cafd;
-    transition: .6s;
+.cronograma {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #39c4ff;
+  padding: 1rem;
 }
 
-/* ESTRUTURA DOS CARDS DOS PALESTRANTES E DOS TÓPICOS */
-
-main #cronograma-frontend,
-#cronograma-comunidade,
-#cronograma-convida {
-    padding-top: 1.5rem;
-    background-color: #021233;
-    border-radius: 30px;
-    width: 100%;
+.cronograma:active {
+  background-color: #189ad1;
+  transform: scale(0.98);
 }
 
-main #cronograma-comunidade,
-#cronograma-convida {
-    display: none;
+.text-divulgacao p,
+footer {
+  background-size: 500%;
+  background-position: 85%;
+  background-image: url(../assets/effects/outline-bg.gif);
 }
 
-.titulo-trilha {
-    color: #51cafd;
-    text-align: center;
+footer {
+  width: 100%;
+  display: flex;
+  margin-top: 6rem;
+  backdrop-filter: blur(8px);
 }
 
-.cards-container {
-    transition: .8s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.footer-container,
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
-.cards-palestrante-content {
-    padding: 1rem 1.5rem;
-    justify-content: center;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    border-bottom: 1.5px solid #51cafd;
+.footer-container,
+footer {
+  border-radius: 3rem 3rem 0 0;
+  width: 100%;
 }
 
-.palestrante-picture {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.footer-container {
+  padding: 0.7rem;
+  background: rgba(57, 196, 255, 0.85);
+  gap: 1rem;
 }
 
-.palestrante-picture img {
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
+.text-divulgacao p {
+  font-family: "Poppins", sans-serif;
+  opacity: 0.5;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.3rem;
+  color: #75c6f0;
+  font-weight: 700;
 }
 
-.card-informacoes {
-    justify-content: center;
-    gap: .75rem;
+.img-container {
+  padding: 0.3rem;
+  border-radius: 50%;
+  background-color: rgba(217, 217, 217, 0.5);
+  gap: 1.5rem;
 }
 
-.card-informacoes,
-.informacoes-palestrante {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    width: 100%;
+.img-dev,
+.img-dev img {
+  object-fit: cover;
+  border-radius: 50%;
+  background-color: #fff;
 }
 
-.informacoes-palestrante .nome {
-    color: #51cafd;
-    font-weight: 700;
+.img-dev {
+  padding: 0.3rem;
+  display: flex;
 }
 
-.informacoes-palestrante .cargo {
-    font-size: 14px;
-    color: #fff;
+.img-dev img {
+  width: 3.2rem;
+  height: 3.2rem;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+  padding: 0.5rem;
 }
 
-.informacoes-palestra .assunto {
-    font-size: 14px;
-    color: #51cafd;
-    font-weight: 700;
-}
-
-.palestrante-meta,
-.palestrante-meta .redes-sociais {
-    display: flex;
-    flex-direction: column;
-}
-
-.palestrante-meta {
-    flex-wrap: wrap;
-    gap: .75rem;
-    align-items: flex-end;
-}
-
-.palestrante-meta .redes-sociais {
-    display: flex;
-    align-items: flex-end;
-    gap: .15rem;
-}
-
-.palestrante-meta .redes-sociais a {
-    font-size: 25px;
-    color: #fff;
-}
-
-.palestrante-meta .horario {
-    font-weight: 700;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-}
-
-.palestrante-meta .horario p {
-    font-weight: 700;
-    color: #fff;
-
-}
-
-.cards-topicos-content {
-    padding: 1rem 1.5rem;
-    border-bottom: 1.5px solid #51cafd;
-    width: 100%;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: flex-start;
-    align-items: center;
-    text-align: center;
-}
-
-.cards-topicos-content .horario-topico {
-    color: #fff;
-    font-weight: 700;
-    font-size: 16px;
-}
-
-.cards-topicos-content .nome-topico {
-    color: #FF8506;
-    background-color: #021233;
-    border-radius: 50px;
-    font-weight: 700;
-    flex: 1;
-    width: 100%;
-}
-
-/* ESTRUTURA DO FOOTER COM CARROSSEL DE LOGOS */
-
-.container-slides {
-    max-width: 800px;
+@media (min-width: 1000px) {
+  header,
+  main {
+    width: 60vw;
     margin: 0 auto;
-    width: 100vw;
-}
+  }
 
-footer h3 {
-    margin-top: 2rem;
-    text-align: center;
-    font-size: 20px;
-    color: #021233;
-}
-
-footer .logo-slider img {
-    width: 100px;
-}
-
-.item:hover {
-    display: block;
-    transition: all ease 0.3s;
-    transform: scale(1.05) translateY(-5px);
-}
-
-.logo-slider .slick-slide {
-    margin: 1.5rem;
-    width: 200px;
-}
-
-.slick-list .slick-track {
-    display: flex;
-    justify-content: center;
+  .footer-container {
+    flex-direction: row;
     align-items: center;
-    width: 100%;
-}
-
-.logo-slider .item a {
-    display: flex;
     justify-content: center;
-    align-items: center;
-}
+    gap: 2rem;
+  }
 
-/* MEDIA QUERY PARA BREAKPOINTS ESPECÍFICOS */
-
-@media (max-width: 370px) {
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        padding: 0.3rem 1rem;
-        font-size: 14px;
-    }
-}
-
-@media (max-width:390px) {
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 1.8rem;
-        padding: .3rem 1rem;
-        font-size: 14px;
-    }
-
-    .cards-palestrante-content,
-    .navbar {
-        flex-direction: column;
-    }
-
-    .assunto,
-    .cargo,
-    .horario,
-    .informacoes-palestrante .nome {
-        text-align: center;
-    }
-
-    .informacoes-palestrante {
-        width: 100%;
-    }
-
-    .palestrante-meta {
-        align-items: center;
-    }
-
-    .palestrante-meta .redes-sociais {
-        flex-direction: row;
-        gap: 1rem;
-    }
-}
-
-@media (min-width:930px) {
-
-    .card-informacoes,
-    .informacoes-palestrante {
-        width: 40%;
-    }
-}
-
-@media (min-width:1200px) {
-
-    header .home {
-        flex-direction: row-reverse;
-        justify-content: center;
-        gap: 70px;
-    }
-
-    header .home #titulo-home h1 {
-        font-size: 30px;
-        color: #51cafd;
-        font-weight: 500;
-    }
-
-    header .home #titulo-home h1 span {
-        font-size: 40px;
-        color: #fff;
-        font-weight: 700;
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .navbar {
-        justify-content: center;
-        gap: 470px;
-    }
+  .img-dev img {
+    width: 3rem;
+    height: 3rem;
+  }
 }

@@ -1,29 +1,37 @@
-export const btnFrontEnd = document.getElementById("trocar-frontend");
-export const btnComunidade = document.getElementById("trocar-comunidade");
-export const btnConvida = document.getElementById("trocar-convida");
+export let btnFrontEnd = document.getElementById("btnFrontEnd");
+export let btnComunidade = document.getElementById("btnComunidade");
+export let btnConvida = document.getElementById("btnConvida");
+export let btnLive = document.getElementById("btnAoVivo");
 
-const cronogramaFrontEnd = document.getElementById("cronograma-frontend");
-const cronogramaComunidade = document.getElementById("cronograma-comunidade");
-const cronogramaConvida = document.getElementById("cronograma-convida");
-
-
-
+let cronogramaFrontEnd = document.getElementById("frontend");
+let cronogramaComunidade = document.getElementById("comunidades");
+let cronogramaConvida = document.getElementById("convida");
+let cronogramaLive = document.getElementById("horario");
 
 btnFrontEnd.addEventListener("click", function () {
-    cronogramaFrontEnd.style.display = "block";
-    cronogramaComunidade.style.display = "none";
-    cronogramaConvida.style.display = "none";
+  cronogramaFrontEnd.style.display = "flex";
+  cronogramaComunidade.style.display = "none";
+  cronogramaConvida.style.display = "none";
+  cronogramaLive.style.display = "none";
 });
 
 btnComunidade.addEventListener("click", function () {
-    cronogramaFrontEnd.style.display = "none";
-    cronogramaComunidade.style.display = "block";
-    cronogramaConvida.style.display = "none";
+  cronogramaFrontEnd.style.display = "none";
+  cronogramaComunidade.style.display = "flex";
+  cronogramaConvida.style.display = "none";
+  cronogramaLive.style.display = "none";
 });
 
 btnConvida.addEventListener("click", function () {
-    cronogramaFrontEnd.style.display = "none";
-    cronogramaComunidade.style.display = "none";
-    cronogramaConvida.style.display = "block";
+  cronogramaFrontEnd.style.display = "none";
+  cronogramaComunidade.style.display = "none";
+  cronogramaConvida.style.display = "flex";
+  cronogramaLive.style.display = "none";
 });
 
+btnLive.addEventListener("click", function () {
+  cronogramaFrontEnd.style.display = "none";
+  cronogramaComunidade.style.display = "none";
+  cronogramaConvida.style.display = "none";
+  cronogramaLive.style.display = "flex";
+});
