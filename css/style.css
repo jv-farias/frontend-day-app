@@ -61,6 +61,7 @@ header {
 main {
   padding: 0 5rem 0 2rem;
   color: #fff;
+  height: 50%;
 }
 
 .text-container {
@@ -101,6 +102,8 @@ footer {
   display: flex;
   margin-top: 6rem;
   backdrop-filter: blur(8px);
+  position: absolute;
+  bottom: 0;
 }
 
 .footer-container,
