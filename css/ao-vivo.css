@@ -684,7 +684,6 @@ footer {
 }
 
 .search-box form {
-
   display: flex;
   border-radius: 50px;
   background-color: #4c4c4c;
@@ -692,9 +691,10 @@ footer {
 }
 
 .search-box .search-box-input {
-  padding-left: 2em;
-  padding-right: 1em;
-  width: 80%;
+  padding-left: 1em;
+  padding-right: .2em;
+  width: 50vw;
+  max-width: 650px;
 }
 
 .search-box-input {
@@ -729,22 +729,4 @@ footer {
 .search-box-icone {
   margin: auto;
   color: #fff;
-}
-
-@media screen and (min-width: 400px) {
-
-  .search-box .search-box-input {
-    width: 50vw;
-  }
-}
-
-@media (max-width: 300px) {
-
-  .search-box .search-box-input {
-    width: 50vw;
-  }
-
-  .titulo {
-    font-size: 1.7rem;
-  }
 }
