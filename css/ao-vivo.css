@@ -691,11 +691,10 @@ footer {
   height: 45px;
 }
 
-.search-box:hover .search-box-input {
-
+.search-box .search-box-input {
   padding-left: 2em;
   padding-right: 1em;
-  width: 250px;
+  width: 80%;
 }
 
 .search-box-input {
@@ -734,14 +733,14 @@ footer {
 
 @media screen and (min-width: 400px) {
 
-  .search-box:hover .search-box-input {
+  .search-box .search-box-input {
     width: 50vw;
   }
 }
 
 @media (max-width: 300px) {
 
-  .search-box:hover .search-box-input {
+  .search-box .search-box-input {
     width: 50vw;
   }
 
