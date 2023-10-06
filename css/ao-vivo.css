@@ -118,7 +118,7 @@ main {
 
 .user {
   color: #fff;
-  gap: 0.5rem;
+  gap: 1rem;
   justify-content: space-between;
 }
 
@@ -385,7 +385,7 @@ footer {
   }
 }
 
-@media (max-width: 333px) {
+@media (max-width: 430px) {
   .cards-palestrante-content {
     flex-direction: column;
   }
@@ -395,9 +395,27 @@ footer {
   }
 
   .info-post {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .user {
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    gap: 1rem;
+  }
+
+  .ao-vivo {
+    align-self: center;
+  }
+
+  .info-palestrante {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
   }
 
   .palestrante {
@@ -407,16 +425,12 @@ footer {
     align-items: flex-start;
   }
 
-  .palestrante img {
-    width: 5rem;
-  }
-
-  .info-palestrante {
-    margin-left: 15px;
+  .img-palestrante img {
+    width: 100%;
   }
 
   .assunto-palestra {
-    width: 85%;
+    width: 100%;
   }
 
   .post-topico,
@@ -439,6 +453,78 @@ footer {
     font-size: 1.3rem;
   }
 }
+
+@media (max-width: 315px) {
+  .cards-palestrante-content {
+    flex-direction: column;
+  }
+
+  .user {
+    order: 1;
+  }
+
+  .info-post {
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .user {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .ao-vivo {
+    align-self: center;
+  }
+
+  .info-palestrante {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .palestrante {
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .img-palestrante img {
+    width: 100%;
+  }
+
+  .assunto-palestra {
+    width: 100%;
+  }
+
+  .post-topico,
+  .topico {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .post-topico {
+    display: flex;
+    gap: 5px;
+  }
+
+  .topico {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .conteudo-topico {
+    font-size: 1.3rem;
+  }
+}
+
+
+
 
 
 /* LOADING */
@@ -715,7 +801,7 @@ footer {
 }
 
 .search-box {
-  margin-top: 1rem  ;
+  margin-top: 1rem;
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -794,4 +880,3 @@ footer {
 .search-box-button:active {
   transform: scale(.85);
 }
-

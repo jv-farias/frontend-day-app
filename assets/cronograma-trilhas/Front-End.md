@@ -18,17 +18,14 @@
 
 **Trilha 1 Front-End:**
 
-**10:40** - Bruno Barroso | Tech Project Manager Doutor Finanças - Portugal
-- **Título:** Carreira & Tecnologia & Bacalhau
+**10:40** - Amanda Esmeraldo | Frontend Developer Grupo Boticário
+- **Título:** Composition ou Opposition API: Por que tamanha resistência?
 
-**10:50** - Victor Nery | Tech Lead zFlow
-- **Título:** Programando com ChatGPT
+**11:00** - Lucas Almeida | Senior Software Engineering Chilli Piper
+- **Título:** Explorando React Server Components
 
-**11:00** - Abraão Alves | Software Engineer Beakyn
-- **Título:** Typescript Morreu! Vida Longa ao Typescript!
-
-**11:20** - Eloise Ferreira | Desenvolvedora Front-End IREDE
-- **Título:** Inclusão Digital: WCAG e Acessibilidade na Web
+**11:20** - João Willamy | Senior Software Engineering iFood
+- **Título:** E2E com Cypress
 
 **11:40** - Bruno Silva | Full Stack Developer Unimed
 - **Título:** Angular e Inteligência Artificial: Como integrar IA em Aplicações Web
@@ -51,14 +48,14 @@
 **14:30** - Ian Ramos | Senior Software Engineer Automattic
 - **Título:** Como ter um pet pode te ajudar a ser um programador melhor
 
-**14:50** - Lucas Almeida | Senior Software Engineering Chilli Piper
-- **Título:** Explorando React Server Components
+**14:50** - Eloise Ferreira | Desenvolvedora Front-End IREDE
+- **Título:** Inclusão Digital: WCAG e Acessibilidade na Web
 
 **15:10** - Kevin Tavares | Software Engineer Elo7
 - **Título:** Progressive Enhancement: O que é e como usá-lo?
 
-**15:30** - João Willamy | Senior Software Engineering iFood
-- **Título:** E2E com Cypress
+**15:30** - Abraão Alves | Software Engineer Beakyn
+- **Título:** Typescript Morreu! Vida Longa ao Typescript!
 
 ---
 
