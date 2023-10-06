@@ -1,7 +1,7 @@
 export const cardsFrontEnd = [
   {
     topico: "ABERTURA",
-    horario: "9:00",
+    horario: "09:00",
     tipo: "card-topico",
   },
   {

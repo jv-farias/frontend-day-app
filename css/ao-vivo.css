@@ -46,9 +46,10 @@ header {
 .return-btn {
   width: 2rem;
   height: 2rem;
-  background-color: rgba(217, 217, 217, 0.7);
+  background-color: transparent;
   padding: 1.3rem;
   border-radius: 200px;
+  border: 3px solid white
 }
 
 .cronograma a,
@@ -171,7 +172,6 @@ main {
   max-width: 700px;
   padding: 1rem;
   border-radius: 20px;
-  background-color: rgba(57, 196, 255, 0.8);
   order: 1;
   width: 100%;
   gap: 0.8rem;
@@ -515,11 +515,22 @@ footer {
 }
 
 .cards-cronograma-content {
+  border-radius: 1.5rem;
+  background-color: #2E9ED1;
   width: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   max-width: 700px;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  flex-direction: column;
+}
+
+.info-cards-top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -530,9 +541,68 @@ footer {
 }
 
 #horario-palestra {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: white;
   font-weight: 700;
+}
+
+.text-palestra {
+  font-size: 1rem;
+  color: white;
+}
+
+.palestrante-cronograma-trilhas {
+  gap: .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+
+.media-informacoes {
+  gap: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.img-profile {
+  width: 5rem;
+  height: 5rem;
+}
+
+.img-profile img {
+  width: 5rem;
+  border-radius: 1rem;
+  height: 100%;
+  object-fit: cover;
+}
+
+.redes-profile a {
+  color: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .4rem;
+  color: white;
+  text-decoration: none;
+
+}
+
+.linkedin,
+.instagram {
+  text-decoration: underline;
+}
+
+
+.fa-brands {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  width: 100%;
+  color: white;
 }
 
 .palestrante {
@@ -546,6 +616,7 @@ footer {
 }
 
 .text-informacoes {
+  order: 1;
   width: 100%;
   gap: 0.5rem;
   display: flex;
@@ -560,61 +631,37 @@ footer {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  font-size: 1.2rem;
   color: white;
+}
+
+#nome {
+  font-size: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
 }
 
 
 #cargo {
-  font-size: 0.7rem;
-  color: rgb(202, 202, 202);
+  color: #FFF;
+  font-size: 14px;
+
 }
 
 #assunto {
-  font-size: 0.9rem;
+  align-self: stretch;
   color: #000517;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
-.media-informacoes {
-  gap: 0.3rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-}
-
-.img-profile {
-  width: 5rem;
-  height: 5rem;
-}
-
-.img-profile img {
-  border-radius: 15px;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .redes-profile {
-  padding: 0.5rem;
   display: flex;
-  gap: 1rem;
-  justify-content: space-around;
-  border-radius: 5px;
+  gap: .5rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
-.redes-profile a {
-  color: transparent;
-}
 
-.fa-brands {
-  display: flex;
-  justify-content: center;
-  font-size: 1.3rem;
-  width: 100%;
-  color: white;
-}
 
 .cards-topicos-content {
   padding: 1rem;
@@ -624,13 +671,9 @@ footer {
   flex-direction: row;
 }
 
-#horario-topico {
-  font-weight: 700;
-  color: white;
-}
-
 #nome-topico {
   color: white;
+  font-size: 1rem;
 }
 
 
@@ -644,13 +687,22 @@ footer {
 }
 
 .topicos-cronograma-content {
-  max-width: 700px;
-  padding: 1rem;
-  border-radius: 20px;
-  justify-content: center;
   background-color: #ff8506;
-  flex-direction: column;
   gap: 1rem;
+  border-radius: 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 700px;
+  padding: 1.5rem 1.3rem;
+}
+
+#horario-topico {
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-weight: 700;
+  color: white;
 }
 
 .box-busca {
@@ -660,6 +712,13 @@ footer {
   align-items: center;
   width: 100%;
   height: 100%;
+}
+
+.search-box {
+  margin-top: 1rem  ;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .search-box-input::placeholder {
@@ -684,17 +743,26 @@ footer {
 }
 
 .search-box form {
+  width: 100%;
+  justify-content: space-between;
   display: flex;
   border-radius: 50px;
-  background-color: #4c4c4c;
+  background-color: white;
   height: 45px;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .search-box .search-box-input {
   padding-left: 1em;
   padding-right: .2em;
-  width: 50vw;
-  max-width: 650px;
+  width: 70vw;
+  max-width: 700px;
+  color: #8a8a8a;
+}
+
+.search-box-input::placeholder {
+  color: #8a8a8a;
 }
 
 .search-box-input {
