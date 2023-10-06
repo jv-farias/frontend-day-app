@@ -2,7 +2,7 @@
 export const cardsConvida = [
   {
     topico: "ABERTURA",
-    horario: "9:00",
+    horario: "09:00",
     tipo: "card-topico",
   },
   {
@@ -131,8 +131,7 @@ export const cardsConvida = [
     nome: "AMÁLIA MOURA",
     nomeArquivoImagem: "amalia-moura.webp",
     cargo: "Especialista em carreira Rocketseat",
-    assunto:
-      "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
+    assunto: "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
     instagram: "amaliabeatrizmoura",
     linkedin: "amáliabeatrizmoura",
     horario: "15:10",

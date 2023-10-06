@@ -2,7 +2,7 @@
 export const dadosComunidade = [
   {
     topico: "ABERTURA",
-    horario: "9:00",
+    horario: "09:00",
     tipo: "card-topico",
   },
   {
@@ -19,7 +19,7 @@ export const dadosComunidade = [
     nome: "CJ PATOILO",
     nomeArquivoImagem: "cj-patoilo.webp",
     cargo: "Criador do Miligram.io e Airform.io",
-    assunto: "Keynote - Arquitetura",
+    assunto: "Frontend Patterns - Uma perspectiva moderna da arquitetura de software",
     instagram: "cjpatoilo",
     linkedin: "cjpatoilo",
     horario: "09:30",
