@@ -35,7 +35,7 @@ export const dadosComunidade = [
     nomeArquivoImagem: "alynne-ferreira.webp",
     cargo: "Software Engineer Shape",
     assunto: "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
-    instagram: "_alynnef",
+    instagram: "_alynnefs",
     linkedin: "alynnefs",
     horario: "10:40",
     tipo: "card-palestrante",
