@@ -9,6 +9,9 @@
 #titulo,
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .logos-container{
@@ -29,6 +32,7 @@ body {
 
 header {
   padding: 4rem 2rem 2rem;
+  height: 300px;
 }
 
 .logos-container {
@@ -98,10 +102,7 @@ footer {
 footer {
   width: 100%;
   display: flex;
-  margin-top: 6rem;
   backdrop-filter: blur(8px);
-  position: absolute;
-  bottom: 0;
 }
 
 .footer-container,
