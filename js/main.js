@@ -6,12 +6,15 @@ import { cardsProcessadosComunidades } from "../dist/templateComunidades.js";
 import { cardsProcessadosFrontEnd } from "../dist/templateFrontEnd.js";
 
 
-function debounce(func, delay = 1000) {
-  let timer;
+// Função debounce para adicionar um atraso na execução de uma função após um evento
+function debounce(func, delay) {
+  let timer; // Variável para armazenar o identificador do temporizador
+
   return function() {
-    clearTimeout(timer);
+    clearTimeout(timer); // Limpa o temporizador se já estiver definido
+
     timer = setTimeout(() => {
-      func.apply(this, arguments);
+      func.apply(this, arguments); // Executa a função original após o atraso
     }, delay);
   };
 }
@@ -72,5 +75,5 @@ function search(){
 };
 
 // Ouça o evento 'input' na barra de pesquisa
-searchBar.addEventListener("input", debounce(search));
+searchBar.addEventListener("input", debounce(search, 1000));
 
