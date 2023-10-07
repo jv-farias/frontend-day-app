@@ -10,6 +10,6 @@ Sinta-se à vontade para explorar o repositório, fazer perguntas e contribuir c
 
 Divirta-se codificando e obrigado por se juntar a nós!
 
-Atenciosamente, Open Rage
+Link para a [documentação](https://doc-frontend-day-app.vercel.app) sobre.
 
-Link para a [documentação](https://doc-frontend-day-app.vercel.app) sobre .
+Atenciosamente, Open Rage
