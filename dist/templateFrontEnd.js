@@ -1,12 +1,41 @@
 import { apresentaCard } from "./cards.js";
 import { cardsFrontEnd } from "./dadosFrontEnd.js";
 
+// Requisição do ENDPOINT
+fetch('https://frontendday.descompliqueapps.com.br/index.php/wp-json/site/v1/data')
+    .then(response => {
+        // Verifica se a resposta foi bem-sucedida (status 200)
+        if (!response.ok) {
+            throw new Error('Não foi possível obter os dados da API');
+        }
+        // Parse a resposta em JSON
+        return response.json();
+    })
+    .then(data => {
+        // Agora, 'data' contém os dados da API
+        console.log(data);
+
+        // Array para armazenar os valores de "role"
+        const roles = [];
+
+        // Percorra o array "principal" e colete os valores de "role"
+        data.talks.frontend.forEach(talk => {
+            roles.push(talk.speaker.role);
+        });
+
+        console.log(roles);
+        
+    })
+    .catch(error => {
+        console.error(error);
+    });
+
 export const cardsProcessadosFrontEnd = apresentaCard(cardsFrontEnd);
 export const htmlFrontEnd = cardsProcessadosFrontEnd
-  .map((card) => {
-    if (card.tipo === "card-palestrante") {
-      // Gere o HTML para um card de palestrante
-      return `
+    .map((card) => {
+        if (card.tipo === "card-palestrante") {
+            // Gere o HTML para um card de palestrante
+            return `
       <li class="cards-cronograma-content">
       <div class="info-cards-top">
           <div class="horario">
@@ -47,8 +76,8 @@ export const htmlFrontEnd = cardsProcessadosFrontEnd
       </div>
   </li>
 `;
-    } else if (card.tipo === "card-topico") {
-      return `
+        } else if (card.tipo === "card-topico") {
+            return `
       <li class="topicos-cronograma-content">
           <div>
                   <p id="horario-topico" class="horario-topico">${card.horario}</p>
@@ -57,12 +86,12 @@ export const htmlFrontEnd = cardsProcessadosFrontEnd
                   <p id="nome-topico">${card.topico}</p>
                   </div>
                 </li>`;
-    } else {
-      return `<div>
+        } else {
+            return `<div>
             <p>ERROR</p>
             </div>`;
-    }
-  })
-  .join("");
+        }
+    })
+    .join("");
 document.querySelector("#cards-cronograma-frontend").innerHTML = htmlFrontEnd;
 
