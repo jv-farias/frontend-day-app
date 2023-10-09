@@ -11,7 +11,7 @@
 
 **09:30** - CJ Patoilo | Criador do Miligram.io e Airform.io
 - **Trilha:** Auditório
-- **Título:** Keynote - Arquitetura
+- **Título:** Frontend Patterns - Uma perspectiva moderna da arquitetura de software
 
 **10:00** - Networking
 
@@ -19,11 +19,11 @@
 
 **Trilha 1 Convida:**
 
-**10:40** - Rachel Carvalho | Product Designer Agenda Edu
-- **Título:** UX e Handoff, a passagem do designer para o dev
+**11:00** - Bruno Barroso | Tech Project Manager Doutor Finanças - Portugal
+- **Título:** Carreira & Tecnologia & Bacalhau
 
-**11:00** - Wesley Jonatha | Desenvolvedor Stefanini
-- **Título:** Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade
+**11:00** - Rachel Carvalho | Product Designer Agenda Edu
+- **Título:** UX e Handoff, a passagem do designer para o dev
 
 **11:20** - Time PMenos Lab | Líderes Times de Inovação, Hub de Saúde, Ecommerce e App
 - **Título:** Ecossistema VTEX e Alavancando Resultados com um App Gerencial
@@ -55,8 +55,8 @@
 **15:10** - Amália Moura | Especialista em carreira Rocketseat
 - **Título:** Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga
 
-**15:30** - Letícia Silva | Software Engineering Manager iFood
-- **Título:** Em Breve
+**15:30** - Wesley Jonatha | Desenvolvedor Stefanini
+- **Título:** Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade
 
 ---
 

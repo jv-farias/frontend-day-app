@@ -1,7 +1,7 @@
-import { apresentaCardAoVivo } from "./cards-aovivo.js";
-import { cardsAoVivo } from "./dadosAoVivo.js";
+import "./loading.js";
+import { dadosAoVivo, apresentaCardAoVivo } from "./dadosAoVivo.js";
 
-const cardsProcessadosAoVivo = apresentaCardAoVivo(cardsAoVivo);
+const cardsProcessadosAoVivo = apresentaCardAoVivo(dadosAoVivo);
 export const htmlGeradoAoVivo = cardsProcessadosAoVivo
   .map((card) => {
     if (card.tipo === "card-palestrante-AoVivo") {
@@ -13,8 +13,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <img src="../assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
                             </div>
                             <div class="user-nome">
-                                <p id="usuario">@frontendday2023</p>
-                                <p id="horarioLive">${card.horario}</p>
+                                <p class="usuario">@frontendday2023</p>
+                                <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
                         <div class="ao-vivo">
@@ -53,8 +53,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <img src="../assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
                             </div>
                             <div class="user-nome">
-                                <p id="usuario">@frontendday2023</p>
-                                <p id="horarioLive">${card.horario}</p>
+                                <p class="usuario">@frontendday2023</p>
+                                <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
                         <div class="ao-vivo">
@@ -66,9 +66,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                         </div>
                     </div>
                     <div class="topico">
-                        <div class="img-topico">
-                            <img src="${card.nomeArquivoImagem}" alt="Gif Ursinho Pooh">
-                        </div>
+
                         <div class="info-topico">
                             <div class="nome-topico">
                                 <p class="conteudo-topico">${card.topico}</p>

@@ -10,7 +10,7 @@
 
 **09:30** - CJ Patoilo | Criador do Miligram.io e Airform.io
 - **Trilha:** Auditório
-- **Título:** Keynote - Arquitetura
+- **Título:** Frontend Patterns - Uma perspectiva moderna da arquitetura de software
 
 **10:00** - Networking
 
@@ -20,6 +20,9 @@
 
 **10:40** - Alynne Ferreira | Software Engineer Shape
 - **Título:** Grafos e Vogue Dance: usando estrutura de dados para criar coreografias
+
+**11:00** - Bruno Lopes | Especialista Android Trybe
+- **Título:** Ataque força bruta a tokens JWT na pratica!
 
 **11:20** - Adrian Maycon | Desenvolvedor Front End MERX
 - **Título:** Novos Caminhos e Networking: O Papel das Comunidades de Tech
@@ -42,10 +45,16 @@
 **14:10** - Noemi Cunha | Desenvolvedora Front-End Uol
 - **Título:** Dominando as Soft Skills para uma Jornada na Tecnologia
 
+**14:30** - Renan Gurgel | Gerente de Tecnologia Agenda Edu
+- **Título:** Contribuindo com Open Source através de Ruby Gems
+
 **14:50** - Sílva Muniz | Tech Lead e Scrum Master Governo do Estado do Ceará
 - **Título:** Como impulsionar sua carreira através das comunidades de tecnologia
 
-**15:10** - Romênia Sousa | Product Manager PicPay
+**15:10** - Riva Júnior | Frontend Engineer Loadsmart
+- **Título:** O que não te ensinaram sobre JavaScript
+
+**15:30** - Romênia Sousa | Product Manager PicPay
 - **Título:** Discovery de Produtos: Os desafios na busca de entregar soluções simples de alto valor
 
 ---

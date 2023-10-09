@@ -1,3 +1,4 @@
+// Funcionalidade de atualizar os cards da página ao vivo.
 function atualizarCardsAoVivo() {
   const now = moment();
   const currentTime = now.format("HH:mm");

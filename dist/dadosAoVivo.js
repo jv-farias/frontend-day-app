@@ -1,5 +1,5 @@
 // CARDS AO VIVO - CRONOGRAMA GERAL
-export const cardsAoVivo = [
+export const dadosAoVivo = [
   {
     topico: "ABERTURA",
     horario: "9:00",
@@ -23,7 +23,7 @@ export const cardsAoVivo = [
     nome: "CJ PATOILO",
     nomeArquivoImagem: "../assets/palestrantes/cj-patoilo.webp",
     cargo: "Criador do Miligram.io e Airform.io",
-    assunto: "Keynote - Arquitetura",
+    assunto: "Frontend Patterns - Uma perspectiva moderna da arquitetura de software",
     horario: "09:30",
     dataStart: "09:30",
     dataEnd: "10:00",
@@ -39,13 +39,13 @@ export const cardsAoVivo = [
     tipo: "card-topico-AoVivo",
   },
   {
-    nome: "BRUNO BARROS",
-    nomeArquivoImagem: "../assets/palestrantes/bruno-barroso.webp",
-    cargo: "Tech Project Manager Doutor Finanças - Portugal",
-    assunto: "Carreira & Tecnologia & Bacalhau",
+    nome: "AMANDA ESMERALDO",
+    nomeArquivoImagem: "../assets/palestrantes/amanda-esmeraldo.webp",
+    cargo: "Frontend Developer Grupo Botícario",
+    assunto: "Composition ou Opposition API: Por que tamanha resistência?",
     horario: "10:40",
     dataStart: "10:40",
-    dataEnd: "10:50",
+    dataEnd: "11:00",
     trilha: "Front-End",
     tipo: "card-palestrante-AoVivo",
   },
@@ -54,8 +54,7 @@ export const cardsAoVivo = [
     nome: "ALYNNE FERREIRA",
     nomeArquivoImagem: "../assets/palestrantes/alynne-ferreira.webp",
     cargo: "Software Engineer Shape",
-    assunto:
-      "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
+    assunto: "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
     horario: "10:40",
     dataStart: "10:40",
     dataEnd: "11:00",
@@ -64,34 +63,21 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "RACHEL CARVALHO",
-    nomeArquivoImagem: "../assets/palestrantes/rachel-carvalho.webp",
-    cargo: "Product Designer Agenda Edu",
-    assunto: "UX e Handoff, a passagem do designer para o dev",
+    nome: "BRUNO BARROSO",
+    nomeArquivoImagem: "../assets/palestrantes/bruno-barroso.webp",
+    cargo: "Tech Project Manager Doutor Finanças - Portugal",
+    assunto: "Carreira & Tecnologia & Bacalhau",
     horario: "10:40",
     dataStart: "10:40",
     dataEnd: "11:00",
     trilha: "Convida",
     tipo: "card-palestrante-AoVivo",
   },
-
   {
-    nome: "VICTOR NERY",
-    nomeArquivoImagem: "../assets/palestrantes/victor-nery.webp",
-    cargo: "Tech Lead zFlow",
-    assunto: "Programando com ChatGPT",
-    horario: "10:50",
-    dataStart: "10:50",
-    dataEnd: "11:00",
-    trilha: "Front-End",
-    tipo: "card-palestrante-AoVivo",
-  },
-
-  {
-    nome: "ABRAÃO ALVES",
-    nomeArquivoImagem: "../assets/palestrantes/abraao-alves.webp",
-    cargo: "Software Engineer Beakyn",
-    assunto: "Typescript Morreu! Vida longa ao Typescript!",
+    nome: "LUCAS ALMEIDA",
+    nomeArquivoImagem: "../assets/palestrantes/lucas-almeida.webp",
+    cargo: "Senior Software Engineering Chilli Piper",
+    assunto: "Explorando React Server Components",
     horario: "11:00",
     dataStart: "11:00",
     dataEnd: "11:20",
@@ -112,11 +98,10 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "WESLEY JONATHA",
-    nomeArquivoImagem: "../assets/palestrantes/wesley-jonatha.webp",
-    cargo: "Desenvolvedor Stefanini",
-    assunto:
-      "Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade",
+    nome: "RACHEL CARVALHO",
+    nomeArquivoImagem: "../assets/palestrantes/rachel-carvalho.webp",
+    cargo: "Product Designer Agenda Edu",
+    assunto: "UX e Handoff, a passagem do designer para o dev",
     horario: "11:00",
     dataStart: "11:00",
     dataEnd: "11:20",
@@ -125,10 +110,10 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "ELOISE FERREIRA",
-    nomeArquivoImagem: "../assets/palestrantes/eloise-ferreira.webp",
-    cargo: "Desenvolvedora Front-End IREDE",
-    assunto: "Inclusão Digital: WCAG e Acessibilidade na Web",
+    nome: "JOAO WILLAMY",
+    nomeArquivoImagem: "../assets/palestrantes/joao-willamy.webp",
+    cargo: "Senior Software Engineering iFood",
+    assunto: "E2E com Cypress",
     horario: "11:20",
     dataStart: "11:20",
     dataEnd: "11:40",
@@ -164,8 +149,7 @@ export const cardsAoVivo = [
     nome: "BRUNO SILVA",
     nomeArquivoImagem: "../assets/palestrantes/bruno-silva.webp",
     cargo: "Full Stack Developer Unimed",
-    assunto:
-      "Angular e Inteligência Artificial: Como Integrar IA em Aplicações Web",
+    assunto: "Angular e Inteligência Artificial: Como Integrar IA em Aplicações Web",
     horario: "11:40",
     dataStart: "11:40",
     dataEnd: "12:00",
@@ -189,8 +173,7 @@ export const cardsAoVivo = [
     nome: "CAMILA GADELHA",
     nomeArquivoImagem: "../assets/palestrantes/camila-gadelha.webp",
     cargo: "UX Designer Sistema Verdes Mares",
-    assunto:
-      "Pesquisa com usuários - A importância de ouvir quem usa o produto",
+    assunto: "Pesquisa com usuários - A importância de ouvir quem usa o produto",
     horario: "11:40",
     dataStart: "11:40",
     dataEnd: "12:00",
@@ -233,7 +216,7 @@ export const cardsAoVivo = [
 
   {
     nome: "VINÍCIUS CAMPITELLI",
-    nomeArquivoImagem: "../assets/palestrantes/camila-gadelha.webp",
+    nomeArquivoImagem: "../assets/palestrantes/vinicius-campitelli.webp",
     cargo: "Developer Relations FusionAuth",
     assunto: "O que você precisa saber sobre autenticação com JWT",
     horario: "13:30",
@@ -271,8 +254,7 @@ export const cardsAoVivo = [
     nome: "VICTOR ALENCAR",
     nomeArquivoImagem: "../assets/palestrantes/victor-alencar.webp",
     cargo: "CTO Sunne Energias",
-    assunto:
-      "Do Console à Sala de Reunião: profissionalismo na entrevista e na empresa",
+    assunto: "Do Console à Sala de Reunião: profissionalismo na entrevista e na empresa",
     horario: "13:50",
     dataStart: "13:50",
     dataEnd: "14:10",
@@ -295,7 +277,7 @@ export const cardsAoVivo = [
   {
     nome: "NOEMI CUNHA",
     nomeArquivoImagem: "../assets/palestrantes/noemi-cunha.webp",
-    cargo: "PyLadies Fortaleza: História e fundação",
+    cargo: "Desenvolvedora Front-End Uol",
     assunto: "Dominando as Soft Skills para uma Jornada na Tecnologia",
     horario: "14:10",
     dataStart: "14:10",
@@ -353,10 +335,10 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "LUCAS ALMEIDA",
-    nomeArquivoImagem: "../assets/palestrantes/lucas-almeida.webp",
-    cargo: "Senior Software Engineering Chilli Piper",
-    assunto: "Explorando React Server Components",
+    nome: "ELOISE FERREIRA",
+    nomeArquivoImagem: "../assets/palestrantes/eloise-ferreira.webp",
+    cargo: "Desenvolvedora Front-End IREDE",
+    assunto: "Inclusão Digital: WCAG e Acessibilidade na Web",
     horario: "14:50",
     dataStart: "14:50",
     dataEnd: "15:10",
@@ -368,8 +350,7 @@ export const cardsAoVivo = [
     nome: "SÍLVIA MUNIZ",
     nomeArquivoImagem: "../assets/palestrantes/silvia-muniz.webp",
     cargo: "Tech Lead e Scrum Master Governo do Estado do Ceará",
-    assunto:
-      "Como impulsionar sua carreira através das comunidades de tecnologia",
+    assunto: "Como impulsionar sua carreira através das comunidades de tecnologia",
     horario: "14:50",
     dataStart: "14:50",
     dataEnd: "15:10",
@@ -417,8 +398,7 @@ export const cardsAoVivo = [
     nome: "AMÁLIA MOURA",
     nomeArquivoImagem: "../assets/palestrantes/amalia-moura.webp",
     cargo: "Especialista em carreira Rocketseat",
-    assunto:
-      "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
+    assunto: "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
     horario: "15:10",
     dataStart: "15:10",
     dataEnd: "15:30",
@@ -427,10 +407,10 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "JOÃO WILLAMY",
-    nomeArquivoImagem: "../assets/palestrantes/joao-willamy.webp",
-    cargo: "Senior Software Engineering iFood",
-    assunto: "E2E com Cypress",
+    nome: "ABRAÃO ALVES",
+    nomeArquivoImagem: "../assets/palestrantes/abraao-alves.webp",
+    cargo: "Software Engineer Beakyn",
+    assunto: "Typescript Morreu! Vida longa ao Typescript!",
     horario: "15:30",
     dataStart: "15:30",
     dataEnd: "15:50",
@@ -442,8 +422,7 @@ export const cardsAoVivo = [
     nome: "ROMÊNIA SOUSA",
     nomeArquivoImagem: "../assets/palestrantes/romenia-sousa.webp",
     cargo: "Product Manager PicPay",
-    assunto:
-      "Discovery de produto: os desafios na busca de entregar soluções simples de alto valor",
+    assunto: "Discovery de produto: os desafios na busca de entregar soluções simples de alto valor",
     horario: "15:30",
     dataStart: "15:30",
     dataEnd: "15:50",
@@ -452,10 +431,10 @@ export const cardsAoVivo = [
   },
 
   {
-    nome: "LETÍCIA SILVA",
-    nomeArquivoImagem: "../assets/palestrantes/leticia-silva.webp",
-    cargo: "Software Engineering Manager iFood",
-    assunto: "Em breve",
+    nome: "WESLEY JONATHA",
+    nomeArquivoImagem: "../assets/palestrantes/wesley-jonatha.webp",
+    cargo: "Desenvolvedor Stefanini",
+    assunto: "Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade",
     horario: "15:30",
     dataStart: "15:30",
     dataEnd: "15:50",
@@ -523,3 +502,64 @@ export const cardsAoVivo = [
     tipo: "card-topico-AoVivo",
   },
 ];
+
+// Processamentos de dados - Ao Vivo
+
+let cardsAoVivo = [
+  {
+      nome: "",
+      nomeArquivoImagem: "",
+      cargo: "",
+      assunto: "",
+      horario: "",
+      dataStart: "",
+      dataEnd: "",
+      trilha: "",
+      tipo: ""
+  },
+];
+let infoAoVivo = [
+  {
+      topico: "",
+      horario: "",
+      nomeArquivoImagem: "",
+      dataStart: "",
+      dataEnd: "",
+      tipo: ''
+  }
+];
+let cardsaovivo = [
+  ...cardsAoVivo,
+  ...infoAoVivo
+];
+export function apresentaCardAoVivo(cardsaovivo) {
+  return cardsaovivo.map(notificacao => {
+      if (notificacao.tipo === 'card-palestrante-AoVivo') {
+          return {
+              nome: notificacao.nome,
+              nomeArquivoImagem: notificacao.nomeArquivoImagem,
+              cargo: notificacao.cargo,
+              assunto: notificacao.assunto,
+              horario: notificacao.horario,
+              dataStart: notificacao.dataStart,
+              dataEnd: notificacao.dataEnd,
+              trilha: notificacao.trilha,
+              tipo: 'card-palestrante-AoVivo'
+          };
+      }
+      if (notificacao.tipo === 'card-topico-AoVivo') {
+          return {
+              topico: notificacao.topico,
+              horario: notificacao.horario,
+              nomeArquivoImagem: notificacao.nomeArquivoImagem,
+              dataStart: notificacao.dataStart,
+              dataEnd: notificacao.dataEnd,
+              tipo: 'card-topico-AoVivo'
+          };
+      }
+      // Tratamento para tipos desconhecidos.
+      return {
+          tipo: 'tipo-desconhecido',
+      };
+  });
+}
