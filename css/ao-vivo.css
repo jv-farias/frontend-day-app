@@ -385,7 +385,7 @@ footer {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 390px) {
   .cards-palestrante-content {
     flex-direction: column;
   }
@@ -441,7 +441,7 @@ footer {
 
   .post-topico {
     display: flex;
-    gap: 5px;
+    gap: .5rem;
   }
 
   .topico {
