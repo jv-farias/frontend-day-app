@@ -19,7 +19,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "allowJs": true 
+    "allowJs": true
+    // TODO: fix JS errors catching by TS
+    // ,"checkJs": true 
   },
   "include": ["src"]
 }
