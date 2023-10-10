@@ -1,4 +1,4 @@
-# <div style="text-align:center; display: flex; justify-content: center; gap: 15px;">frontEnd-Day-app <img src="./assets/logos/logo-open-rage.svg" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;"></div>
+# frontEnd-Day-app <img src="./assets/logos/logo-open-rage.svg" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;">
 
 Bem-vindo ao Repositório do Frontend Day App! 
 
