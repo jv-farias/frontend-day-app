@@ -12,7 +12,7 @@ function atualizarCardsAoVivo() {
     if (currentTime >= start && currentTime < end) {
       card.style.display = "flex"; // Exibe o Card
     } else {
-      card.style.display = "none"; // Oculta o Card
+      card.style.display = "flex"; // Oculta o Card
     }
   });
 }

@@ -14,7 +14,7 @@ body {
   background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(2) rotate(55)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(227, 100%, 5%, 1)'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002'  stroke-width='1.5' stroke='hsla(227, 91%, 6%, 1)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   background-color: #000517;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 header,
@@ -24,6 +24,10 @@ main {
 
 header {
   padding: 4rem 2rem 2rem;
+}
+
+.titulo {
+  font-size: 2rem;
 }
 
 .header-container,
@@ -108,7 +112,7 @@ main {
   flex-wrap: wrap;
 }
 
-.ao-vivo,
+.salvar,
 .info-post,
 .user,
 .user-img {
@@ -122,7 +126,7 @@ main {
   justify-content: space-between;
 }
 
-.ao-vivo,
+.salvar,
 .user-img {
   justify-content: center;
 }
@@ -139,7 +143,8 @@ main {
 
 
 
-.ao-vivo {
+.salvar {
+  font-size: 1.5rem;
   gap: 0.5rem;
 }
 
@@ -239,7 +244,7 @@ main {
 
 .cards-topicos-content {
   max-width: 700px;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 20px;
   justify-content: center;
   background-color: #ff8506;
@@ -285,7 +290,7 @@ main {
 }
 
 .conteudo-topico {
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-align: right;
   color: #fff;
 }
@@ -331,9 +336,15 @@ footer {
   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
 }
 
-.botoes-trilhas {
-
+.botoes {
   gap: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.botoes-trilhas {
+  gap: .5rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -342,7 +353,7 @@ footer {
 .content-trilhas {
   cursor: pointer;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   gap: 0.2rem;
@@ -383,6 +394,35 @@ footer {
     width: 3rem;
     height: 3rem;
   }
+
+  footer {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    background-color: rgba(253, 246, 246, 0.8);
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0.1);
+    border-right: 1.5px solid rgba(255, 255, 255, 0.5);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    left: 0;
+    width: 12vh;
+    padding: 2rem 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .botoes-trilhas {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
 }
 
 @media (max-width: 390px) {
@@ -390,27 +430,19 @@ footer {
     flex-direction: column;
   }
 
-  .user {
-    order: 1;
-  }
 
   .info-post {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    flex-direction: column;
   }
 
   .user {
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
   }
 
-  .ao-vivo {
-    align-self: center;
-  }
 
   .info-palestrante {
     text-align: center;
@@ -435,7 +467,6 @@ footer {
 
   .post-topico,
   .topico {
-    justify-content: center;
     align-items: center;
   }
 
@@ -477,7 +508,7 @@ footer {
     text-align: center;
   }
 
-  .ao-vivo {
+  .salvar {
     align-self: center;
   }
 
@@ -750,7 +781,7 @@ footer {
 
 
 .cards-topicos-content {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
