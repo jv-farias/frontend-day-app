@@ -53,9 +53,6 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
-                        <div class="salvar">
-                        <i class="fa-regular fa-bookmark" class="salvar-agenda"></i>
-                        </div>
                     </div>
                     <div class="topico">
 
