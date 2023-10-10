@@ -17,13 +17,13 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
-                        <div class="salvar">
+                        <button class="salvar-agenda">
                         <i class="fa-regular fa-bookmark" class="salvar-agenda"></i>
-                        </div>
+                        </button>
                     </div>
                     <div class="palestrante">
                         <div class="img-palestrante">
-                            <img src="${card.nomeArquivoImagem}" alt="${card.nome}">
+                            <img src="${card.nomeArquivoImagem}" alt="${card.nome}" class="imag-palestrante">
                         </div>
                         <div class="info-palestrante">
                             <div class="nome-cargo">
@@ -36,7 +36,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                         </div>
                     </div>
                     <div class="assunto-palestra">
-                        <p>${card.assunto}</p>
+                        <p class="assuntoLive">${card.assunto}</p>
                     </div>
                 </li>
 `;
