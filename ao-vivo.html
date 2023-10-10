@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Cronograma para o Evento: Frontend Day - Dia 14 de Outubro" />
+  <link rel="shortcut icon" type="imagex/svg" href="./assets/logos/logo-frontend-day.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="./css/ao-vivo.css" />
+  <title>Cronograma Front-End Day 2023</title>
+</head>
+
+<body>
+  <!-- PÁGINA DE LOADING -->
+  <div class="loading" id="loader" display="none">
+    <span class="loader"></span>
+  </div>
+
+  <header class="content-container">
+    <div class="header-container">
+      <div class="top-header">
+        <div class="return-btn">
+          <a href="./index.html"><i class="fa-solid fa-chevron-left"></i></a>
+        </div>
+        <div class="title-live">
+          <h1 class="titulo">Ao Vivo</h1>
+        </div>
+      </div>
+      <div class="box-busca">
+        <div class="search-box">
+          <form method="post" action="#">
+            <input type="text" class="search-box-input" id="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
+            <button class="search-box-button"><i class="fa-solid fa-magnifying-glass"
+                style="color: #8a8a8a;"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="cronograma-live content-main" id="horario">
+      <ul class="cards-container" id="cards-cronograma"></ul>
+    </section>
+
+    <section class="cronograma-frontend content-main" id="frontend">
+      <ul class="cards-container" id="cards-cronograma-frontend"></ul>
+    </section>
+
+    <section class="cronograma-comunidades content-main" id="comunidades">
+      <ul class="cards-container" id="cards-cronograma-comunidades"></ul>
+    </section>
+
+    <section class="cronograma-convida content-main" id="convida">
+      <ul class="cards-container" id="cards-cronograma-convida"></ul>
+    </section>
+  </main>
+
+  <footer class="content-footer">
+    <div class="botoes-trilhas">
+      <div id="btnAoVivo" class="content-trilhas">
+        <div class="iconBtn" id="iconAoVivo">
+          <i class="fa-solid fa-person-chalkboard"></i>
+        </div>
+        <div class="textBtn" id="textAoVivo">
+          <p class="titulo-trilha">Ao Vivo</p>
+        </div>
+      </div>
+
+      <div id="btnFrontEnd" class="content-trilhas">
+        <div class="iconBtn" id="iconFrontEnd">
+          <i class="fa-solid fa-laptop-code"></i>
+        </div>
+        <div class="textBtn">
+          <p class="titulo-trilha">Front-End</p>
+        </div>
+      </div>
+
+      <div id="btnComunidade" class="content-trilhas">
+        <div class="iconBtn" id="iconComunidade">
+          <i class="fa-solid fa-users"></i>
+        </div>
+        <div class="textBtn">
+          <p class="titulo-trilha">Comunidades</p>
+        </div>
+      </div>
+
+      <div id="btnConvida" class="content-trilhas">
+        <div class="iconBtn" id="iconConvida">
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="textBtn">
+          <p class="titulo-trilha">Convida</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
