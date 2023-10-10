@@ -77,3 +77,27 @@ function search(){
 // Ouça o evento 'input' na barra de pesquisa
 searchBar.addEventListener("input", debounce(search, 1000));
 
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".tab");
+  const tabButtons = document.querySelectorAll(".content-trilhas");
+
+  // Adicione um manipulador de eventos de clique a cada aba no rodapé
+  tabButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      // Remova a classe 'active' de todas as abas
+      tabs.forEach(function (tab) {
+        tab.classList.remove("active");
+      });
+
+      // Obtenha o valor do atributo 'data-tab' da aba clicada
+      const tabName = button.getAttribute("data-tab");
+
+      // Selecione a aba correspondente com base no valor do 'data-tab'
+      const tabToShow = document.querySelector(`.tab[data-tab="${tabName}"]`);
+
+      // Adicione a classe 'active' à aba que deve ser exibida
+      tabToShow.classList.add("active");
+    });
+  });
+});
