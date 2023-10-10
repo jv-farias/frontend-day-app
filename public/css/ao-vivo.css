@@ -108,7 +108,7 @@ main {
   flex-wrap: wrap;
 }
 
-.ao-vivo,
+.salvar,
 .info-post,
 .user,
 .user-img {
@@ -122,7 +122,7 @@ main {
   justify-content: space-between;
 }
 
-.ao-vivo,
+.salvar,
 .user-img {
   justify-content: center;
 }
@@ -139,7 +139,8 @@ main {
 
 
 
-.ao-vivo {
+.salvar {
+  font-size: 1.5rem;
   gap: 0.5rem;
 }
 
@@ -239,7 +240,7 @@ main {
 
 .cards-topicos-content {
   max-width: 700px;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 20px;
   justify-content: center;
   background-color: #ff8506;
@@ -390,27 +391,19 @@ footer {
     flex-direction: column;
   }
 
-  .user {
-    order: 1;
-  }
 
   .info-post {
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: flex-start;
     gap: 1rem;
-    flex-direction: column;
   }
 
   .user {
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
     gap: 1rem;
   }
 
-  .ao-vivo {
-    align-self: center;
-  }
 
   .info-palestrante {
     text-align: center;
@@ -435,7 +428,6 @@ footer {
 
   .post-topico,
   .topico {
-    justify-content: center;
     align-items: center;
   }
 
@@ -477,7 +469,7 @@ footer {
     text-align: center;
   }
 
-  .ao-vivo {
+  .salvar {
     align-self: center;
   }
 
@@ -750,7 +742,7 @@ footer {
 
 
 .cards-topicos-content {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

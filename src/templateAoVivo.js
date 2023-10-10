@@ -17,12 +17,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
-                        <div class="ao-vivo">
-                            <div class="live-circle">
-                            </div>
-                            <div class="live-text">
-                                <p>AO VIVO</p>
-                            </div>
+                        <div class="salvar">
+                        <i class="fa-regular fa-bookmark" class="salvar-agenda"></i>
                         </div>
                     </div>
                     <div class="palestrante">
@@ -57,12 +53,8 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                                 <p class="horarioLive">${card.horario}</p>
                             </div>
                         </div>
-                        <div class="ao-vivo">
-                            <div class="live-circle">
-                            </div>
-                            <div class="live-text-topico">
-                                <p>AO VIVO</p>
-                            </div>
+                        <div class="salvar">
+                        <i class="fa-regular fa-bookmark" class="salvar-agenda"></i>
                         </div>
                     </div>
                     <div class="topico">
