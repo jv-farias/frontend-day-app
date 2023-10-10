@@ -158,6 +158,10 @@ footer {
   display: flex;
 }
 
+.img-dev:active {
+  transform: scale(0.96);
+}
+
 .img-dev img {
   width: 3.2rem;
   height: 3.2rem;
