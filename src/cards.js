@@ -1,23 +1,10 @@
-type Palestrante = {
-    nome: string,
-    nomeArquivoImagem: string,
-    cargo: string,
-    assunto: string,
-    linkedin: string,
-    instagram: string,
-    horario: string,
-    tipo: 'card-palestrante'
-};
 
-type Topico = {
-    horario: string,
-    topico: string,
-    tipo: 'card-topico'
-};
+/** @typedef {import("./cards.types").Card} Card */
+/** @typedef {import("./cards.types").Palestrante} Palestrante */
+/** @typedef {import("./cards.types").Topico} Topico */
 
-type Card = Palestrante | Topico;
-
-let card: Palestrante[] = [
+/** @type {Array<Palestrante>} */
+let card = [
     {
         nome: "ABRAÃO ALVES",
         nomeArquivoImagem: "abraao-alves.webp",
@@ -30,7 +17,8 @@ let card: Palestrante[] = [
     },
 ];
 
-let info: Topico[] = [
+/** @type {Array<Topico>} */
+let info = [
     {
         topico: "Almoço",
         horario: "11:00",
@@ -38,12 +26,14 @@ let info: Topico[] = [
     }
 ];
 
-let cards: Card[] = [
+/** @type {Array<Card>} */
+let cards = [
     ...card,
     ...info
 ];
 
-function apresentaCard(cards: Card[]) {
+/** @param {Array<Card>} cards */
+export function apresentaCard(cards) {
     return cards.map(notificacao => {
         if (notificacao.tipo === 'card-palestrante') {
             return {
