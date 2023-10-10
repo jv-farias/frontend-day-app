@@ -3,14 +3,14 @@ export const dadosAoVivo = [
   {
     topico: "ABERTURA",
     horario: "9:00",
-    nomeArquivoImagem: "../assets/gifs/entrada.gif",
+    nomeArquivoImagem: "./assets/gifs/entrada.gif",
     dataStart: "09:00",
     dataEnd: "09:15",
     tipo: "card-topico-AoVivo",
   },
   {
     nome: "JEAN LIVINO",
-    nomeArquivoImagem: "../assets/palestrantes/jean-livino.webp",
+    nomeArquivoImagem: "./assets/palestrantes/jean-livino.webp",
     cargo: "Desenvolvedor Front-End iFood",
     assunto: "A realidade de trabalhar em projetos que usam IA",
     horario: "09:15",
@@ -21,7 +21,7 @@ export const dadosAoVivo = [
   },
   {
     nome: "CJ PATOILO",
-    nomeArquivoImagem: "../assets/palestrantes/cj-patoilo.webp",
+    nomeArquivoImagem: "./assets/palestrantes/cj-patoilo.webp",
     cargo: "Criador do Miligram.io e Airform.io",
     assunto: "Frontend Patterns - Uma perspectiva moderna da arquitetura de software",
     horario: "09:30",
@@ -33,14 +33,14 @@ export const dadosAoVivo = [
   {
     topico: "NETWORKING",
     horario: "10:00",
-    nomeArquivoImagem: "../assets/gifs/networking.gif",
+    nomeArquivoImagem: "./assets/gifs/networking.gif",
     dataStart: "10:00",
     dataEnd: "10:40",
     tipo: "card-topico-AoVivo",
   },
   {
     nome: "AMANDA ESMERALDO",
-    nomeArquivoImagem: "../assets/palestrantes/amanda-esmeraldo.webp",
+    nomeArquivoImagem: "./assets/palestrantes/amanda-esmeraldo.webp",
     cargo: "Frontend Developer Grupo Botícario",
     assunto: "Composition ou Opposition API: Por que tamanha resistência?",
     horario: "10:40",
@@ -52,7 +52,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ALYNNE FERREIRA",
-    nomeArquivoImagem: "../assets/palestrantes/alynne-ferreira.webp",
+    nomeArquivoImagem: "./assets/palestrantes/alynne-ferreira.webp",
     cargo: "Software Engineer Shape",
     assunto: "Grafos e Vogue Dance: usando estrutura de dados para criar coreografias",
     horario: "10:40",
@@ -64,7 +64,7 @@ export const dadosAoVivo = [
 
   {
     nome: "BRUNO BARROSO",
-    nomeArquivoImagem: "../assets/palestrantes/bruno-barroso.webp",
+    nomeArquivoImagem: "./assets/palestrantes/bruno-barroso.webp",
     cargo: "Tech Project Manager Doutor Finanças - Portugal",
     assunto: "Carreira & Tecnologia & Bacalhau",
     horario: "10:40",
@@ -75,7 +75,7 @@ export const dadosAoVivo = [
   },
   {
     nome: "LUCAS ALMEIDA",
-    nomeArquivoImagem: "../assets/palestrantes/lucas-almeida.webp",
+    nomeArquivoImagem: "./assets/palestrantes/lucas-almeida.webp",
     cargo: "Senior Software Engineering Chilli Piper",
     assunto: "Explorando React Server Components",
     horario: "11:00",
@@ -87,7 +87,7 @@ export const dadosAoVivo = [
 
   {
     nome: "BRUNO LOPES",
-    nomeArquivoImagem: "../assets/palestrantes/bruno-lopes.webp",
+    nomeArquivoImagem: "./assets/palestrantes/bruno-lopes.webp",
     cargo: "Especialista Android Trybe",
     assunto: "Ataque força bruta a tokens JWT na pratica!",
     horario: "11:00",
@@ -99,7 +99,7 @@ export const dadosAoVivo = [
 
   {
     nome: "RACHEL CARVALHO",
-    nomeArquivoImagem: "../assets/palestrantes/rachel-carvalho.webp",
+    nomeArquivoImagem: "./assets/palestrantes/rachel-carvalho.webp",
     cargo: "Product Designer Agenda Edu",
     assunto: "UX e Handoff, a passagem do designer para o dev",
     horario: "11:00",
@@ -111,7 +111,7 @@ export const dadosAoVivo = [
 
   {
     nome: "JOAO WILLAMY",
-    nomeArquivoImagem: "../assets/palestrantes/joao-willamy.webp",
+    nomeArquivoImagem: "./assets/palestrantes/joao-willamy.webp",
     cargo: "Senior Software Engineering iFood",
     assunto: "E2E com Cypress",
     horario: "11:20",
@@ -123,7 +123,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ADRIAN MAYCON",
-    nomeArquivoImagem: "../assets/palestrantes/adrian-maycon.webp",
+    nomeArquivoImagem: "./assets/palestrantes/adrian-maycon.webp",
     cargo: "Desenvolvedor Front End MERX",
     assunto: "Novos Caminhos e Networking: O Papel das Comunidades de Tech",
     horario: "11:20",
@@ -135,7 +135,7 @@ export const dadosAoVivo = [
 
   {
     nome: "TIME PMENOS LAB",
-    nomeArquivoImagem: "../assets/palestrantes/time-pmenos-lab.webp",
+    nomeArquivoImagem: "./assets/palestrantes/time-pmenos-lab.webp",
     cargo: "Líderes Times de Inovação, Hub de Saúde, Ecommerce e App",
     assunto: "Ecossistema VTEX e Alavancando Resultados com um App Gerencial",
     horario: "11:20",
@@ -147,7 +147,7 @@ export const dadosAoVivo = [
 
   {
     nome: "BRUNO SILVA",
-    nomeArquivoImagem: "../assets/palestrantes/bruno-silva.webp",
+    nomeArquivoImagem: "./assets/palestrantes/bruno-silva.webp",
     cargo: "Full Stack Developer Unimed",
     assunto: "Angular e Inteligência Artificial: Como Integrar IA em Aplicações Web",
     horario: "11:40",
@@ -159,7 +159,7 @@ export const dadosAoVivo = [
 
   {
     nome: "EWERTON NEPOMUCENO",
-    nomeArquivoImagem: "../assets/palestrantes/ewerton-nepomuceno.webp",
+    nomeArquivoImagem: "./assets/palestrantes/ewerton-nepomuceno.webp",
     cargo: "UX/UI Designer VMetrix",
     assunto: "Design System e Tokens",
     horario: "11:40",
@@ -171,7 +171,7 @@ export const dadosAoVivo = [
 
   {
     nome: "CAMILA GADELHA",
-    nomeArquivoImagem: "../assets/palestrantes/camila-gadelha.webp",
+    nomeArquivoImagem: "./assets/palestrantes/camila-gadelha.webp",
     cargo: "UX Designer Sistema Verdes Mares",
     assunto: "Pesquisa com usuários - A importância de ouvir quem usa o produto",
     horario: "11:40",
@@ -184,7 +184,7 @@ export const dadosAoVivo = [
   {
     topico: "INTERVALO ALMOÇO",
     horario: "12:00",
-    nomeArquivoImagem: "../assets/gifs/almoco.gif",
+    nomeArquivoImagem: "./assets/gifs/almoco.gif",
     dataStart: "12:00",
     dataEnd: "13:30",
     tipo: "card-topico-AoVivo",
@@ -192,7 +192,7 @@ export const dadosAoVivo = [
 
   {
     nome: "HEYDE MOURA",
-    nomeArquivoImagem: "../assets/palestrantes/heyde-moura.webp",
+    nomeArquivoImagem: "./assets/palestrantes/heyde-moura.webp",
     cargo: "Senior Software Engineer Automattic",
     assunto: "React para extender o Editor de Blocos do WordPress",
     horario: "13:30",
@@ -204,7 +204,7 @@ export const dadosAoVivo = [
 
   {
     nome: "CAUAN VICTOR",
-    nomeArquivoImagem: "../assets/palestrantes/cauan-victor.webp",
+    nomeArquivoImagem: "./assets/palestrantes/cauan-victor.webp",
     cargo: "Engenheiro de software Normalabs",
     assunto: "React Native em 2024: Por onde começar?",
     horario: "13:30",
@@ -216,7 +216,7 @@ export const dadosAoVivo = [
 
   {
     nome: "VINÍCIUS CAMPITELLI",
-    nomeArquivoImagem: "../assets/palestrantes/vinicius-campitelli.webp",
+    nomeArquivoImagem: "./assets/palestrantes/vinicius-campitelli.webp",
     cargo: "Developer Relations FusionAuth",
     assunto: "O que você precisa saber sobre autenticação com JWT",
     horario: "13:30",
@@ -228,7 +228,7 @@ export const dadosAoVivo = [
 
   {
     nome: "FELIPE CÉSAR",
-    nomeArquivoImagem: "../assets/palestrantes/felipe-cesar.webp",
+    nomeArquivoImagem: "./assets/palestrantes/felipe-cesar.webp",
     cargo: "Desenvolvedor Front-End Globo",
     assunto: "React com TDD: Da Teoria à Prática",
     horario: "13:50",
@@ -240,7 +240,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ROSE FÉLIX",
-    nomeArquivoImagem: "../assets/palestrantes/rose-felix.webp",
+    nomeArquivoImagem: "./assets/palestrantes/rose-felix.webp",
     cargo: "QA Profectum",
     assunto: "PyLadies Fortaleza: História e fundação",
     horario: "13:50",
@@ -252,7 +252,7 @@ export const dadosAoVivo = [
 
   {
     nome: "VICTOR ALENCAR",
-    nomeArquivoImagem: "../assets/palestrantes/victor-alencar.webp",
+    nomeArquivoImagem: "./assets/palestrantes/victor-alencar.webp",
     cargo: "CTO Sunne Energias",
     assunto: "Do Console à Sala de Reunião: profissionalismo na entrevista e na empresa",
     horario: "13:50",
@@ -264,7 +264,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ISMAEL ASH",
-    nomeArquivoImagem: "../assets/palestrantes/ismael-ash.webp",
+    nomeArquivoImagem: "./assets/palestrantes/ismael-ash.webp",
     cargo: "Senior Software Developer 3blocks",
     assunto: "React.js para entrevistas",
     horario: "14:10",
@@ -276,7 +276,7 @@ export const dadosAoVivo = [
 
   {
     nome: "NOEMI CUNHA",
-    nomeArquivoImagem: "../assets/palestrantes/noemi-cunha.webp",
+    nomeArquivoImagem: "./assets/palestrantes/noemi-cunha.webp",
     cargo: "Desenvolvedora Front-End Uol",
     assunto: "Dominando as Soft Skills para uma Jornada na Tecnologia",
     horario: "14:10",
@@ -288,7 +288,7 @@ export const dadosAoVivo = [
 
   {
     nome: "MATHEUS LOUREIRO",
-    nomeArquivoImagem: "../assets/palestrantes/matheus-loureiro.webp",
+    nomeArquivoImagem: "./assets/palestrantes/matheus-loureiro.webp",
     cargo: "Co-Founder e Idealizador de soluções bh2",
     assunto: "Tecnologia e Finanças. O que temos de oportunidade?",
     horario: "14:10",
@@ -300,7 +300,7 @@ export const dadosAoVivo = [
 
   {
     nome: "IAN RAMOS",
-    nomeArquivoImagem: "../assets/palestrantes/ian-ramos.webp",
+    nomeArquivoImagem: "./assets/palestrantes/ian-ramos.webp",
     cargo: "Senior Software Engineer Automattic",
     assunto: "Como ter um pet pode te ajudar a ser um programador melhor",
     horario: "14:30",
@@ -312,7 +312,7 @@ export const dadosAoVivo = [
 
   {
     nome: "RENAN GURGEL",
-    nomeArquivoImagem: "../assets/palestrantes/renan-gurgel.webp",
+    nomeArquivoImagem: "./assets/palestrantes/renan-gurgel.webp",
     cargo: "Gerente de Tecnologia Agenda Edu",
     assunto: "Contribuindo com Open Source através de Ruby Gems",
     horario: "14:30",
@@ -324,7 +324,7 @@ export const dadosAoVivo = [
 
   {
     nome: "RENATA E KEL",
-    nomeArquivoImagem: "../assets/palestrantes/renata-e-kel.webp",
+    nomeArquivoImagem: "./assets/palestrantes/renata-e-kel.webp",
     cargo: "Sócias Evo Contábil",
     assunto: "Contabilidade básica para o empreendedor, PJ e CLT",
     horario: "14:30",
@@ -336,7 +336,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ELOISE FERREIRA",
-    nomeArquivoImagem: "../assets/palestrantes/eloise-ferreira.webp",
+    nomeArquivoImagem: "./assets/palestrantes/eloise-ferreira.webp",
     cargo: "Desenvolvedora Front-End IREDE",
     assunto: "Inclusão Digital: WCAG e Acessibilidade na Web",
     horario: "14:50",
@@ -348,7 +348,7 @@ export const dadosAoVivo = [
 
   {
     nome: "SÍLVIA MUNIZ",
-    nomeArquivoImagem: "../assets/palestrantes/silvia-muniz.webp",
+    nomeArquivoImagem: "./assets/palestrantes/silvia-muniz.webp",
     cargo: "Tech Lead e Scrum Master Governo do Estado do Ceará",
     assunto: "Como impulsionar sua carreira através das comunidades de tecnologia",
     horario: "14:50",
@@ -360,7 +360,7 @@ export const dadosAoVivo = [
 
   {
     nome: "MILENA TAVEIRA",
-    nomeArquivoImagem: "../assets/palestrantes/milena-taveira.webp",
+    nomeArquivoImagem: "./assets/palestrantes/milena-taveira.webp",
     cargo: "UX Designer LSBD",
     assunto: "Transição de carreira: migrando para UX",
     horario: "14:50",
@@ -372,7 +372,7 @@ export const dadosAoVivo = [
 
   {
     nome: "KEVIN TAVARES",
-    nomeArquivoImagem: "../assets/palestrantes/kevin-tavares.webp",
+    nomeArquivoImagem: "./assets/palestrantes/kevin-tavares.webp",
     cargo: "Software Engineer Elo7",
     assunto: "Progressive Enhancement: O que é e como usá-lo?",
     horario: "15:10",
@@ -384,7 +384,7 @@ export const dadosAoVivo = [
 
   {
     nome: "RIVA JUNIOR",
-    nomeArquivoImagem: "../assets/palestrantes/riva-junior.webp",
+    nomeArquivoImagem: "./assets/palestrantes/riva-junior.webp",
     cargo: "Frontend Engineer Loadsmart",
     assunto: "O que não te ensinaram sobre JavaScript",
     horario: "15:10",
@@ -396,7 +396,7 @@ export const dadosAoVivo = [
 
   {
     nome: "AMÁLIA MOURA",
-    nomeArquivoImagem: "../assets/palestrantes/amalia-moura.webp",
+    nomeArquivoImagem: "./assets/palestrantes/amalia-moura.webp",
     cargo: "Especialista em carreira Rocketseat",
     assunto: "Além dos Códigos: Tudo que você precisa saber para conquistar sua vaga",
     horario: "15:10",
@@ -408,7 +408,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ABRAÃO ALVES",
-    nomeArquivoImagem: "../assets/palestrantes/abraao-alves.webp",
+    nomeArquivoImagem: "./assets/palestrantes/abraao-alves.webp",
     cargo: "Software Engineer Beakyn",
     assunto: "Typescript Morreu! Vida longa ao Typescript!",
     horario: "15:30",
@@ -420,7 +420,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ROMÊNIA SOUSA",
-    nomeArquivoImagem: "../assets/palestrantes/romenia-sousa.webp",
+    nomeArquivoImagem: "./assets/palestrantes/romenia-sousa.webp",
     cargo: "Product Manager PicPay",
     assunto: "Discovery de produto: os desafios na busca de entregar soluções simples de alto valor",
     horario: "15:30",
@@ -432,7 +432,7 @@ export const dadosAoVivo = [
 
   {
     nome: "WESLEY JONATHA",
-    nomeArquivoImagem: "../assets/palestrantes/wesley-jonatha.webp",
+    nomeArquivoImagem: "./assets/palestrantes/wesley-jonatha.webp",
     cargo: "Desenvolvedor Stefanini",
     assunto: "Introdução ao Golang e Micro Serviços: Eficiência e Escalabilidade",
     horario: "15:30",
@@ -445,7 +445,7 @@ export const dadosAoVivo = [
   {
     topico: "COFFEE BREAK + NETWORKING",
     horario: "15:50",
-    nomeArquivoImagem: "../assets/gifs/coffee-break.gif",
+    nomeArquivoImagem: "./assets/gifs/coffee-break.gif",
     dataStart: "15:50",
     dataEnd: "16:45",
     tipo: "card-topico-AoVivo",
@@ -454,7 +454,7 @@ export const dadosAoVivo = [
   {
     topico: "SORTEIOS DE BRINDES E PARTICIPANTES DO CODANDO NO BREU",
     horario: "16:45",
-    nomeArquivoImagem: "../assets/gifs/brindes.gif",
+    nomeArquivoImagem: "./assets/gifs/brindes.gif",
     dataStart: "16:45",
     dataEnd: "17:00",
     tipo: "card-topico-AoVivo",
@@ -462,7 +462,7 @@ export const dadosAoVivo = [
 
   {
     nome: "WILLIAN FRANTZ",
-    nomeArquivoImagem: "../assets/palestrantes/willian-frantz.webp",
+    nomeArquivoImagem: "./assets/palestrantes/willian-frantz.webp",
     cargo: "Senior Software Engineer Riot Games",
     assunto: "Código nos jogos: Minha experiência na Riot Games",
     horario: "17:00",
@@ -474,7 +474,7 @@ export const dadosAoVivo = [
 
   {
     nome: "ADRIANA SATY",
-    nomeArquivoImagem: "../assets/palestrantes/adriana-saty.webp",
+    nomeArquivoImagem: "./assets/palestrantes/adriana-saty.webp",
     cargo: "Criadora de Conteúdo WebSaty",
     assunto: "Data Driven na vida pessoal",
     horario: "17:30",
@@ -487,7 +487,7 @@ export const dadosAoVivo = [
   {
     topico: "ENCERRAMENTO DAS PALESTRAS",
     horario: "18:00",
-    nomeArquivoImagem: "../assets/gifs/fim-das-palestras.gif",
+    nomeArquivoImagem: "./assets/gifs/fim-das-palestras.gif",
     dataStart: "18:00",
     dataEnd: "18:20",
     tipo: "card-topico-AoVivo",
@@ -496,7 +496,7 @@ export const dadosAoVivo = [
   {
     topico: "CODANDO NO BREU | CODE IN THE DARK",
     horario: "18:30",
-    nomeArquivoImagem: "../assets/gifs/codando-no-breu.gif",
+    nomeArquivoImagem: "./assets/gifs/codando-no-breu.gif",
     dataStart: "18:20",
     dataEnd: "20:00",
     tipo: "card-topico-AoVivo",

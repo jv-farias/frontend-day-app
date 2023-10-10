@@ -10,7 +10,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                     <div class="info-post">
                         <div class="user">
                             <div class="user-img">
-                                <img src="../assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
+                                <img src="./assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
                             </div>
                             <div class="user-nome">
                                 <p class="usuario">@frontendday2023</p>
@@ -50,7 +50,7 @@ export const htmlGeradoAoVivo = cardsProcessadosAoVivo
                     <div class="post-topico">
                         <div class="user">
                             <div class="user-img">
-                                <img src="../assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
+                                <img src="./assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
                             </div>
                             <div class="user-nome">
                                 <p class="usuario">@frontendday2023</p>

@@ -37,7 +37,7 @@ let infoAoVivo: topicoAoVivo[] = [
     {
         topico: "Almoço",
         horario: "11:00",
-        nomeArquivoImagem: "../assets/gifs/almoco.gif",
+        nomeArquivoImagem: "./assets/gifs/almoco.gif",
         dataStart: "",
         dataEnd: "",
         tipo: 'card-topico-AoVivo'

@@ -18,7 +18,7 @@ export const htmlComunidades = cardsProcessadosComunidades
       </div>
       <div class="media-informacoes">
           <div class="img-profile">
-              <img src="../assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
+              <img src="./assets/palestrantes/${card.nomeArquivoImagem}" alt="${card.nome}">
           </div>
           <div class="palestrante-cronograma-trilhas">
               <div class="text-informacoes">
