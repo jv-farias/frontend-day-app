@@ -64,6 +64,7 @@ header {
 
 
 main {
+  margin-top: 3rem;
   padding: 0 5rem 2rem 2rem;
   color: #fff;
   height: 50%;
@@ -103,7 +104,7 @@ footer {
 }
 
 footer {
-  margin-top: 2rem;
+  margin-top: 5rem;
   width: 100%;
   display: flex;
   backdrop-filter: blur(8px);
