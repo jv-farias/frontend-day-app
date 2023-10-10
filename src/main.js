@@ -1,9 +1,9 @@
-import "../dist/navigation-mobile.js";
-import "../dist/templateAoVivo.js";
-import { atualizarCardsAoVivo } from "../dist/atualizarCards.js";
-import { cardsProcessadosConvida } from "../dist/templateConvida.js";
-import { cardsProcessadosComunidades } from "../dist/templateComunidades.js";
-import { cardsProcessadosFrontEnd } from "../dist/templateFrontEnd.js";
+import "./navigation-mobile.js";
+import "./templateAoVivo.js";
+import { atualizarCardsAoVivo } from "./atualizarCards.js";
+import { cardsProcessadosConvida } from "./templateConvida.js";
+import { cardsProcessadosComunidades } from "./templateComunidades.js";
+import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
 
 
 // Função debounce para adicionar um atraso na execução de uma função após um evento
