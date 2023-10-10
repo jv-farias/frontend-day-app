@@ -17,43 +17,58 @@ botoes.forEach((botao) => {
   });
 });
 
-destacarBotao(botoes[0]); // Fará que o primeiro botão, do ao vivo fique sempre destacado
+destacarBotao(botoes[0]); // Fará que o primeiro botão - Geral - fique sempre destacado
 
 // Funcionalidade dos botões
-export let btnFrontEnd = document.getElementById("btnFrontEnd");
-export let btnComunidade = document.getElementById("btnComunidade");
-export let btnConvida = document.getElementById("btnConvida");
-export let btnLive = document.getElementById("btnAoVivo");
+export const btnFrontEnd = document.getElementById("btnFrontEnd");
+export const btnComunidade = document.getElementById("btnComunidade");
+export const btnConvida = document.getElementById("btnConvida");
+export const btnGeral = document.getElementById("btnGeral");
+export const btnAgenda = document.getElementById("btnAgenda");
 
-let cronogramaFrontEnd = document.getElementById("frontend");
-let cronogramaComunidade = document.getElementById("comunidades");
-let cronogramaConvida = document.getElementById("convida");
-let cronogramaLive = document.getElementById("horario");
+const cronogramaFrontEnd = document.getElementById("frontend");
+const cronogramaComunidade = document.getElementById("comunidades");
+const cronogramaConvida = document.getElementById("convida");
+const cronogramaGeral = document.getElementById("horario");
+const cronogramaAgenda = document.getElementById("agenda");
+
+btnGeral.addEventListener("click", function () {
+  cronogramaGeral.style.display = "flex";
+  cronogramaFrontEnd.style.display = "none";
+  cronogramaComunidade.style.display = "none";
+  cronogramaConvida.style.display = "none";
+  cronogramaAgenda.style.display = "none";
+});
 
 btnFrontEnd.addEventListener("click", function () {
   cronogramaFrontEnd.style.display = "flex";
   cronogramaComunidade.style.display = "none";
   cronogramaConvida.style.display = "none";
-  cronogramaLive.style.display = "none";
+  cronogramaGeral.style.display = "none";
+  cronogramaAgenda.style.display = "none";
 });
 
 btnComunidade.addEventListener("click", function () {
-  cronogramaFrontEnd.style.display = "none";
   cronogramaComunidade.style.display = "flex";
+  cronogramaFrontEnd.style.display = "none";
   cronogramaConvida.style.display = "none";
-  cronogramaLive.style.display = "none";
+  cronogramaGeral.style.display = "none";
+  cronogramaAgenda.style.display = "none";
 });
 
 btnConvida.addEventListener("click", function () {
+  cronogramaConvida.style.display = "flex";
   cronogramaFrontEnd.style.display = "none";
   cronogramaComunidade.style.display = "none";
-  cronogramaConvida.style.display = "flex";
-  cronogramaLive.style.display = "none";
+  cronogramaGeral.style.display = "none";
+  cronogramaAgenda.style.display = "none";
 });
 
-btnLive.addEventListener("click", function () {
+btnAgenda.addEventListener("click", function () {
+  cronogramaAgenda.style.display = "flex";
   cronogramaFrontEnd.style.display = "none";
   cronogramaComunidade.style.display = "none";
   cronogramaConvida.style.display = "none";
-  cronogramaLive.style.display = "flex";
+  cronogramaGeral.style.display = "none";
 });
+
