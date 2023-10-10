@@ -10,6 +10,24 @@ Sinta-se à vontade para explorar o repositório, fazer perguntas e contribuir c
 
 Divirta-se codificando e obrigado por se juntar a nós!
 
+# Pré-requisitos
+
+- nodejs 18
+- npm 9
+- git
+
+> Para rodar esse projeto rapidamente, use o Githu CodeSpace:
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jv-farias/frontend-day-app)
+
+
+## Rodando o Projeto
+
+1. `npm install` instala todas as dependencias
+2. `npm run dev` roda o projeto em modo de desenvolvimento
+3. `npm start` roda o projeto em modo de preview
+
+
 Link para a [documentação](https://doc-frontend-day-app.vercel.app) sobre.
 
 Atenciosamente, Open Rage
