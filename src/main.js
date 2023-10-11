@@ -1,6 +1,5 @@
 import "./navigation-mobile.js";
 import "./templateAoVivo.js";
-import { atualizarCardsAoVivo } from "./atualizarCards.js";
 import { cardsProcessadosConvida } from "./templateConvida.js";
 import { cardsProcessadosComunidades } from "./templateComunidades.js";
 import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
@@ -48,7 +47,6 @@ function search() {
       }
     }
 
-
   });
 
   // Obtém todos os elementos com classe "topicos-cronograma-content" (tópicos)
@@ -58,6 +56,52 @@ function search() {
   topicos.forEach((element) => {
     // Verifica se o elemento contém informações relevantes para a pesquisa
     const nomeElement = element.querySelector(".nome-topico");
+
+    if (nomeElement) {
+      const nome = nomeElement.textContent.toLowerCase();
+
+      // Verifica se o elemento corresponde à pesquisa
+      if (nome.includes(searchTerm) || searchTerm === "") {
+        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
+        element.style.display = "flex";
+      } else {
+        // Caso contrário, oculta o elemento
+        element.style.display = "none";
+      }
+    }
+  });
+
+  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
+  const cardsPalestrantesGeral = document.querySelectorAll(".cards-palestrante-content");
+
+  // Itera sobre todos os elementos de cards de palestrantes
+  cardsPalestrantesGeral.forEach((element) => {
+    const nomeElement = element.querySelector(".nomePalestrante");
+    const assuntoElement = element.querySelector(".assunto-palestra");
+
+    if (nomeElement && assuntoElement) {
+      const nome = nomeElement.textContent.toLowerCase();
+      const assunto = assuntoElement.textContent.toLowerCase();
+
+      // Verifica se o elemento corresponde à pesquisa
+      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
+        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
+        element.style.display = "flex";
+      } else {
+        // Caso contrário, oculta o elemento
+        element.style.display = "none";
+      }
+    }
+
+  });
+
+  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
+  const cardsTopicosGeral = document.querySelectorAll(".cards-topicos-content");
+
+  // Itera sobre todos os elementos de tópicos
+  cardsTopicosGeral.forEach((element) => {
+    // Verifica se o elemento contém informações relevantes para a pesquisa
+    const nomeElement = element.querySelector(".conteudo-topico");
 
     if (nomeElement) {
       const nome = nomeElement.textContent.toLowerCase();
