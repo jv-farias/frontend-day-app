@@ -1,4 +1,4 @@
-# <div style="text-align:center; display: flex; justify-content: center; gap: 15px;">frontEnd-Day-app <img src="./assets/logos/logo-open-rage.svg" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;"></div>
+# <div style="text-align:center; display: flex; justify-content: center; gap: 15px;">frontEnd-Day-app <!--<img src="https://media-gru2-2.cdn.whatsapp.net/v/t61.24694-24/374306624_111305882073555_9008761491116925821_n.jpg?ccb=11-4&oh=01_AdRzetgP0YU0XSWJxl73cKLm0MgsfSSp1wZ96myhwaJfzg&oe=65330552&_nc_sid=000000&_nc_cat=104" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;"></div>-->
 
 Bem-vindo ao Repositório do Frontend Day App! 
 
@@ -30,4 +30,4 @@ Divirta-se codificando e obrigado por se juntar a nós!
 
 Link para a [documentação](https://doc-frontend-day-app.vercel.app) sobre.
 
-Atenciosamente, Open Rage
+<div style="text-align:center; display: flex; justify-content: center; gap: 15px;">Atenciosamente, Open Rage <img src="https://media-gru2-2.cdn.whatsapp.net/v/t61.24694-24/374306624_111305882073555_9008761491116925821_n.jpg?ccb=11-4&oh=01_AdRzetgP0YU0XSWJxl73cKLm0MgsfSSp1wZ96myhwaJfzg&oe=65330552&_nc_sid=000000&_nc_cat=104" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;"></div>
