@@ -33,7 +33,8 @@
       <div class="box-busca">
         <div class="search-box">
           <form method="post" action="#">
-            <input type="text" class="search-box-input" id="search-box-input" name="busca" placeholder="Faça sua Pesquisa">
+            <input type="text" class="search-box-input" id="search-box-input" name="busca"
+              placeholder="Faça sua Pesquisa">
             <button class="search-box-button"><i class="fa-solid fa-magnifying-glass"
                 style="color: #8a8a8a;"></i></button>
           </form>
@@ -43,75 +44,55 @@
   </header>
 
   <main>
-    <section class="cronograma-live content-main" id="horario">
+    <section class="cronograma-trilhas content-main" id="trilhas">
       <ul class="cards-container" id="cards-cronograma"></ul>
     </section>
 
-    <section class="cronograma-frontend content-main" id="frontend">
-      <ul class="cards-container" id="cards-cronograma-frontend"></ul>
-    </section>
 
-    <section class="cronograma-comunidades content-main" id="comunidades">
-      <ul class="cards-container" id="cards-cronograma-comunidades"></ul>
-    </section>
-
-    <section class="cronograma-convida content-main" id="convida">
-      <ul class="cards-container" id="cards-cronograma-convida"></ul>
-    </section>
-
-    <section class="cronograma-agenda content-main" id="agenda">
-      <ul class="cards-container" id="cards-cronograma-agenda"></ul>
-    </section>
 
   </main>
 
   <footer class="content-footer">
     <div class="botoes-trilhas">
-      <div id="btnGeral" class="content-trilhas">
+      <label id="btnGeral" class="content-trilhas">
         <div class="iconBtn" id="iconGeral">
           <i class="fa-solid fa-person-chalkboard"></i>
         </div>
-        <div class="textBtn" id="textGeral">
-          <p class="titulo-trilha">Geral</p>
-        </div>
-      </div>
+        <input class="textBtn" id="textGeral" type="radio" name="tab" value="all" checked />
+        <span class="titulo-trilha">Geral</span>
+      </label>
 
-      <div id="btnFrontEnd" class="content-trilhas">
+      <label id="btnFrontEnd" class="content-trilhas">
         <div class="iconBtn" id="iconFrontEnd">
           <i class="fa-solid fa-laptop-code"></i>
         </div>
-        <div class="textBtn">
-          <p class="titulo-trilha">Front-End</p>
-        </div>
-      </div>
+        <input class="textBtn" id="textFrontEnd" type="radio" name="tab" value="frontend" />
+        <span class="titulo-trilha">Front-End</span>
+      </label>
 
-      <div id="btnComunidade" class="content-trilhas">
+      <label id="btnComunidade" class="content-trilhas">
         <div class="iconBtn" id="iconComunidade">
           <i class="fa-solid fa-users"></i>
         </div>
-        <div class="textBtn">
-          <p class="titulo-trilha">Comunidades</p>
-        </div>
-      </div>
+        <input class="textBtn" id="textComunidade" type="radio" name="tab" value="communities" />
+        <span class="titulo-trilha">Comunidades</span>
+      </label>
 
-      <div id="btnConvida" class="content-trilhas">
+      <label id="btnConvida" class="content-trilhas">
         <div class="iconBtn" id="iconConvida">
           <i class="fa-solid fa-star"></i>
         </div>
-        <div class="textBtn">
-          <p class="titulo-trilha">Convida</p>
-        </div>
-      </div>
+        <input class="textBtn" id="textConvida" type="radio" name="tab" value="invite" />
+        <span class="titulo-trilha">Convida</span>
+      </label>
 
-      <div id="btnAgenda" class="content-trilhas">
+      <label id="btnAgenda" class="content-trilhas">
         <div class="iconBtn" id="iconAgenda">
           <i class="fa-regular fa-bookmark"></i>
         </div>
-        <div class="textBtn">
-          <p class="titulo-trilha">Agenda</p>
-        </div>
-      </div>
-
+        <input class="textBtn" id="textSalvo" type="radio" name="tab" value="saved" />
+        <span class="titulo-trilha">Salvos</span>
+      </label>
     </div>
   </footer>
 

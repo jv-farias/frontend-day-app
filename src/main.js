@@ -1,22 +1,46 @@
-import "./navigation-mobile.js";
-import "./templateAoVivo.js";
-import { cardsProcessadosConvida } from "./templateConvida.js";
-import { cardsProcessadosComunidades } from "./templateComunidades.js";
-import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
-import { salvarCard, criarElementosComDadosSalvos } from "./localstorage.js";
-import { atualizarCardsAoVivo } from "./scrollCards.js";
+import "./loading.js";
 
-// Função debounce para adicionar um atraso na execução de uma função após um evento
-function debounce(func, delay) {
-  let timer; // Variável para armazenar o identificador do temporizador
 
-  return function () {
-    clearTimeout(timer); // Limpa o temporizador se já estiver definido
+// inicio do main.js
+// criando um apelido para a função querySelectorAll
+const $ = (s) => document.querySelectorAll(s);
 
-    timer = setTimeout(() => {
-      func.apply(this, arguments); // Executa a função original após o atraso
-    }, delay);
-  };
+const [el] = $('#search-box-input');
+const [ul] = $('.cards-container');
+const radios = $('input[name="tab"]')
+let cache = {placeholder: true, talks: {principal: [], invite:[], frontend:[], communities:[]}};
+
+// inicia os dados
+search();
+
+
+// registra os eventos
+el.addEventListener('input', debounce(async function (el) {
+  const {value: query} = el.target;
+  const [{value: tab}] = $('input[name="tab"]:checked');
+
+  search(tab, query);
+}));
+
+Array.from(radios).forEach((radio) => {
+  radio.addEventListener('change', function () {
+    search(this.value, '');
+  })
+})
+// fim do main.js
+
+
+
+
+
+// funcoes auxiliares
+
+function handleToggleSave(e){
+  if(e.checked) {
+    addSavedIdTalk(+e.dataset.id);    
+  } else{
+    removeSavedIdTalk(+e.dataset.id);    
+  }
 }
 
 // Obtém a barra de pesquisa
@@ -128,3 +152,9 @@ searchBar.addEventListener("keydown", function (event) {
     search();
   }
 });
+
+// Adicione um ouvinte de eventos para delegar cliques nos ícones "salvar-agenda"
+document.addEventListener("click", salvarCard);
+
+// Chame a função para criar elementos com os dados salvos quando a página carregar
+window.addEventListener("load", criarElementosComDadosSalvos);

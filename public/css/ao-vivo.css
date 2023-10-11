@@ -336,6 +336,35 @@ footer {
   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
 }
 
+label:hover{
+  cursor: pointer;
+}
+
+label input{
+  visibility: hidden;
+  position: absolute;
+}
+label span {
+  text-align:center;
+}
+
+label input:checked + span {
+  color: rgb(5, 125, 255);
+}
+
+.media-informacoes{
+  width: 100%;
+}
+.media-informacoes .action {
+  flex-grow:2;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.action label {
+  display: block;
+}
+
 .botoes {
   gap: 0.5rem;
   display: flex;
@@ -413,7 +442,7 @@ footer {
     align-items: center;
     flex-direction: column;
   }
-
+  
   .botoes-trilhas {
     width: 100%;
     display: flex;
@@ -483,7 +512,6 @@ footer {
   .conteudo-topico {
     font-size: 1.3rem;
   }
-
 }
 
 @media (max-width: 315px) {
@@ -913,16 +941,16 @@ footer {
   transform: scale(.85);
 }
 
-.salvar-agenda {
-  border: 0;
-  font-size: 15px;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
+
+
+.action label {
+  display: block;
 }
 
-.remove-agenda {
-  border: 0;
-  font-size: 15px;
-  background-color: rgba(0, 0, 0, 0);
-  cursor: pointer;
+.action input:not(:checked) +span:after{
+  content: "Salvar"
+}
+
+.action input:checked +span:after{
+  content: "Salvo"
 }
