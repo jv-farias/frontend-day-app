@@ -3,7 +3,7 @@ import "./templateAoVivo.js";
 import { cardsProcessadosConvida } from "./templateConvida.js";
 import { cardsProcessadosComunidades } from "./templateComunidades.js";
 import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
-
+import { atualizarCardsAoVivo } from "./scrollCards.js";
 
 // Função debounce para adicionar um atraso na execução de uma função após um evento
 function debounce(func, delay) {
@@ -127,3 +127,5 @@ searchBar.addEventListener("keydown", function (event) {
     search();
   }
 });
+
+atualizarCardsAoVivo();
