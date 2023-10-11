@@ -942,15 +942,23 @@ label input:checked + span {
 }
 
 
-
 .action label {
-  display: block;
+  display: flex;
 }
 
 .action input:not(:checked) +span:after{
-  content: "Salvar"
+  content: "+ salvar";
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #000517;
+  
 }
 
 .action input:checked +span:after{
-  content: "Salvo"
+  content: "- remover";
+  border: 1px solid white;
+  color: white;
+  padding: .5rem 2rem;
+  border-radius: 20px;
 }

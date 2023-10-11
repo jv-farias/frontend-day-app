@@ -1,4 +1,4 @@
-import "./loading.js";
+import "/src/loading.js";
 
 
 // inicio do main.js
@@ -8,7 +8,7 @@ const $ = (s) => document.querySelectorAll(s);
 const [el] = $('#search-box-input');
 const [ul] = $('.cards-container');
 const radios = $('input[name="tab"]')
-let cache = {placeholder: true, talks: {principal: [], invite:[], frontend:[], communities:[]}};
+let cache = { placeholder: true, talks: { principal: [], invite: [], frontend: [], communities: [] } };
 
 // inicia os dados
 search();
@@ -16,8 +16,8 @@ search();
 
 // registra os eventos
 el.addEventListener('input', debounce(async function (el) {
-  const {value: query} = el.target;
-  const [{value: tab}] = $('input[name="tab"]:checked');
+  const { value: query } = el.target;
+  const [{ value: tab }] = $('input[name="tab"]:checked');
 
   search(tab, query);
 }));
@@ -35,126 +35,163 @@ Array.from(radios).forEach((radio) => {
 
 // funcoes auxiliares
 
-function handleToggleSave(e){
-  if(e.checked) {
-    addSavedIdTalk(+e.dataset.id);    
-  } else{
-    removeSavedIdTalk(+e.dataset.id);    
+function handleToggleSave(e) {
+  if (e.checked) {
+    addSavedIdTalk(+e.dataset.id);
+  } else {
+    removeSavedIdTalk(+e.dataset.id);
   }
 }
 
-// Obtém a barra de pesquisa
-const searchBar = document.getElementById("search-box-input");
+// fim dos registros  eventos
 
-function search() {
+async function search(type = 'all', text = '') {
+  // perguntar ao dados
+  const data = await repositorioTalks(type);
 
-  const searchTerm = searchBar.value.toLowerCase();
+  const list = text ? data.filter((talk) => talkHasText(talk, text)) : data;
 
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsPalestrantes = document.querySelectorAll(".cards-cronograma-content");
+  const sorted = list.sort((a, b) => b.hour - a.hour);
+  const itens = sorted.map((talk) => renderTalk(talk));
 
-  // Itera sobre todos os elementos de cards de palestrantes
-  cardsPalestrantes.forEach((element) => {
-    const nomeElement = element.querySelector(".nome");
-    const assuntoElement = element.querySelector(".assunto");
+  //sempre remove e atualiza a lista; 
+  ul.innerHTML = itens.join('');
+}
 
-    if (nomeElement && assuntoElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-      const assunto = assuntoElement.textContent.toLowerCase();
+function talkHasText(talk, text) {
+  const content = JSON.stringify(talk).toLowerCase();
+  const query = text.toLowerCase();
 
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
+  return content.includes(query)
+}
 
-  });
 
-  // Obtém todos os elementos com classe "topicos-cronograma-content" (tópicos)
-  const topicos = document.querySelectorAll(".topicos-cronograma-content");
-
-  // Itera sobre todos os elementos de tópicos
-  topicos.forEach((element) => {
-    // Verifica se o elemento contém informações relevantes para a pesquisa
-    const nomeElement = element.querySelector(".nome-topico");
-
-    if (nomeElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-  });
-
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsPalestrantesGeral = document.querySelectorAll(".cards-palestrante-content");
-
-  // Itera sobre todos os elementos de cards de palestrantes
-  cardsPalestrantesGeral.forEach((element) => {
-    const nomeElement = element.querySelector(".nomePalestrante");
-    const assuntoElement = element.querySelector(".assunto-palestra");
-
-    if (nomeElement && assuntoElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-      const assunto = assuntoElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-
-  });
-
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsTopicosGeral = document.querySelectorAll(".cards-topicos-content");
-
-  // Itera sobre todos os elementos de tópicos
-  cardsTopicosGeral.forEach((element) => {
-    // Verifica se o elemento contém informações relevantes para a pesquisa
-    const nomeElement = element.querySelector(".conteudo-topico");
-
-    if (nomeElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-  });
-};
-
-// Ouça o evento 'input' na barra de pesquisa
-searchBar.addEventListener("input", debounce(search, 1000));
-
-searchBar.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault();
-    search();
+async function getCachedData() {
+  if (cache.placeholder) {
+    const resp = await fetch('https://frontendday.descompliqueapps.com.br/index.php/wp-json/site/v1/data');
+    cache = await resp.json();
   }
-});
 
-// Adicione um ouvinte de eventos para delegar cliques nos ícones "salvar-agenda"
-document.addEventListener("click", salvarCard);
+  return cache;
+}
 
-// Chame a função para criar elementos com os dados salvos quando a página carregar
-window.addEventListener("load", criarElementosComDadosSalvos);
+async function repositorioTalks(type) {
+  const data = await getCachedData();
+  // podemos adicionar os dados de topicos aqui!
+
+  const all = [
+    ...data.talks.principal,
+    ...data.talks.invite,
+    ...data.talks.frontend,
+    ...data.talks.communities
+  ];
+
+  // TODO: order by time
+
+  switch (type) {
+    case 'all':
+      return all;
+    case 'saved':
+      return all.filter(hasSaved);
+    default:
+      return [
+        ...data.talks.principal,
+        ...data.talks[type],
+      ];
+  }
+}
+
+/** @param {Talk} */
+function hasSaved(talk) {
+  const savedIds = getSavedTalkIds();
+
+  return savedIds.includes(talk.id);
+}
+
+/** @return {Array<string>} */
+function getSavedTalkIds() {
+  const lcContent = localStorage.getItem('savedIdTalks') || '[]';
+  return JSON.parse(lcContent) || [''];
+}
+
+/** @type {Array<string>} ids*/
+function setSavedTalkIds(ids = []) {
+  const lcContent = JSON.stringify(ids);
+  localStorage.setItem('savedIdTalks', lcContent);
+}
+
+/** @type {string} id*/
+function addSavedIdTalk(id) {
+  const ids = getSavedTalkIds();
+  const removeDuplicates = [...ids, id];
+  // remove possible duplicates;
+  setSavedTalkIds(removeDuplicates);
+}
+
+function removeSavedIdTalk(id) {
+  const ids = getSavedTalkIds();
+  setSavedTalkIds(ids.filter((item) => item !== id));
+}
+
+
+
+function renderTalk(talk) {
+  const saved = hasSaved(talk);
+
+  return ` <li class="cards-palestrante-content">
+  <div class="info-post">
+      <div class="user">
+          <div class="user-img">
+              <img src="./assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
+          </div>
+          <div class="user-nome">
+              <p class="usuario">@frontendday2023</p>
+              <p class="horarioLive">${talk.hour}</p>
+          </div>
+      </div>
+  </div>
+  <div class="action">
+  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span></span></label>
+</div>
+  <div class="palestrante">
+      <div class="img-palestrante">
+          <img src="${talk.speaker.image}" alt="${talk.title}" class="imag-palestrante">
+      </div>
+      <div class="info-palestrante">
+          <div class="nome-cargo">
+              <h3 class="nomePalestrante">${talk.speaker.title}</h3>
+              <p class="cargoPalestrante">${talk.speaker.role} 
+${talk.speaker.company}</p>
+          </div>
+
+<div class="redes-profile">
+<div class="linkedin-user">
+<a href="${talk.speaker.social_link}" target="_blank"><i class="fa-brands fa-linkedin"></i>
+<p class="linkedin">Linkedin</p>
+</a>
+</div>
+</div>
+
+          <div class="trilha">
+              <p class="trilhaPalestrante">Trilha: ${talk.room}</p>
+          </div>
+      </div>
+  </div>
+  <div class="assunto-palestra">
+      <p class="assuntoLive">${talk.title}</p>
+  </div>
+</li>`;
+}
+
+// atrasando a execução de uma função: 
+// https://www.freecodecamp.org/portuguese/news/debounce-como-atrasar-a-execucao-de-uma-funcao-em-javascript-exemplo-com-js-es6/
+function debounce(fn, delay = 500) {
+  let timer;
+
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => fn.apply(this, args), delay)
+  }
+}
+
+window.handleToggleSave = handleToggleSave;
