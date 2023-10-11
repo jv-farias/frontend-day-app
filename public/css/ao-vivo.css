@@ -413,7 +413,7 @@ footer {
     align-items: center;
     flex-direction: column;
   }
-  
+
   .botoes-trilhas {
     width: 100%;
     display: flex;
@@ -483,6 +483,7 @@ footer {
   .conteudo-topico {
     font-size: 1.3rem;
   }
+
 }
 
 @media (max-width: 315px) {
@@ -913,6 +914,15 @@ footer {
 }
 
 .salvar-agenda {
-  width: 20px;
-  height: 20px;
+  border: 0;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
+}
+
+.remove-agenda {
+  border: 0;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  cursor: pointer;
 }
