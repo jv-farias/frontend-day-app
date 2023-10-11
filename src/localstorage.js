@@ -49,6 +49,9 @@ export function salvarCard(event) {
 
             // Opcional: Adiciona um bouce ao icone indicando que foi salvo por 1s
             event.target.classList.add("fa-bounce");
+            event.target.classList.remove("fa-regular");
+            event.target.classList.add("fa-solid");
+            event.target.style.color = "#dde000";
             setTimeout(() => {
                 event.target.classList.remove("fa-bounce");
             }, 1000);
@@ -126,7 +129,7 @@ window.addEventListener("click", criarElementosComDadosSalvos);
 export function removerCard(event) {
     if (event.target.classList.contains("remove-agenda")) {
         const cardElement = event.target.closest(".cards-palestrante-content");
-        const E = (s) => cardElement.querySelector(s)
+        const E = (s) => cardElement.querySelector(s);
 
         // Recupere as informações do card a ser removido
         const nomePalestranteElement = E(".nomePalestrante");
