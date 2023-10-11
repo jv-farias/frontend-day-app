@@ -6,7 +6,7 @@ const $ = (s) => document.querySelectorAll(s);
 
 const [el] = $('#search-box-input');
 const [ul] = $('.cards-container');
-const radios = $('input[name="tab"]')
+const tabs = $('input[name="tab"]')
 let cache = { placeholder: true, talks: { principal: [], invite: [], frontend: [], communities: [] } };
 
 // inicia os dados
@@ -20,9 +20,9 @@ el.addEventListener('input', debounce(async function (el) {
   search(tab, query);
 }));
 
-Array.from(radios).forEach((radio) => {
+Array.from(tabs).forEach((radio) => {
   radio.addEventListener('change', function () {
-    search(this.value, '');
+    search(this.value, el.value);
   })
 })
 // fim do main.js
