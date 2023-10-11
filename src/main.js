@@ -120,3 +120,10 @@ function search() {
 
 // Ouça o evento 'input' na barra de pesquisa
 searchBar.addEventListener("input", debounce(search, 1000));
+
+searchBar.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
+});
