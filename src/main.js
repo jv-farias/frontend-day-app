@@ -3,6 +3,7 @@ import "./templateAoVivo.js";
 import { cardsProcessadosConvida } from "./templateConvida.js";
 import { cardsProcessadosComunidades } from "./templateComunidades.js";
 import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
+import { salvarCard, criarElementosComDadosSalvos } from "./localstorage.js";
 
 
 // Função debounce para adicionar um atraso na execução de uma função após um evento
@@ -127,3 +128,9 @@ searchBar.addEventListener("keydown", function (event) {
     search();
   }
 });
+
+// Adicione um ouvinte de eventos para delegar cliques nos ícones "salvar-agenda"
+document.addEventListener("click", salvarCard);
+
+// Chame a função para criar elementos com os dados salvos quando a página carregar
+window.addEventListener("load", criarElementosComDadosSalvos);
