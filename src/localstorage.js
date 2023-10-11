@@ -4,13 +4,14 @@ export function salvarCard(event) {
     if (event.target.classList.contains("salvar-agenda")) {
         // Encontre o elemento pai do ícone que é o card
         const cardElement = event.target.closest(".cards-palestrante-content");
+        const E = (s) => cardElement.querySelector(s)
 
-        const nomePalestranteElement = cardElement.querySelector(".nomePalestrante");
-        const cargoPalestranteElement = cardElement.querySelector(".cargoPalestrante");
-        const trilhaPalestranteElement = cardElement.querySelector(".trilhaPalestrante");
-        const assuntoPalestranteElement = cardElement.querySelector(".assuntoLive");
-        const nomeArquivoImagemElement = cardElement.querySelector(".imag-palestrante");
-        const HorarioPalestranteElement = cardElement.querySelector(".horarioLive");
+        const nomePalestranteElement = E(".nomePalestrante");
+        const cargoPalestranteElement = E(".cargoPalestrante");
+        const trilhaPalestranteElement = E(".trilhaPalestrante");
+        const assuntoPalestranteElement = E(".assuntoLive");
+        const nomeArquivoImagemElement = E(".imag-palestrante");
+        const HorarioPalestranteElement = E(".horarioLive");
 
         const nomePalestrante = nomePalestranteElement.textContent;
         const cargoPalestrante = cargoPalestranteElement.textContent;
@@ -34,24 +35,30 @@ export function salvarCard(event) {
         // Recupere ou crie o array de cards salvos no localStorage
         let savedCards = JSON.parse(localStorage.getItem("savedCards")) || [];
 
+        // Verifique se o card já foi salvo (com base nas informações do card)
+        const isDuplicate = savedCards.some((savedCard) => {
+            return JSON.stringify(savedCard) === JSON.stringify(cardData);
+        });
 
-        // Verifique se o card já foi salvo (pode ser identificado pelo data-id)
-
-        if (savedCards) {
-            // Se o card ainda não estiver na lista, adicione-o
+        if (!isDuplicate) {
+            // Se o card não for um duplicado, adicione-o
             savedCards.push({ ...cardData });
 
             // Atualize o localStorage com os cards salvos
             localStorage.setItem("savedCards", JSON.stringify(savedCards));
 
-            // Opcional: Exiba uma mensagem de confirmação ou atualize a interface do usuário
-            alert("Card salvo com sucesso!");
+            // Opcional: Adiciona um bouce ao icone indicando que foi salvo por 1s
+            event.target.classList.add("fa-bounce");
+            setTimeout(() => {
+                event.target.classList.remove("fa-bounce");
+            }, 1000);
         } else {
             // Opcional: Trate o caso em que o card já foi salvo anteriormente
             alert("Este card já foi salvo.");
         }
     }
 }
+
 
 // Adicione um ouvinte de eventos para delegar cliques nos ícones "salvar-agenda"
 document.addEventListener("click", salvarCard);
@@ -84,7 +91,7 @@ export function criarElementosComDadosSalvos() {
               </div>
           </div>
           <button class="remove-agenda">
-          <i class="fa-regular fa-bookmark"class="remove-agenda"></i>
+          <i class="fa-solid fa-bookmark remove-agenda" style="color: #dde000;"></i>
           </button>
       </div>
       <div class="palestrante">
@@ -114,3 +121,48 @@ export function criarElementosComDadosSalvos() {
 
 // Chame a função para criar elementos com os dados salvos quando a página carregar
 window.addEventListener("click", criarElementosComDadosSalvos);
+
+// Função para remover o card da agenda
+export function removerCard(event) {
+    if (event.target.classList.contains("remove-agenda")) {
+        const cardElement = event.target.closest(".cards-palestrante-content");
+        const E = (s) => cardElement.querySelector(s)
+
+        // Recupere as informações do card a ser removido
+        const nomePalestranteElement = E(".nomePalestrante");
+        const horarioPalestranteElement = E(".horarioLive");
+
+        const nomePalestrante = nomePalestranteElement.textContent;
+        const horarioPalestrante = horarioPalestranteElement.textContent;
+
+        // Crie uma chave exclusiva com base nas informações do card
+        const cardKey = `${nomePalestrante}-${horarioPalestrante}`;
+
+        // Recupere os cards salvos do localStorage
+        let savedCards = JSON.parse(localStorage.getItem("savedCards")) || [];
+
+        // Encontre o índice do card a ser removido
+        const index = savedCards.findIndex((card) => {
+            const cardInfo = `${card.nomePalestrante}-${card.HorarioPalestrante}`;
+            return cardInfo === cardKey;
+        });
+
+        if (index !== -1) {
+            // Remova o card do array
+            savedCards.splice(index, 1);
+
+            // Atualize o localStorage com os cards removidos
+            localStorage.setItem("savedCards", JSON.stringify(savedCards));
+
+            // Remova o elemento do DOM
+            cardElement.remove();
+
+        } else {
+            
+            alert("Este card não está na sua agenda.");
+        }
+    }
+}
+
+// Adicione um ouvinte de eventos para delegar cliques nos botões "remove-agenda"
+document.addEventListener("click", removerCard);
