@@ -1,4 +1,4 @@
-import "/src/loading.js";
+import "./loading.js";
 
 // inicio do main.js
 // criando um apelido para a função querySelectorAll
