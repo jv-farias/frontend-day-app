@@ -118,7 +118,7 @@ function withTopics(cards) {
     },
     {
       title: "ENCERRAMENTOS DAS PALESTRAS",
-      hour: "18:0",
+      hour: "18:00",
       type: "topic",
     },
     {
@@ -247,14 +247,15 @@ function renderTalk(talk) {
   <div class="trilha">
   <p class="trilhaPalestrante">Trilha: ${roomName}</p>
   </div>
+  <div class="action">
+  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span></span></label>
+</div>
   </div>
   </div>
   <div class="assunto-palestra">
   <p class="assuntoLive">${talk.title}</p>
   </div>
-  <div class="action">
-  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span></span></label>
-</div>
+  
 </li>`;
 }
 
@@ -271,9 +272,9 @@ function debounce(fn, delay = 500) {
 
 window.handleToggleSave = handleToggleSave;
 
-el.addEventListener("keydown", function(event) {
-    if (event.key === "Enter") {
-        event.preventDefault();
-        search();
-    }
+el.addEventListener("keydown", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    search();
+  }
 });

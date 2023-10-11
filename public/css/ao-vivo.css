@@ -133,7 +133,7 @@ main {
 
 .usuario {
   font-size: 0.9rem;
-  color: rgba(239, 239, 239, 1);
+  color: #000517;
 }
 
 .horarioLive {
@@ -335,27 +335,29 @@ footer {
   border-top: 1.5px solid rgba(255, 255, 255, 0.5);
 }
 
-label:hover{
+label:hover {
   cursor: pointer;
 }
 
-label input{
+label input {
   visibility: hidden;
   position: absolute;
 }
+
 label span {
-  text-align:center;
+  text-align: center;
 }
 
-label input:checked + span {
+label input:checked+span {
   color: rgb(5, 125, 255);
 }
 
-.media-informacoes{
+.media-informacoes {
   width: 100%;
 }
+
 .media-informacoes .action {
-  flex-grow:2;
+  flex-grow: 2;
   display: flex;
   justify-content: flex-end;
 }
@@ -943,29 +945,30 @@ label input:checked + span {
 
 .action label {
   display: flex;
-  
 }
 
-.action input:not(:checked) +span:after{
-  content: "+ salvar";
+.action input:not(:checked)+span:after {
+  content: "Salvar";
   padding: .5rem 2rem;
   border-radius: 20px;
   color: white;
   background-color: #000517;
-  
+  font-weight: 700;
+  margin: .5rem;
 }
 
-.action input:checked +span:after{
-  content: "- remover";
-  border: 1px solid white;
-  color: white;
+.action input:checked+span:after {
+  content: "Remover";
   padding: .5rem 2rem;
   border-radius: 20px;
+  color:#000517;
+  background-color: white;
+  margin-bottom: .5rem;
 }
 
 .action {
   order: 2;
-  margin-top: 1rem;
+  margin: .8rem;
 }
 
 .icone-color {
