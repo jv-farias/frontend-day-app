@@ -9,10 +9,8 @@ export function salvarCard(event) {
         const cargoPalestranteElement = cardElement.querySelector(".cargoPalestrante");
         const trilhaPalestranteElement = cardElement.querySelector(".trilhaPalestrante");
         const assuntoPalestranteElement = cardElement.querySelector(".assuntoLive");
-        const nomeArquivoImagemElement = document.querySelector(".imag-palestrante");
+        const nomeArquivoImagemElement = cardElement.querySelector(".imag-palestrante");
         const HorarioPalestranteElement = cardElement.querySelector(".horarioLive");
-
-
 
         const nomePalestrante = nomePalestranteElement.textContent;
         const cargoPalestrante = cargoPalestranteElement.textContent;
@@ -85,8 +83,8 @@ export function criarElementosComDadosSalvos() {
                   <p class="horarioLive">${cardData.HorarioPalestrante}</p>
               </div>
           </div>
-          <button class="salvar-agenda">
-          <i class="fa-regular fa-bookmark" class="salvar-agenda"></i>
+          <button class="remove-agenda">
+          <i class="fa-regular fa-bookmark"class="remove-agenda"></i>
           </button>
       </div>
       <div class="palestrante">

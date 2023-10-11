@@ -911,3 +911,8 @@ footer {
 .search-box-button:active {
   transform: scale(.85);
 }
+
+.salvar-agenda {
+  width: 20px;
+  height: 20px;
+}
