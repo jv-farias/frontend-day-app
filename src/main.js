@@ -270,3 +270,10 @@ function debounce(fn, delay = 500) {
 }
 
 window.handleToggleSave = handleToggleSave;
+
+el.addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        search();
+    }
+});
