@@ -79,3 +79,24 @@ function apresentaCardAoVivo(cardsaovivo: CardAoVivo[]) {
         };
     });
 }
+<<<<<<< HEAD:dist/cards-aovivo.js
+// Página de loading
+
+document.addEventListener("DOMContentLoaded", function () {
+    
+    setTimeout(function () {
+        var loader = document.getElementById("loader");
+        loader.style.display = "none";
+        var contentContainer = document.querySelector(".content-container");
+        contentContainer.style.display = "block";
+    }, 3000); 
+});
+
+
+
+
+
+
+
+=======
+>>>>>>> b7b0b38a049ef338b006c6686724920dc8125b4f:src/cards-aovivo.ts
