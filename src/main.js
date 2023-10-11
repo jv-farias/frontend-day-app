@@ -112,7 +112,7 @@ function search() {
         element.style.display = "flex";
       } else {
         // Caso contrário, oculta o elemento
-        element.style.displgay = "none";
+        element.style.display = "none";
       }
     }
   });
