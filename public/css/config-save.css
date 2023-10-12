@@ -138,7 +138,7 @@ footer {
     flex-direction: row;
     gap: 1.25rem;
     color:#000517;
-    font-size: 1.3em;
+    font-size: 1rem;
 }
 
 .text-comentario {
@@ -150,7 +150,7 @@ footer {
     background-color:#000517;
     padding: .4rem .8rem;
     color: rgba(255, 133, 6, 1);
-    font-size: 2rem;
+    font-size: 1.7rem;
     border-radius: .5rem;
 }
 

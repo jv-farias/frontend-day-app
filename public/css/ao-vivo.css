@@ -168,7 +168,7 @@ main {
 
 .palestrante {
   order: 1;
-  background-color: rgba(57, 196, 255, 0.8);
+  background-color: #000517;
   width: 100%;
   gap: 0.8rem;
   display: flex;
@@ -760,13 +760,13 @@ label input:checked+span {
 }
 
 .palestrante {
+  background-color: #000517;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.2rem;
   align-items: center;
   border-radius: 20px;
-  background-color: rgba(57, 196, 255, 0.8);
 }
 
 .text-informacoes {
@@ -953,34 +953,36 @@ label input:checked+span {
   display: flex;
 }
 
-.action input:not(:checked)+span:after {
-  content: " Salvar";
-  font-weight: 700;
-
+.icon-salvar {
+  font-weight: 400;
+  color: white;
 }
 
-.action input:checked+span:after {
-  content: " Remover";
+.action input:not(:checked) + span::after {
+  content: "Salvar";
   font-weight: 700;
-  color: rgb(255, 147, 5);
 }
 
-.action {
+.action input:checked + span::after {
+  content: "Remover";
+  color: white;
+  font-weight: 700;
+}
+
+.action input:checked + .btn-salvar .icon-salvar {
+  font-weight: 700;
+}
+
+.icone-color {
+  color: rgb(5, 125, 255);
+}
+
+.btn-salvar {
   order: 2;
-  margin: .8rem;
   padding: .5rem 2rem;
   border-radius: 20px;
   color: white;
-  background-color: #000517;
-  margin: .5rem;
-}
-
-label input:checked+span {
-  color: rgb(255, 147, 5);
-}
-
-
-.btn-salvar {
+  background-color: #000517; 
   display: flex;
   justify-content: center;
   align-items: center;
