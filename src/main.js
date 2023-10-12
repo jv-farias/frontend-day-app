@@ -1,129 +1,74 @@
-import "./navigation-mobile.js";
-import "./templateAoVivo.js";
-import { cardsProcessadosConvida } from "./templateConvida.js";
-import { cardsProcessadosComunidades } from "./templateComunidades.js";
-import { cardsProcessadosFrontEnd } from "./templateFrontEnd.js";
+import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
+import "./loading.js";
+import { debounce } from "./Utils.js";
+import { search } from "./search.js";
+
+// inicio do main.js
+// criando um apelido para a função querySelectorAll
+const $ = (s) => document.querySelectorAll(s);
+
+const [el] = $('#search-box-input');
+const [ul] = $('.cards-container');
+const tabs = $('input[name="tab"]')
 
 
-// Função debounce para adicionar um atraso na execução de uma função após um evento
-function debounce(func, delay) {
-  let timer; // Variável para armazenar o identificador do temporizador
+// inicia os dados
+fillList();
 
-  return function () {
-    clearTimeout(timer); // Limpa o temporizador se já estiver definido
+// registra os eventos
+el.addEventListener('input', debounce(async function (el) {
+  const { value: query } = el.target;
+  const [{ value: tab }] = $('input[name="tab"]:checked');
 
-    timer = setTimeout(() => {
-      func.apply(this, arguments); // Executa a função original após o atraso
-    }, delay);
-  };
-}
+  fillList(tab, query);
+}));
 
-// Obtém a barra de pesquisa
-const searchBar = document.getElementById("search-box-input");
-
-function search() {
-
-  const searchTerm = searchBar.value.toLowerCase();
-
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsPalestrantes = document.querySelectorAll(".cards-cronograma-content");
-
-  // Itera sobre todos os elementos de cards de palestrantes
-  cardsPalestrantes.forEach((element) => {
-    const nomeElement = element.querySelector(".nome");
-    const assuntoElement = element.querySelector(".assunto");
-
-    if (nomeElement && assuntoElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-      const assunto = assuntoElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-
-  });
-
-  // Obtém todos os elementos com classe "topicos-cronograma-content" (tópicos)
-  const topicos = document.querySelectorAll(".topicos-cronograma-content");
-
-  // Itera sobre todos os elementos de tópicos
-  topicos.forEach((element) => {
-    // Verifica se o elemento contém informações relevantes para a pesquisa
-    const nomeElement = element.querySelector(".nome-topico");
-
-    if (nomeElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-  });
-
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsPalestrantesGeral = document.querySelectorAll(".cards-palestrante-content");
-
-  // Itera sobre todos os elementos de cards de palestrantes
-  cardsPalestrantesGeral.forEach((element) => {
-    const nomeElement = element.querySelector(".nomePalestrante");
-    const assuntoElement = element.querySelector(".assunto-palestra");
-
-    if (nomeElement && assuntoElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-      const assunto = assuntoElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || assunto.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-
-  });
-
-  // Obtém todos os elementos com classe "cards-cronograma-content" (cards de palestrantes)
-  const cardsTopicosGeral = document.querySelectorAll(".cards-topicos-content");
-
-  // Itera sobre todos os elementos de tópicos
-  cardsTopicosGeral.forEach((element) => {
-    // Verifica se o elemento contém informações relevantes para a pesquisa
-    const nomeElement = element.querySelector(".conteudo-topico");
-
-    if (nomeElement) {
-      const nome = nomeElement.textContent.toLowerCase();
-
-      // Verifica se o elemento corresponde à pesquisa
-      if (nome.includes(searchTerm) || searchTerm === "") {
-        // Se corresponder (ou se a pesquisa estiver vazia), exibe o elemento
-        element.style.display = "flex";
-      } else {
-        // Caso contrário, oculta o elemento
-        element.style.display = "none";
-      }
-    }
-  });
-};
-
-// Ouça o evento 'input' na barra de pesquisa
-searchBar.addEventListener("input", debounce(search, 1000));
-
-searchBar.addEventListener("keydown", function (event) {
+el.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
-    event.preventDefault();
-    search();
+      event.preventDefault();
+      fillList();
   }
 });
+
+Array.from(tabs).forEach((radio) => {
+  radio.addEventListener('change', function () {
+    fillList(this.value, el.value);
+  })
+})
+
+window.handleToggleSave = handleToggleSave;
+
+
+
+function handleToggleSave(e) {
+  const talkId = +e.dataset.id;
+  const savedIds = getSavedTalkIds();
+
+  if (e.checked) {
+    // Adicione o ID à lista de IDs salvos
+    savedIds.push(talkId);
+  } else {
+    // Remova o ID da lista de IDs salvos
+    const index = savedIds.indexOf(talkId);
+    if (index > -1) {
+      savedIds.splice(index, 1);
+    }
+  }
+
+  // Atualize o `localStorage` com os IDs salvos atualizados
+  setSavedTalkIds(savedIds);
+
+  // Verifique a guia atual e atualize a exibição apenas na guia "saved"
+  const activeTab = document.querySelector('input[name="tab"]:checked').value;
+  if (activeTab === 'saved') {
+    fillList('saved', el.value);
+  }
+}
+// fim do main.js
+// fim dos registros  eventos
+
+async function fillList(type, text) {
+  ul.innerHTML = await search(type, text);
+}
+
+
