@@ -2,6 +2,7 @@ import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
 import "./loading.js";
 import { renderTopic, renderTalk } from "./Components.js";
 import { repositorioTalks, withTopics } from "./Data.js";
+import { debounce, talkHasText } from "./Utils.js";
 
 // inicio do main.js
 // criando um apelido para a função querySelectorAll
@@ -84,21 +85,4 @@ async function search(type = 'all', text = '') {
   ul.innerHTML = itens.join('');
 }
 
-function talkHasText(talk, text) {
-  const content = JSON.stringify(talk).toLowerCase();
-  const query = text.toLowerCase();
-
-  return content.includes(query)
-}
-
-// atrasando a execução de uma função: 
-// https://www.freecodecamp.org/portuguese/news/debounce-como-atrasar-a-execucao-de-uma-funcao-em-javascript-exemplo-com-js-es6/
-function debounce(fn, delay = 500) {
-  let timer;
-
-  return (...args) => {
-    clearTimeout(timer);
-    timer = setTimeout(() => fn.apply(this, args), delay)
-  }
-}
 
