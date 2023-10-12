@@ -34,7 +34,10 @@ export function renderTalk(talk) {
               <p class="usuario">@frontendday2023</p>
               <p class="horarioLive">${talk.hour}</p>
           </div>
-      </div>
+        </div>
+        <div class="action">
+          <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark icon-salvar"></i></span></label>
+        </div>
   </div>
   <div class="palestrante">
   <div class="img-palestrante">
@@ -63,8 +66,5 @@ export function renderTalk(talk) {
   <div class="assunto-palestra">
   <p class="assuntoLive">${talk.title}</p>
   </div>
-  <div class="action">
-  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark icon-salvar"></i></span></label>
-</div>
 </li>`;
 }
