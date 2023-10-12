@@ -84,6 +84,7 @@ header {
 /* ESTRUTURA MAIN */
 main {
   padding: 0 2rem 2rem;
+  justify-content: center;
 }
 
 .cards-container,
