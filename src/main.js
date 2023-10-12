@@ -24,10 +24,10 @@ el.addEventListener('input', debounce(async function (el) {
   fillList(tab, query);
 }));
 
-el.addEventListener("keydown", function(event) {
+el.addEventListener("keydown", function (event) {
   if (event.key === "Enter") {
-      event.preventDefault();
-      fillList();
+    event.preventDefault();
+    fillList();
   }
 });
 
@@ -71,6 +71,3 @@ function handleToggleSave(e) {
 async function fillList(type, text) {
   ul.innerHTML = await search(type, text);
 }
-
-
-

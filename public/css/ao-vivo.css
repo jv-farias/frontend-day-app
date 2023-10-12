@@ -53,7 +53,10 @@ header {
   background-color: transparent;
   padding: 1.3rem;
   border-radius: 200px;
-  border: 3px solid white
+  border: 3px solid white;
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .cronograma a,
@@ -165,7 +168,7 @@ main {
 
 .palestrante {
   order: 1;
-  background-color: rgba(57, 196, 255, 0.8);
+  background-color: #000517;
   width: 100%;
   gap: 0.8rem;
   display: flex;
@@ -403,6 +406,8 @@ label input:checked+span {
   font-size: 0.7rem;
   color: rgb(131, 131, 131);
 }
+
+
 
 /* MEDIA QUERYS PARA TELAS ESPECÍFICAS */
 
@@ -755,13 +760,13 @@ label input:checked+span {
 }
 
 .palestrante {
+  background-color: #000517;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 1rem 1.2rem;
   align-items: center;
   border-radius: 20px;
-  background-color: rgba(57, 196, 255, 0.8);
 }
 
 .text-informacoes {
@@ -948,30 +953,39 @@ label input:checked+span {
   display: flex;
 }
 
-.action input:not(:checked)+span:after {
-  content: "Salvar";
-  padding: .5rem 2rem;
-  border-radius: 20px;
+.icon-salvar {
+  font-weight: 400;
   color: white;
-  background-color: #000517;
+}
+
+.action input:not(:checked) + span::after {
+  content: "Salvar";
   font-weight: 700;
-  margin: .5rem;
 }
 
-.action input:checked+span:after {
+.action input:checked + span::after {
   content: "Remover";
-  padding: .5rem 2rem;
-  border-radius: 20px;
-  color:#000517;
-  background-color: white;
-  margin-bottom: .5rem;
+  color: white;
+  font-weight: 700;
 }
 
-.action {
-  order: 2;
-  margin: .8rem;
+.action input:checked + .btn-salvar .icon-salvar {
+  font-weight: 700;
 }
 
 .icone-color {
   color: rgb(5, 125, 255);
+}
+
+.btn-salvar {
+  order: 2;
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #000517; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  color: white;
 }
