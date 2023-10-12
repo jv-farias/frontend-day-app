@@ -1,6 +1,7 @@
-import { getSavedTalkIds, setSavedTalkIds, hasSaved } from "./LocalStorage";
+import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
 import "./loading.js";
 import { renderTopic, renderTalk } from "./Components.js";
+import { repositorioTalks, withTopics } from "./Data.js";
 
 // inicio do main.js
 // criando um apelido para a função querySelectorAll
@@ -9,7 +10,7 @@ const $ = (s) => document.querySelectorAll(s);
 const [el] = $('#search-box-input');
 const [ul] = $('.cards-container');
 const tabs = $('input[name="tab"]')
-let cache = { placeholder: true, talks: { principal: [], invite: [], frontend: [], communities: [] } };
+
 
 // inicia os dados
 search();
@@ -88,84 +89,6 @@ function talkHasText(talk, text) {
   const query = text.toLowerCase();
 
   return content.includes(query)
-}
-
-
-async function getCachedData() {
-  if (cache.placeholder) {
-    const resp = await fetch('https://frontendday.descompliqueapps.com.br/index.php/wp-json/site/v1/data');
-    cache = await resp.json();
-  }
-
-  return cache;
-}
-
-function withTopics(cards) {
-
-  return [
-    ...cards,
-    {
-      title: "ABERTURA",
-      hour: "09:00",
-      type: "topic",
-    },
-    {
-      title: "NETWORKING",
-      hour: "10:00",
-      type: "topic",
-    },
-    {
-      title: "INTERVALO ALMOÇO",
-      hour: "12:00",
-      type: "topic",
-    },
-    {
-      title: "COFFEE BREAK + NETWORKING",
-      hour: "15:50",
-      type: "topic",
-    },
-    {
-      title: "SORTEIOS DE BRINDES E PARTICIPANTES DO CODANDO NO BREU",
-      hour: "16:45",
-      type: "topic",
-    },
-    {
-      title: "ENCERRAMENTOS DAS PALESTRAS",
-      hour: "18:0",
-      type: "topic",
-    },
-    {
-      title: "CODANDO NO BREU | CODE IN THE DARK",
-      hour: "18:30",
-      type: "topic",
-    }
-  ];
-}
-
-
-async function repositorioTalks(type) {
-  const data = await getCachedData();
-  // podemos adicionar os dados de topicos aqui!
-  const all = [
-    ...data.talks.principal,
-    ...data.talks.invite,
-    ...data.talks.frontend,
-    ...data.talks.communities,
-  ];
-
-  // TODO: order by time
-
-  switch (type) {
-    case 'all':
-      return all;
-    case 'saved':
-      return all.filter(talk => hasSaved(talk));
-    default:
-      return [
-        ...data.talks.principal,
-        ...data.talks[type],
-      ];
-  }
 }
 
 // atrasando a execução de uma função: 
