@@ -1,3 +1,4 @@
+import { getSavedTalkIds, setSavedTalkIds, hasSaved } from "./LocalStorage";
 import "./loading.js";
 
 // inicio do main.js
@@ -57,7 +58,7 @@ function handleToggleSave(e) {
 async function search(type = 'all', text = '') {
   // perguntar ao dados
   const data = await repositorioTalks(type);
-  const all = withTopics(data);
+  const all = type === 'saved' ? data : withTopics(data);
   const list = text ? all.filter((talk) => talkHasText(talk, text)) : all;
 
 
@@ -153,38 +154,6 @@ async function repositorioTalks(type) {
         ...data.talks[type],
       ];
   }
-}
-
-/** @param {Talk} */
-function hasSaved(talk) {
-  const savedIds = getSavedTalkIds();
-
-  return savedIds.includes(talk.id);
-}
-
-/** @return {Array<string>} */
-function getSavedTalkIds() {
-  const lcContent = localStorage.getItem('savedIdTalks') || '[]';
-  return JSON.parse(lcContent) || [''];
-}
-
-/** @type {Array<string>} ids*/
-function setSavedTalkIds(ids = []) {
-  const lcContent = JSON.stringify(ids);
-  localStorage.setItem('savedIdTalks', lcContent);
-}
-
-/** @type {string} id*/
-function addSavedIdTalk(id) {
-  const ids = getSavedTalkIds();
-  const removeDuplicates = [...ids, id];
-  // remove possible duplicates;
-  setSavedTalkIds(removeDuplicates);
-}
-
-function removeSavedIdTalk(id) {
-  const ids = getSavedTalkIds();
-  setSavedTalkIds(ids.filter((item) => item !== id));
 }
 
 function renderTopic(card) {
