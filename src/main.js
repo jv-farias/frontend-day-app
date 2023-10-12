@@ -71,4 +71,3 @@ async function fillList(type, text) {
   ul.innerHTML = await search(type, text);
 }
 
-
