@@ -40,8 +40,8 @@ header {
   margin-bottom: 3rem;
   width: 100%;
   display: flex;
-  background-color: rgba(0, 24, 109, 1);
-  height: 0.2rem;
+  background-color:#38C1FA;
+  height: 0.3rem;
   border-radius: 100px;
   justify-content: flex-start;
 }
@@ -52,7 +52,6 @@ header {
   background-color: white;
   border-radius: 100px;
 }
-
 
 
 .logos-container {

@@ -404,6 +404,8 @@ label input:checked+span {
   color: rgb(131, 131, 131);
 }
 
+
+
 /* MEDIA QUERYS PARA TELAS ESPECÍFICAS */
 
 @media (min-width: 1000px) {
@@ -949,29 +951,36 @@ label input:checked+span {
 }
 
 .action input:not(:checked)+span:after {
-  content: "Salvar";
-  padding: .5rem 2rem;
-  border-radius: 20px;
-  color: white;
-  background-color: #000517;
+  content: " Salvar";
   font-weight: 700;
-  margin: .5rem;
+
 }
 
 .action input:checked+span:after {
-  content: "Remover";
-  padding: .5rem 2rem;
-  border-radius: 20px;
-  color:#000517;
-  background-color: white;
-  margin-bottom: .5rem;
+  content: " Remover";
+  font-weight: 700;
+  color: rgb(255, 147, 5);
 }
 
 .action {
   order: 2;
   margin: .8rem;
+  padding: .5rem 2rem;
+  border-radius: 20px;
+  color: white;
+  background-color: #000517;
+  margin: .5rem;
 }
 
-.icone-color {
-  color: rgb(5, 125, 255);
+label input:checked+span {
+  color: rgb(255, 147, 5);
+}
+
+
+.btn-salvar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .7rem;
+  color: white;
 }
