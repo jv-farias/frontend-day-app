@@ -1,8 +1,7 @@
 import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
 import "./loading.js";
-import { renderTopic, renderTalk } from "./Components.js";
-import { repositorioTalks, withTopics } from "./Data.js";
-import { debounce, talkHasText } from "./Utils.js";
+import { debounce } from "./Utils.js";
+import { search } from "./search.js";
 
 // inicio do main.js
 // criando um apelido para a função querySelectorAll
@@ -14,26 +13,26 @@ const tabs = $('input[name="tab"]')
 
 
 // inicia os dados
-search();
+fillList();
 
 // registra os eventos
 el.addEventListener('input', debounce(async function (el) {
   const { value: query } = el.target;
   const [{ value: tab }] = $('input[name="tab"]:checked');
 
-  search(tab, query);
+  fillList(tab, query);
 }));
 
 el.addEventListener("keydown", function(event) {
   if (event.key === "Enter") {
       event.preventDefault();
-      search();
+      fillList();
   }
 });
 
 Array.from(tabs).forEach((radio) => {
   radio.addEventListener('change', function () {
-    search(this.value, el.value);
+    fillList(this.value, el.value);
   })
 })
 
@@ -62,27 +61,14 @@ function handleToggleSave(e) {
   // Verifique a guia atual e atualize a exibição apenas na guia "saved"
   const activeTab = document.querySelector('input[name="tab"]:checked').value;
   if (activeTab === 'saved') {
-    search('saved', el.value);
+    fillList('saved', el.value);
   }
 }
 // fim do main.js
 // fim dos registros  eventos
 
-// funcoes auxiliares
-async function search(type = 'all', text = '') {
-  // perguntar ao dados
-  const data = await repositorioTalks(type);
-  const all = type === 'saved' ? data : withTopics(data);
-  const list = text ? all.filter((talk) => talkHasText(talk, text)) : all;
-
-
-  const sorted = list.sort((a, b) => a.hour.localeCompare(b.hour));
-  const itens = sorted.map((item) =>
-    item.type === 'topic' ? renderTopic(item) : renderTalk(item)
-  );
-
-  //sempre remove e atualiza a lista; 
-  ul.innerHTML = itens.join('');
+async function fillList(type, text) {
+  ul.innerHTML = await search(type, text);
 }
 
 
