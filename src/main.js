@@ -71,7 +71,3 @@ function handleToggleSave(e) {
 async function fillList(type, text) {
   ul.innerHTML = await search(type, text);
 }
-
-const checkbox = document.querySelector('#myCheckbox');
-const icon = document.querySelector('.action label input span i');
-
