@@ -82,16 +82,17 @@ main {
 }
 
 .cronograma {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
-  background-color: #39c4ff;
-  padding: 1rem;
+  background-color: #fff;
+  padding: .8rem 3rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
 }
 
 .cronograma:active {
-  background-color: #189ad1;
   transform: scale(0.97);
 }
 
