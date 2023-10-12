@@ -64,7 +64,7 @@ export function renderTalk(talk) {
   <p class="assuntoLive">${talk.title}</p>
   </div>
   <div class="action">
-  <label id="myCheckbox"><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark"></i></span></label>
+  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark"></i></span></label>
 </div>
 </li>`;
 }
