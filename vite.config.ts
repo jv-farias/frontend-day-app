@@ -11,6 +11,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         'ao-vivo': resolve(__dirname, 'ao-vivo.html'),
+        'config-save': resolve(__dirname, 'config-save.html'),
       },
     },
   },
