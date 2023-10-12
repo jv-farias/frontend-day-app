@@ -33,9 +33,30 @@ body {
 header {
   height: 50%;
   padding: 4rem 2rem 2rem;
+
 }
 
+.barra-slides {
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 24, 109, 1);
+  height: 0.2rem;
+  border-radius: 100px;
+  justify-content: flex-start;
+}
+
+.lado-slide {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-radius: 100px;
+}
+
+
+
 .logos-container {
+  justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
 }
@@ -63,7 +84,7 @@ header {
 
 
 main {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   padding: 0 5rem 2rem 2rem;
   color: #fff;
   height: 50%;
@@ -79,19 +100,21 @@ main {
 
 #titulo {
   font-size: 2rem;
+  line-height: 120%;
 }
 
 .cronograma {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 700;
   cursor: pointer;
-  background-color: #39c4ff;
-  padding: 1rem;
+  background-color: #fff;
+  padding: .8rem 3rem;
+  border-radius: 15px;
+  font-size: 1.2rem;
 }
 
 .cronograma:active {
-  background-color: #189ad1;
   transform: scale(0.97);
 }
 
@@ -109,13 +132,21 @@ footer {
   backdrop-filter: blur(8px);
 }
 
-.footer-container,
-.img-container {
+.footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
 }
+
+.img-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+
 
 .footer-container,
 footer {
@@ -124,7 +155,7 @@ footer {
 }
 
 .footer-container {
-  padding: 0.7rem;
+  padding: 1.2rem;
   background: rgba(57, 196, 255, 0.85);
   gap: 1rem;
 }
@@ -139,23 +170,17 @@ footer {
   font-weight: 700;
 }
 
-.img-container {
-  padding: 0.3rem;
-  border-radius: 50%;
-  background-color: rgba(217, 217, 217, 0.5);
-  gap: 1.5rem;
-}
 
 .img-dev,
 .img-dev img {
   object-fit: cover;
   border-radius: 50%;
-  background-color: #fff;
 }
 
 .img-dev {
-  padding: 0.3rem;
   display: flex;
+  margin-right: -.7rem;
+  border: 3px solid white;
 }
 
 .img-dev:active {
@@ -166,7 +191,6 @@ footer {
   width: 3.2rem;
   height: 3.2rem;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-  padding: 0.5rem;
 }
 
 @media (min-width: 1000px) {
@@ -192,8 +216,8 @@ footer {
 
 @media (max-width: 340px) {
 
-footer {
-  margin-top: 15rem;
-}
+  footer {
+    margin-top: 15rem;
+  }
 
 }

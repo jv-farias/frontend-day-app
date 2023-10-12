@@ -1,5 +1,6 @@
-import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
+import "./colorButton.js";
 import "./loading.js";
+import { getSavedTalkIds, setSavedTalkIds } from "./LocalStorage";
 import { debounce } from "./Utils.js";
 import { search } from "./search.js";
 
@@ -70,4 +71,6 @@ function handleToggleSave(e) {
 async function fillList(type, text) {
   ul.innerHTML = await search(type, text);
 }
+
+
 
