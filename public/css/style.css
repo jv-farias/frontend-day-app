@@ -33,9 +33,30 @@ body {
 header {
   height: 50%;
   padding: 4rem 2rem 2rem;
+
 }
 
+.barra-slides {
+  margin-bottom: 3rem;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 24, 109, 1);
+  height: 0.2rem;
+  border-radius: 100px;
+  justify-content: flex-start;
+}
+
+.lado-slide {
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  border-radius: 100px;
+}
+
+
+
 .logos-container {
+  justify-content: space-between;
   align-items: flex-start;
   gap: 2rem;
 }
@@ -63,7 +84,7 @@ header {
 
 
 main {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
   padding: 0 5rem 2rem 2rem;
   color: #fff;
   height: 50%;
@@ -79,6 +100,7 @@ main {
 
 #titulo {
   font-size: 2rem;
+  line-height: 120%;
 }
 
 .cronograma {
@@ -193,8 +215,8 @@ footer {
 
 @media (max-width: 340px) {
 
-footer {
-  margin-top: 15rem;
-}
+  footer {
+    margin-top: 15rem;
+  }
 
 }
