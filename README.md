@@ -1,14 +1,17 @@
-# frontEnd-Day-app <img src="./assets/logos/logo-open-rage.svg" style="width: 30px; padding: 5px; background-color: #fff; border-radius: 50%;">
+# FrontEnd-Day-App <img src="./docs/design/Artboard 2.png" style="width: 40px; padding: 3px; background-color: #fff; border-radius: 50%;"> <img src="./docs/design/logo-vertical-white-0.png" style="width: 35px; padding: 4px; background-color: #021233; border-radius: 25%;">
 
 Bem-vindo ao Repositório do Frontend Day App! 
 
-Estamos empolgados em tê-lo aqui, fazendo parte deste projeto emocionante. O Frontend Day App tem como objetivo criar uma experiência incrível para todos os participantes do evento do dia 14, fornecendo um cronograma completo de todas as palestras e atividades.
+O projeto foi uma estratégia planejada à frente do que já tínhamos no site Front-End Day, com foco principal no formato mobile, mas também elaborado pensando no formato desktop. Em apenas 1 mês, desenvolvemos o design no Figma e implementamos, contando com a orientação e monitoria do nosso professor Abraão Alves. O principal desafio foi o prazo, o qual nos limitou a pensar com inteligência para definir o que era viável ou não, ou seja, o que seria ou não opcional.
 
-Nossa equipe está dedicada a construir uma aplicação que tornará sua experiência no evento ainda mais enriquecedora e informativa. Aqui, você encontrará informações sobre o desenvolvimento do aplicativo, colaborações, sugestões e muito mais.
+As principais funcionalidades do aplicativo são a animação do cronograma já disponível no site do Front-End Day, com um recurso de busca que auxilia o usuário a encontrar um palestrante específico ou um horário determinado.
 
-Sinta-se à vontade para explorar o repositório, fazer perguntas e contribuir com suas ideias e habilidades.
+(Mostrar aqui a tela da função de search: Gif).
 
-Divirta-se codificando e obrigado por se juntar a nós!
+A segunda funcionalidade consiste em criar uma aba de cronograma personalizada, permitindo que cada usuário escolha o cronograma que deseja seguir.
+
+(Mostrar aqui a tela de salve, com o cronograma personalizavel: Gif).
+
 
 # Pré-requisitos
 
@@ -16,18 +19,18 @@ Divirta-se codificando e obrigado por se juntar a nós!
 - npm 9
 - git
 
-> Para rodar esse projeto rapidamente, use o Githu CodeSpace:
+> O projeto está disponível através do Githut CodeSpace, acesse:
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jv-farias/frontend-day-app)
 
 
 ## Rodando o Projeto
 
-1. `npm install` instala todas as dependencias
+1. `npm install` instala todas as dependências
 2. `npm run dev` roda o projeto em modo de desenvolvimento
 3. `npm start` roda o projeto em modo de preview
 
 
 Link para a [documentação](https://doc-frontend-day-app.vercel.app) sobre.
 
-Atenciosamente, Open Rage
+Atenciosamente, Open Rage.
