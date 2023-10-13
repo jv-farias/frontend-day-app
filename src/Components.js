@@ -76,7 +76,6 @@ export function renderTalk(talk) {
   
   <div class="redes-profile">
   <div class="linkedin-user">
-  ${renderSocialLink(talk.speaker.social_link)}
   <a href="${talk.speaker.social_link}" target="_blank"><i class="fa-brands fa-linkedin"></i>
   <p class="name-link">${nameLink}</p>
   </a>
@@ -93,7 +92,3 @@ export function renderTalk(talk) {
   </div>
 </li>`;
 }
-
-
-
-
