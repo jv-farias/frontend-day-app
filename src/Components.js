@@ -31,10 +31,12 @@ export function renderTalk(talk) {
               <img src="./assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
           </div>
           <div class="user-nome">
-              <p class="usuario">@frontendday2023</p>
               <p class="horarioLive">${talk.hour}</p>
           </div>
-      </div>
+        </div>
+        <div class="action">
+          <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark icon-salvar"></i></span></label>
+        </div>
   </div>
   <div class="palestrante">
   <div class="img-palestrante">
@@ -63,10 +65,5 @@ export function renderTalk(talk) {
   <div class="assunto-palestra">
   <p class="assuntoLive">${talk.title}</p>
   </div>
-  <div class="action">
-  <label><input type="checkbox" data-id="${talk.id}" ${saved ? 'checked' : ''} onclick="handleToggleSave(this)" /><span class="btn-salvar"><i class="fa-solid fa-bookmark"></i></span></label>
-</div>
 </li>`;
 }
-
-
