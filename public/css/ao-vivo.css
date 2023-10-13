@@ -141,7 +141,7 @@ main {
 }
 
 .horarioLive {
-  font-size: 1.1rem;
+  font-size: 1.5rem;
   font-weight: 700;
 }
 
@@ -458,6 +458,7 @@ label input:checked+span {
     flex-direction: column;
     height: 100%;
   }
+  
 
 }
 
@@ -469,7 +470,7 @@ label input:checked+span {
 
   .info-post {
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     gap: 1rem;
   }
 
@@ -520,15 +521,14 @@ label input:checked+span {
     font-size: 1.3rem;
   }
 
+  .action {
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 315px) {
   .cards-palestrante-content {
     flex-direction: column;
-  }
-
-  .user {
-    order: 1;
   }
 
   .info-post {

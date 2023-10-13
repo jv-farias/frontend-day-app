@@ -31,7 +31,6 @@ export function renderTalk(talk) {
               <img src="./assets/logos/frontenday2023.svg" alt="Logo Front-End Day 2023">
           </div>
           <div class="user-nome">
-              <p class="usuario">@frontendday2023</p>
               <p class="horarioLive">${talk.hour}</p>
           </div>
         </div>
