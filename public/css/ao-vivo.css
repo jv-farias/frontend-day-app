@@ -744,7 +744,7 @@ label input:checked+span {
 
 }
 
-.linkedin,
+.name-link,
 .instagram {
   text-decoration: underline;
 }

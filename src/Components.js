@@ -24,6 +24,31 @@ export function renderTalk(talk) {
   // Verifique se o tipo de sala está no mapeamento e faça a substituição
   const roomName = roomMappings[talk.room] || talk.room;
 
+
+  function getSocialLinks(url) {
+    let linkName = document.querySelector(".name-link");
+    switch (true) {
+      case url.includes('instagram.com'):
+        linkName = 'Instagram';
+        break;
+      case url.includes('github.com'):
+        linkName = 'GitHub';
+        break;
+      case url.includes('pmenoslab'):
+        linkName = 'Site';
+        break;
+      case url.includes('twitter.com'):
+        linkName = 'Twiiter';
+        break;
+      default:
+        linkName = 'Linkedin';
+    }
+    return linkName;
+  }
+  
+  let nameLink = getSocialLinks(talk.speaker.social_link);
+  
+
   return `<li class="cards-palestrante-content">
   <div class="info-post">
       <div class="user">
@@ -52,7 +77,7 @@ export function renderTalk(talk) {
   <div class="redes-profile">
   <div class="linkedin-user">
   <a href="${talk.speaker.social_link}" target="_blank"><i class="fa-brands fa-linkedin"></i>
-  <p class="linkedin">Linkedin</p>
+  <p class="name-link">${nameLink}</p>
   </a>
   </div>
   </div>
