@@ -41,7 +41,7 @@ export function withTopics(cards) {
     },
     {
       title: "ENCERRAMENTOS DAS PALESTRAS",
-      hour: "18:0",
+      hour: "18:00",
       type: "topic",
     },
     {
