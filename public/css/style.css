@@ -196,6 +196,14 @@ footer {
   display: flex;
 }
 
+.github {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
 @media (min-width: 1000px) {
 
   header,
