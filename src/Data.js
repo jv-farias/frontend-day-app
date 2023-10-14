@@ -31,12 +31,12 @@ export function withTopics(cards) {
     },
     {
       title: "COFFEE BREAK + NETWORKING",
-      hour: "15:50",
+      hour: "16:20",
       type: "topic",
     },
     {
       title: "SORTEIOS DE BRINDES E PARTICIPANTES DO CODANDO NO BREU",
-      hour: "16:45",
+      hour: "17:00",
       type: "topic",
     },
     {
