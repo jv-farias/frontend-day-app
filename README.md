@@ -6,11 +6,7 @@ Este projeto foi uma estratégia cuidadosamente planejada, avançando em relaç�
 
 As principais funcionalidades do aplicativo incluem a animação do cronograma já disponível no site do Front-End Day, juntamente com um recurso de busca que auxilia o usuário a encontrar um palestrante específico ou um horário determinado.
 
-(Mostrar aqui a tela da função de busca: Gif).
-
 A segunda funcionalidade consiste em criar uma aba de cronograma personalizada, permitindo que cada usuário escolha o cronograma que deseja seguir.
-
-(Mostrar aqui a tela de salve, com o cronograma personalizável: Gif).
 
 ## Pré-requisitos
 
