@@ -1,5 +1,6 @@
 import { hasSaved } from "./LocalStorage";
 
+/** @type {import('./api.types').Event} */
 let cache = { placeholder: true, talks: { principal: [], invite: [], frontend: [], communities: [] } };
 
 async function getCachedData() {
@@ -53,6 +54,7 @@ export function withTopics(cards) {
 }
 export async function repositorioTalks(type) {
   const data = await getCachedData();
+  
   // podemos adicionar os dados de topicos aqui!
   const all = [
     ...data.talks.principal,
