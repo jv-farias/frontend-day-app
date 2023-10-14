@@ -5,7 +5,9 @@ let cache = { placeholder: true, talks: { principal: [], invite: [], frontend: [
 
 async function getCachedData() {
   if (cache.placeholder) {
-    const resp = await fetch('https://frontendday.descompliqueapps.com.br/index.php/wp-json/site/v1/data');
+    const resp = await fetch('https://frontendday.descompliqueapps.com.br/index.php/wp-json/site/v1/data', {
+      cache: 'reload'
+    });
     cache = await resp.json();
   }
 
