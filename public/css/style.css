@@ -192,6 +192,18 @@ footer {
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
+.img-dev a {
+  display: flex;
+}
+
+.github {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: 30px;
+  font-size: 40px;
+}
+
 @media (min-width: 1000px) {
 
   header,
