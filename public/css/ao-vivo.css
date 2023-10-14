@@ -23,11 +23,11 @@ main {
 }
 
 header {
-  padding: 4rem 2rem 2rem;
+  padding: 4rem 1.5rem 1.5rem;
 }
 
 .titulo {
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .header-container,
@@ -47,7 +47,7 @@ header {
   justify-content: space-between;
 }
 
-.return-btn {
+.return-btn a {
   width: 2rem;
   height: 2rem;
   background-color: transparent;
@@ -83,8 +83,12 @@ header {
 
 /* ESTRUTURA MAIN */
 main {
-  padding: 0 2rem 2rem;
+  padding: 0 1.5rem 1.5rem;
   justify-content: center;
+}
+
+.cronograma-trilhas {
+  width: 100%;
 }
 
 .cards-container,
