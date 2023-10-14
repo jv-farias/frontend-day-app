@@ -145,8 +145,6 @@ main {
   font-weight: 700;
 }
 
-
-
 .salvar {
   font-size: 1.5rem;
   gap: 0.5rem;
@@ -161,7 +159,7 @@ main {
 }
 
 .live-text {
-  color: #89D5F4;
+  color: #89d5f4;
   font-size: 1rem;
   font-weight: 700;
 }
@@ -174,7 +172,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 5px 35px #137EAB;
+  box-shadow: 0px 5px 35px #137eab;
 }
 
 .palestrante-cronograma {
@@ -238,7 +236,6 @@ main {
 
 .cards-topicos-content,
 .post-topico {
-
   width: 100%;
   display: flex;
   align-items: center;
@@ -260,8 +257,7 @@ main {
 }
 
 .live-text-topico {
-  color: rgba(255, 255, 255, .5);
-  ;
+  color: rgba(255, 255, 255, 0.5);
   font-size: 0.9rem;
   font-weight: 700;
 }
@@ -352,7 +348,7 @@ label span {
   text-align: center;
 }
 
-label input:checked+span {
+label input:checked + span {
   color: rgb(5, 125, 255);
 }
 
@@ -378,7 +374,7 @@ label input:checked+span {
 }
 
 .botoes-trilhas {
-  gap: .5rem;
+  gap: 0.5rem;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -407,12 +403,9 @@ label input:checked+span {
   color: rgb(131, 131, 131);
 }
 
-
-
 /* MEDIA QUERYS PARA TELAS ESPECÍFICAS */
 
 @media (min-width: 1000px) {
-
   header,
   main {
     width: 60vw;
@@ -458,18 +451,15 @@ label input:checked+span {
     flex-direction: column;
     height: 100%;
   }
-  
-
 }
 
-@media (max-width: 390px) {
+@media (max-width: 380px) {
   .cards-palestrante-content {
     flex-direction: column;
   }
 
-
   .info-post {
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 1rem;
   }
@@ -479,7 +469,6 @@ label input:checked+span {
     align-items: center;
     gap: 1rem;
   }
-
 
   .info-palestrante {
     text-align: center;
@@ -509,7 +498,7 @@ label input:checked+span {
 
   .post-topico {
     display: flex;
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
   .topico {
@@ -520,10 +509,6 @@ label input:checked+span {
   .conteudo-topico {
     font-size: 1.3rem;
   }
-
-  .action {
-    margin: 0 auto;
-  }
 }
 
 @media (max-width: 315px) {
@@ -532,8 +517,8 @@ label input:checked+span {
   }
 
   .info-post {
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
     gap: 1rem;
     flex-direction: column;
   }
@@ -591,9 +576,42 @@ label input:checked+span {
   }
 }
 
+@media (max-width: 360px) {
+  .titulo {
+    font-size: 1.5rem;
+    text-align: right;
+  }
 
+  .titulo {
+    font-size: 1.7rem;
+    text-align: right;
+  }
 
+  .return-btn {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+    width: 1.9rem;
+    height: 1.9rem;
+  }
+}
 
+@media (max-width: 320px) {
+  .titulo-trilha {
+    font-size: 0.6rem;
+  }
+
+  .titulo {
+    font-size: 1.5rem;
+    text-align: right;
+  }
+
+  .return-btn {
+    font-size: 1.2rem;
+    padding: 1rem;
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+}
 
 /* LOADING */
 
@@ -670,7 +688,7 @@ label input:checked+span {
 
 .cards-cronograma-content {
   border-radius: 1.5rem;
-  background-color: #2E9ED1;
+  background-color: #2e9ed1;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -706,13 +724,12 @@ label input:checked+span {
 }
 
 .palestrante-cronograma-trilhas {
-  gap: .5rem;
+  gap: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: column;
 }
-
 
 .media-informacoes {
   gap: 1rem;
@@ -738,17 +755,15 @@ label input:checked+span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: .4rem;
+  gap: 0.4rem;
   color: white;
   text-decoration: none;
-
 }
 
 .name-link,
 .instagram {
   text-decoration: underline;
 }
-
 
 .fa-brands {
   background-color: transparent;
@@ -794,11 +809,9 @@ label input:checked+span {
   font-weight: 700;
 }
 
-
 #cargo {
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
-
 }
 
 #assunto {
@@ -810,12 +823,10 @@ label input:checked+span {
 
 .redes-profile {
   display: flex;
-  gap: .5rem;
+  gap: 0.5rem;
   justify-content: flex-start;
   flex-wrap: wrap;
 }
-
-
 
 .cards-topicos-content {
   padding: 1.5rem;
@@ -829,8 +840,6 @@ label input:checked+span {
   color: white;
   font-size: 1rem;
 }
-
-
 
 .topicos-cronograma-content,
 .post-topico {
@@ -876,7 +885,7 @@ label input:checked+span {
 }
 
 .search-box-input::placeholder {
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
   color: #ffffff;
   opacity: 0.6;
 }
@@ -909,7 +918,7 @@ label input:checked+span {
 
 .search-box .search-box-input {
   padding-left: 1em;
-  padding-right: .2em;
+  padding-right: 0.2em;
   width: 70vw;
   max-width: 700px;
   color: #8a8a8a;
@@ -927,7 +936,7 @@ label input:checked+span {
   padding: 0;
   border: none;
   background: none;
-  transition: .45s;
+  transition: 0.45s;
 }
 
 .search-box-button {
@@ -941,12 +950,12 @@ label input:checked+span {
   background-color: rgba(57, 196, 255, 0);
   border: none;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
   pointer-events: none;
 }
 
 .search-box-button:active {
-  transform: scale(.85);
+  transform: scale(0.85);
 }
 
 .action label {
@@ -979,13 +988,13 @@ label input:checked+span {
 
 .btn-salvar {
   order: 2;
-  padding: .5rem 2rem;
+  padding: 0.5rem 1.5rem;
   border-radius: 20px;
   color: white;
-  background-color: #000517; 
+  background-color: #000517;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: .7rem;
+  gap: 0.5rem;
   color: white;
 }
