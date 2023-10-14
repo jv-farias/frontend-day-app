@@ -428,9 +428,9 @@ label input:checked + span {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     z-index: 100;
-    background-color: rgba(253, 246, 246, 0);
-    box-shadow: 0px -5px 15px rgba(0, 0, 0, 0);
-    border-right: 1.5px solid rgba(255, 255, 255, 0);
+    background-color: rgba(253, 246, 246, .8);
+    box-shadow: 0px -5px 15px rgba(0, 0, 0, .8);
+    border-right: 1.5px solid rgba(255, 255, 255, .5);
     position: fixed;
     top: 0;
     height: 100vh;
@@ -441,6 +441,7 @@ label input:checked + span {
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
+
   }
 
   .botoes-trilhas {
@@ -451,6 +452,11 @@ label input:checked + span {
     flex-direction: column;
     height: 100%;
   }
+
+  .iconBtn {
+    font-size: 1.5rem;
+  }
+
 }
 
 @media (max-width: 380px) {
