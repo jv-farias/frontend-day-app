@@ -26,27 +26,32 @@ export function renderTalk(talk) {
 
 
   function getSocialLinks(url) {
-    let linkName = document.querySelector(".name-link");
+    let linkName = 'LinkedIn';
+    let iconLink = 'fa-brands fa-linkedin'
     switch (true) {
       case url.includes('instagram.com'):
-        linkName = 'Instagram';
+        linkName = 'Instagram'
+        iconLink = 'fa-brands fa-instagram'
         break;
       case url.includes('github.com'):
         linkName = 'GitHub';
+        iconLink = 'fa-brands fa-github'
         break;
       case url.includes('pmenoslab'):
         linkName = 'Site';
+        iconLink = 'fa-solid fa-globe'
         break;
       case url.includes('twitter.com'):
-        linkName = 'Twiiter';
+        linkName = 'Twitter';
+        iconLink = 'fa-brands fa-x-twitter'
         break;
-      default:
-        linkName = 'Linkedin';
     }
-    return linkName;
+    return { linkName, iconLink };
   }
   
-  let nameLink = getSocialLinks(talk.speaker.social_link);
+  const socialInfo = getSocialLinks(talk.speaker.social_link);
+  const linkName = socialInfo.linkName;
+  const iconLink = socialInfo.iconLink;
   
 
   return `<li class="cards-palestrante-content">
@@ -76,8 +81,8 @@ export function renderTalk(talk) {
   
   <div class="redes-profile">
   <div class="linkedin-user">
-  <a href="${talk.speaker.social_link}" target="_blank"><i class="fa-brands fa-linkedin"></i>
-  <p class="name-link">${nameLink}</p>
+  <a href="${talk.speaker.social_link}" target="_blank"><i class="${iconLink}"></i>
+  <p class="name-link">${linkName}</p>
   </a>
   </div>
   </div>
