@@ -436,12 +436,11 @@ label input:checked + span {
     height: 100vh;
     left: 0;
     width: 12vh;
-    padding: 10rem 1rem;
+    padding: 10rem 3rem;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-
   }
 
   .botoes-trilhas {
